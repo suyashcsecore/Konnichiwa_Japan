@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Ignore only .env files but NOT .env.example
+!.env.example
+
+# Build files
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
