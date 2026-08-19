@@ -206,48 +206,79 @@ const Home = () => {
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">From the ephemeral pink canopy of spring to the silent white blankets of winter, Japan completely transforms four times a year.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col lg:flex-row h-[800px] lg:h-[600px] w-full gap-4">
             {/* Spring */}
-            <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-lg h-[350px]">
-              <img src={spring} alt="Spring" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-500 group-hover:bg-black/10"></div>
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-3xl font-bold text-white mb-2">Spring (春)</h3>
-                <div className="overflow-hidden">
-                  <p className="text-white/90 max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">The fleeting beauty of sakura blooming across the nation.</p>
+            <div className="group relative flex-1 hover:flex-[3] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] rounded-3xl overflow-hidden cursor-pointer shadow-lg">
+              <img src={spring} alt="Spring" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-700"></div>
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-japan-red/90 backdrop-blur-md flex items-center justify-center text-white font-bold text-xl opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 lg:-translate-x-4 lg:group-hover:translate-x-0">春</div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap drop-shadow-md">Spring</h3>
+                </div>
+                <div className="grid grid-rows-[1fr] lg:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                  <div className="overflow-hidden">
+                    <p className="text-white/90 text-lg mt-2 font-light lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                      The fleeting beauty of sakura blooming across the nation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+            
             {/* Summer */}
-            <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-lg h-[350px]">
-              <img src={summer} alt="Summer" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-500 group-hover:bg-black/10"></div>
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-3xl font-bold text-white mb-2">Summer (夏)</h3>
-                <div className="overflow-hidden">
-                  <p className="text-white/90 max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">Vibrant matsuri festivals, fireworks, and lush green mountains.</p>
+            <div className="group relative flex-1 hover:flex-[3] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] rounded-3xl overflow-hidden cursor-pointer shadow-lg">
+              <img src={summer} alt="Summer" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-700"></div>
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-japan-red/90 backdrop-blur-md flex items-center justify-center text-white font-bold text-xl opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 lg:-translate-x-4 lg:group-hover:translate-x-0">夏</div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap drop-shadow-md">Summer</h3>
+                </div>
+                <div className="grid grid-rows-[1fr] lg:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                  <div className="overflow-hidden">
+                    <p className="text-white/90 text-lg mt-2 font-light lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                      Vibrant matsuri festivals, fireworks, and lush green mountains.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+
             {/* Autumn */}
-            <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-lg h-[350px]">
-              <img src={autumn} alt="Autumn" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-500 group-hover:bg-black/10"></div>
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-3xl font-bold text-white mb-2">Autumn (秋)</h3>
-                <div className="overflow-hidden">
-                  <p className="text-white/90 max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">A fiery landscape of red and gold momiji leaves.</p>
+            <div className="group relative flex-1 hover:flex-[3] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] rounded-3xl overflow-hidden cursor-pointer shadow-lg">
+              <img src={autumn} alt="Autumn" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-700"></div>
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-japan-red/90 backdrop-blur-md flex items-center justify-center text-white font-bold text-xl opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 lg:-translate-x-4 lg:group-hover:translate-x-0">秋</div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap drop-shadow-md">Autumn</h3>
+                </div>
+                <div className="grid grid-rows-[1fr] lg:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                  <div className="overflow-hidden">
+                    <p className="text-white/90 text-lg mt-2 font-light lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                      A fiery landscape of red and gold momiji leaves.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+
             {/* Winter */}
-            <div className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-lg h-[350px]">
-              <img src={winter} alt="Winter" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-500 group-hover:bg-black/10"></div>
-              <div className="absolute bottom-8 left-8">
-                <h3 className="text-3xl font-bold text-white mb-2">Winter (冬)</h3>
-                <div className="overflow-hidden">
-                  <p className="text-white/90 max-w-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">Silent, pristine snowscapes blanketing traditional villages.</p>
+            <div className="group relative flex-1 hover:flex-[3] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] rounded-3xl overflow-hidden cursor-pointer shadow-lg">
+              <img src={winter} alt="Winter" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-700"></div>
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-japan-red/90 backdrop-blur-md flex items-center justify-center text-white font-bold text-xl opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 lg:-translate-x-4 lg:group-hover:translate-x-0">冬</div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap drop-shadow-md">Winter</h3>
+                </div>
+                <div className="grid grid-rows-[1fr] lg:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                  <div className="overflow-hidden">
+                    <p className="text-white/90 text-lg mt-2 font-light lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                      Silent, pristine snowscapes blanketing traditional villages.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -287,12 +318,12 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full lg:w-1/2">
-            <div className="relative rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-              <img src={food} alt="Sushi" className="w-full h-[500px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-8 left-8">
-                <div className="text-white/80 text-sm font-semibold tracking-widest uppercase mb-1">Delicacy</div>
-                <div className="text-2xl font-bold">The Art of Sushi</div>
+            <div className="group relative rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer transition-shadow duration-700 hover:shadow-[0_20px_80px_rgba(230,0,18,0.2)]">
+              <img src={food} alt="Sushi" className="w-full h-[500px] object-cover transition-transform duration-[2000ms] group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-transparent transition-opacity duration-700 group-hover:opacity-70"></div>
+              <div className="absolute bottom-8 left-8 transition-transform duration-700 ease-out group-hover:-translate-y-2">
+                <div className="text-white/80 text-sm font-semibold tracking-widest uppercase mb-1 transition-colors duration-500 group-hover:text-japan-red">Delicacy</div>
+                <div className="text-2xl font-bold drop-shadow-md">The Art of Sushi</div>
               </div>
             </div>
           </div>
