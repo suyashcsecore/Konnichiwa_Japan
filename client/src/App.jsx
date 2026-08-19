@@ -14,11 +14,13 @@ if (!PUBLISHABLE_KEY) {
 
 const UserSync = () => {
   const { user, isLoaded, isSignedIn } = useUser();
+  const hasSynced = React.useRef(false);
 
   useEffect(() => {
-    if (isLoaded && isSignedIn && user) {
+    if (isLoaded && isSignedIn && user && !hasSynced.current) {
       const syncUserToDb = async () => {
         try {
+          hasSynced.current = true; // Mark as synced to prevent multiple calls
           await fetch('http://localhost:5000/api/users/sync', {
             method: 'POST',
             headers: {
@@ -35,6 +37,7 @@ const UserSync = () => {
           console.log("User successfully synced to backend!");
         } catch (error) {
           console.error("Error syncing user to backend:", error);
+          hasSynced.current = false; // Reset if failed so it can try again
         }
       };
       syncUserToDb();
