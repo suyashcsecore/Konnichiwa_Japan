@@ -17,7 +17,7 @@ const syncUser = async (req, res) => {
         lastName: lastName || '',
         profileImageUrl: profileImageUrl || ''
       },
-      { upsert: true, new: true } // Creates the user if they don't exist
+      { upsert: true, new: true } // Creates the user if they don't exists
     );
 
     console.log(`Synced user to MongoDB: ${email}`);

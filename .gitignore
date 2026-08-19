@@ -2,7 +2,7 @@
 node_modules/
 jspm_packages/
 
-# Env files
+# Env files safe
 .env
 .env.local
 .env.development.local
