@@ -50,7 +50,7 @@ const Home = () => {
             <Link to="/lifestyle" className="flex items-center gap-2 px-8 py-4 rounded-full bg-japan-red text-white font-medium hover:bg-japan-red-hover transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_24px_rgba(230,0,18,0.4)]">
               Explore Lifestyle <ArrowRight size={20} />
             </Link>
-            <Link to="/quiz" className="flex items-center gap-2 px-8 py-4 rounded-full bg-white/20 text-white font-medium backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
+            <Link to="/learn-japanese" className="flex items-center gap-2 px-8 py-4 rounded-full bg-white/20 text-white font-medium backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
               Take the Culture Quiz
             </Link>
           </div>

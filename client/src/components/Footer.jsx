@@ -37,7 +37,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Explore</h3>
             <ul className="flex flex-col gap-4">
               <li><Link to="/lifestyle" className="hover:text-japan-red transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-japan-red/0 group-hover:bg-japan-red transition-all"></span>Lifestyle</Link></li>
-              <li><Link to="/quiz" className="hover:text-japan-red transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-japan-red/0 group-hover:bg-japan-red transition-all"></span>Culture Quiz</Link></li>
+              <li><Link to="/learn-japanese" className="hover:text-japan-red transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-japan-red/0 group-hover:bg-japan-red transition-all"></span>Culture Quiz</Link></li>
               <li><Link to="/garbage-collection" className="hover:text-japan-red transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-japan-red/0 group-hover:bg-japan-red transition-all"></span>Garbage Rules</Link></li>
             </ul>
           </div>

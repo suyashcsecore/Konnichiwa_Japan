@@ -69,7 +69,7 @@ function QuizPage() {
     }
 
     if (currentQuestion === questions.length - 1) {
-      navigate("/quiz/result", {
+      navigate("/learn-japanese/result", {
         state: {
           score: newScore,
           total: questions.length,
@@ -93,7 +93,7 @@ function QuizPage() {
       ? score + 1
       : score;
 
-    navigate("/quiz/result", {
+    navigate("/learn-japanese/result", {
       state: {
         score: finalScore,
         total: questions.length,

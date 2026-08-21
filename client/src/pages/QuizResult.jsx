@@ -96,7 +96,7 @@ function QuizResult() {
 
           <button
             className="secondary-button"
-            onClick={() => navigate(`/quiz/${level}`)}
+            onClick={() => navigate(`/learn-japanese/${level}`)}
           >
             <RotateCcw size={18} />
             Try Again

@@ -20,11 +20,11 @@ const Navbar = () => {
             Konnichiwa <span className="text-japan-red">Japan</span>
           </span>
         </Link>
-        
+
         <div className="flex gap-8 items-center">
           <Link to="/" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/')}`}>Home</Link>
           <Link to="/lifestyle" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/lifestyle')}`}>Lifestyle</Link>
-          <Link to="/learn-japanese" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/quiz')}`}>Learn Japanese</Link>
+          <Link to="/learn-japanese" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/learn-japanese')}`}>Learn Japanese</Link>
           <Link to="/puzzles" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/puzzles')}`}>Puzzles</Link>
         </div>
 

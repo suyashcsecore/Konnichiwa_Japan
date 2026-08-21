@@ -68,7 +68,7 @@ function QuizHome() {
             <button
               key={level.id}
               className="level-card"
-              onClick={() => navigate(`/quiz/${level.id}`)}
+              onClick={() => navigate(`/learn-japanese/${level.id}`)}
             >
               <span className="level-icon">
                 {level.icon}

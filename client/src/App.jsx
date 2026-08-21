@@ -67,9 +67,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/lifestyle" element={<div style={{padding: '8rem 2rem', textAlign: 'center'}}>Lifestyle</div>} />
-            <Route path="/quiz" element={<QuizHome />} />
-            <Route path="/quiz/:level" element={<QuizPage />} />
-            <Route path="/quiz/result" element={<QuizResult />} />
+            <Route path="/learn-japanese" element={<QuizHome />} />
+            <Route path="/learn-japanese/:level" element={<QuizPage />} />
+            <Route path="/learn-japanese/result" element={<QuizResult />} />
             <Route path="/puzzles" element={<PuzzleHome />} />
             <Route path="/puzzles/garbage" element={<GarbagePuzzle />} />
             <Route path="/puzzles/manners" element={<MannersGame />} />
