@@ -8,6 +8,7 @@ import QuizHome from './pages/QuizHome';
 import QuizPage from './pages/QuizPage';
 import QuizResult from './pages/QuizResult';
 import Lifestyle from './pages/Lifestyle';
+import GarbageCollectorIframe from './pages/GarbageCollectorIframe';
 import PuzzleHome from './pages/PuzzleHome';
 import GarbagePuzzle from './pages/GarbagePuzzle';
 import MannersGame from './pages/MannersGame';
@@ -72,6 +73,7 @@ function App() {
             <Route path="/learn-japanese/:level" element={<QuizPage />} />
             <Route path="/learn-japanese/result" element={<QuizResult />} />
             <Route path="/puzzles" element={<PuzzleHome />} />
+            <Route path="/garbage-collector" element={<GarbageCollectorIframe />} />
             <Route path="/puzzles/garbage" element={<GarbagePuzzle />} />
             <Route path="/puzzles/manners" element={<MannersGame />} />
             <Route path="/puzzles/packing" element={<PackingGame />} />

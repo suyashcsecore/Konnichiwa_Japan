@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GomiGuide AI 🌸 Japan Smart Waste Classification System | スマート分別 AI</title>
+  <meta name="description" content="AI-powered Smart Waste Classification and Municipal Sorting Assistant tailored for Japan. Snap a photo, identify gomi categories, view ward pickup schedules, find nearby drop-off bins, and earn Eco-Points.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%22100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  
+  <!-- Leaflet CSS for Interactive Japan Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Sakura Petals Dynamic Canvas Background -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" id="nav-brand">
+        <div class="brand-icon-box">🌸</div>
+        <div class="brand-text-group">
+          <div class="brand-title">GomiGuide<span>.AI</span></div>
+          <div class="brand-subtitle" data-i18n-en="JAPAN SMART WASTE AI" data-i18n-ja="日本標準 スマート分別 AI">JAPAN SMART WASTE AI</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link" data-i18n-en="Home" data-i18n-ja="ホーム">Home</a></li>
+        <li><a href="#problem-section" class="nav-link" data-i18n-en="How Japan Sorts" data-i18n-ja="日本の分別ルール">How Japan Sorts</a></li>
+        <li><a href="#scanner-section" class="nav-link" data-i18n-en="AI Scanner" data-i18n-ja="AIスキャナー">AI Scanner</a></li>
+        <li><a href="#schedule-section" class="nav-link" data-i18n-en="Ward Schedule" data-i18n-ja="収集カレンダー">Ward Schedule</a></li>
+        <li><a href="#map-section" class="nav-link" data-i18n-en="Drop-off Map" data-i18n-ja="回収マップ">Drop-off Map</a></li>
+        <li><a href="#rewards-section" class="nav-link" data-i18n-en="Eco Rewards" data-i18n-ja="エコ特典">Eco Rewards</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="nav-points-badge" id="nav-points-container" title="Your Eco Points">
+          <span class="points-sparkle">🌸</span>
+          <span class="user-eco-points-count">850</span>
+          <span>pts</span>
+        </div>
+        <button id="lang-toggle-btn" class="lang-btn" aria-label="Switch Language">
+          <span>🌐</span>
+          <strong>日本語</strong>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-toggle-btn" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       1. Hero Landing & Overview
+       ========================================================================== -->
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tagline">
+              <span>🎌</span>
+              <span data-i18n-en="Japan's 1st Computer Vision Waste Classifier" data-i18n-ja="日本標準対応 • 画像認識ごみ分別アシスタント">Japan's 1st Computer Vision Waste Classifier</span>
+            </div>
+            <h1 class="hero-headline">
+              <span data-i18n-en="Never Get Confused by" data-i18n-ja="もう迷わない！">Never Get Confused by</span><br>
+              <span class="highlight-red" data-i18n-en="Japanese Waste Rules" data-i18n-ja="日本の厳しいごみ分別">Japanese Waste Rules</span>
+            </h1>
+            <p class="hero-desc" data-i18n-en="Snap a photo of any item or bento box. Our AI instantly segments components, matches your Tokyo municipal ward rules, displays step-by-step preparation, and rewards you with real local perks." data-i18n-ja="写真を撮るだけでAIが素材を自動分解し、各自治体の最新ルールに沿って正しい排出手順（水洗い・ラベル剥がし・指定袋）をわかりやすく案内します。">
+              Snap a photo of any item or bento box. Our AI instantly segments components, matches your Tokyo municipal ward rules, displays step-by-step preparation, and rewards you with real local perks.
+            </p>
+            <div class="hero-cta-group">
+              <button id="hero-scan-cta" class="btn btn-crimson">
+                <span>📸</span>
+                <span data-i18n-en="Start AI Waste Scan" data-i18n-ja="AIスキャンを開始する">Start AI Waste Scan</span>
+              </button>
+              <button id="hero-schedule-cta" class="btn btn-outline">
+                <span>📅</span>
+                <span data-i18n-en="Check Collection Days" data-i18n-ja="地域の収集日を確認">Check Collection Days</span>
+              </button>
+            </div>
+            <div class="hero-stats-row">
+              <div class="stat-item">
+                <span class="stat-number">45.2M</span>
+                <span class="stat-label" data-i18n-en="Tons Annual Waste in Japan" data-i18n-ja="日本の年間ごみ排出量 (トン)">Tons Annual Waste in Japan</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">34+</span>
+                <span class="stat-label" data-i18n-en="Sub-Categories in Municipalities" data-i18n-ja="自治体ごとの詳細分別区分">Sub-Categories in Municipalities</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98.5%</span>
+                <span class="stat-label" data-i18n-en="AI Recognition Accuracy" data-i18n-ja="AI分別判定の適合精度">AI Recognition Accuracy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Preview Showcase -->
+          <div class="hero-visual-card glass-card">
+            <div class="hero-seal-stamp" title="Japan Standard Verification Seal">
+              <span>日本</span>
+              <span>分別基準</span>
+              <span>適合</span>
+            </div>
+            <div class="hero-preview-scanner">
+              <div class="preview-scan-line"></div>
+              <div class="preview-target-icon">🍱</div>
+              <h3 style="font-size:1.15rem; color:var(--text-headline); margin-bottom:4px;" data-i18n-en="Live Recognition AI Active" data-i18n-ja="リアルタイムAI画像解析稼働中">Live Recognition AI Active</h3>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:12px;" data-i18n-en="Multi-part decomposition: Tray + Lid + Chopsticks" data-i18n-ja="パーツ自動分離：容器本体＋フタ＋割り箸">Multi-part decomposition: Tray + Lid + Chopsticks</p>
+              <div class="preview-tags-row">
+                <span class="preview-tag" style="background:#fff0f3; color:#ff4d6d; border:1px solid #ff4d6d40;">♻️ プラ (Plastic)</span>
+                <span class="preview-tag" style="background:#ffe5ec; color:#e63946; border:1px solid #e6394640;">🥬 可燃 (Burnable)</span>
+                <span class="preview-tag" style="background:#e0f2fe; color:#0077b6; border:1px solid #0077b640;">🧴 PET (Bottle)</span>
+              </div>
+            </div>
+            <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; font-weight:700; color:var(--crimson-dark);" data-i18n-en="🌸 Sakura Blossom Level:" data-i18n-ja="🌸 桜の開花状況:">🌸 Sakura Blossom Level:</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--primary-red);" id="hero-tree-quick-stage">85% Blooming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Problem Statement & Japan Waste Management System
+         ========================================================================== -->
+    <section class="section" id="problem-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n-en="THE CHALLENGE & THE SYSTEM" data-i18n-ja="課題と日本の廃棄物管理">THE CHALLENGE & THE SYSTEM</span>
+          <h2 class="section-title" data-i18n-en="Why Sorting in Japan is Unique & Complex" data-i18n-ja="なぜ日本のゴミ分別はこれほど厳格なのか？">Why Sorting in Japan is Unique & Complex</h2>
+          <p class="section-subtitle" data-i18n-en="Japan is celebrated globally for clean streets, but navigating 8 distinct categories, municipal designated bags, and crow prevention can be overwhelming for residents and travelers alike." data-i18n-ja="街の美しさの裏には徹底した住民の分別努力があります。しかし、区ごとの違いや細かい下準備ルールに戸惑う方も少なくありません。">
+            Japan is celebrated globally for clean streets, but navigating 8 distinct categories, municipal designated bags, and crow prevention can be overwhelming for residents and travelers alike.
+          </p>
+        </div>
+
+        <div class="problem-solution-grid">
+          <div class="problem-card glass-card">
+            <span class="problem-card-number">01</span>
+            <div class="problem-card-icon">⚠️</div>
+            <h3 class="problem-card-title" data-i18n-en="The Confusion & Penalties" data-i18n-ja="分別の混乱とトラブル">The Confusion & Penalties</h3>
+            <p class="problem-card-desc" data-i18n-en="One piece of contaminated plastic can cause municipal collectors to place a red rejection sticker on your bag. Landlords issue warnings, and improper hazardous disposal (like lithium batteries) sparks garbage truck fires." data-i18n-ja="油汚れの残ったプラスチックや電池の混入は回収拒否や収集車の火災事故に直結します。正しい知識がないと近隣トラブルの原因にも。">
+              One piece of contaminated plastic can cause municipal collectors to place a red rejection sticker on your bag. Landlords issue warnings, and improper hazardous disposal (like lithium batteries) sparks garbage truck fires.
+            </p>
+          </div>
+
+          <div class="problem-card glass-card">
+            <span class="problem-card-number">02</span>
+            <div class="problem-card-icon">🏛️</div>
+            <h3 class="problem-card-title" data-i18n-en="How Japan Manages Waste" data-i18n-ja="日本の4大基本分別体系">How Japan Manages Waste</h3>
+            <p class="problem-card-desc" data-i18n-en="Japan separates waste into 4 core pillars: Combustible (Moeru), Non-Combustible (Moenai), Recyclable Resources (Shigen), and Large Bulky Items (Sodai Gomi), each with specific morning collection windows." data-i18n-ja="可燃ごみ（もえる）、不燃ごみ（もえない）、資源ごみ（プラ・ペット・缶・びん・古紙）、粗大ごみの4体系で循環型社会を実現しています。">
+              Japan separates waste into 4 core pillars: Combustible (Moeru), Non-Combustible (Moenai), Recyclable Resources (Shigen), and Large Bulky Items (Sodai Gomi), each with specific morning collection windows.
+            </p>
+          </div>
+
+          <div class="problem-card glass-card">
+            <span class="problem-card-number">03</span>
+            <div class="problem-card-icon">💡</div>
+            <h3 class="problem-card-title" data-i18n-en="Our Smart AI Solution" data-i18n-ja="GomiGuide AIによる解決策">Our Smart AI Solution</h3>
+            <p class="problem-card-desc" data-i18n-en="GomiGuide AI bridges the gap: instantly scan multi-material products, receive step-by-step visual preparation checklists, sync with your exact ward schedule, and earn redeemable Eco-Points!" data-i18n-ja="最新のAI視覚認識で瞬時に素材を特定し、水洗いや分別手順を解説。お住まいの自治体日程と連動し、正しく分別するたびにポイントが貯まります。">
+              GomiGuide AI bridges the gap: instantly scan multi-material products, receive step-by-step visual preparation checklists, sync with your exact ward schedule, and earn redeemable Eco-Points!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. AI Waste Scanner & Multi-Mode Input Hub
+         ========================================================================== -->
+    <section class="section" id="scanner-section">
+      <div class="container">
+        <div class="scanner-section-container glass-card">
+          <div class="section-header" style="margin-bottom:32px;">
+            <span class="section-badge" data-i18n-en="STEP 2 & 3: SCAN & CLASSIFY" data-i18n-ja="ステップ 2 & 3: スキャンとAI判定">STEP 2 & 3: SCAN & CLASSIFY</span>
+            <h2 class="section-title" data-i18n-en="Identify Waste in Seconds" data-i18n-ja="AIで瞬時にごみを識別・判定">Identify Waste in Seconds</h2>
+            <p class="section-subtitle" data-i18n-en="Snap a photo with your phone camera, upload an image, click a sample Japanese item, or type an item name below." data-i18n-ja="カメラでの写真撮影、画像アップロード、検索入力、または代表的な日本のサンプル品からお選びください。">
+              Snap a photo with your phone camera, upload an image, click a sample Japanese item, or type an item name below.
+            </p>
+          </div>
+
+          <div class="scanner-modes-wrapper">
+            <!-- Left Mode: Dropzone & Camera Live View -->
+            <div class="scanner-dropzone-box" id="upload-dropzone">
+              <input type="file" id="file-input" accept="image/*" style="display:none;">
+              <video id="camera-video" playsinline></video>
+              <canvas id="camera-canvas" style="display:none;"></canvas>
+              <img id="preview-image" alt="Scanned item preview">
+
+              <!-- Scanner HUD Animation Overlay -->
+              <div class="scan-overlay-layer" id="scan-overlay">
+                <div class="laser-scan-line"></div>
+                <div class="hud-reticle-box" id="scan-hud">
+                  <div class="hud-corner hud-tl"></div>
+                  <div class="hud-corner hud-tr"></div>
+                  <div class="hud-corner hud-bl"></div>
+                  <div class="hud-corner hud-br"></div>
+                  <div class="hud-scan-text" id="scan-status-text">Analyzing Japanese waste composition...</div>
+                  <div class="hud-progress-wrap">
+                    <div class="hud-progress-fill" id="scan-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Default Dropzone Content -->
+              <div class="dropzone-idle-content">
+                <div class="dropzone-icon">📷</div>
+                <h3 class="dropzone-title" data-i18n-en="Take Photo or Drag & Drop" data-i18n-ja="写真を撮るか画像をドロップ">Take Photo or Drag & Drop</h3>
+                <p class="dropzone-subtitle" data-i18n-en="Supports JPG, PNG, WebP • Auto-detects Japanese recycling marks (プラ, PET, 缶)" data-i18n-ja="プラ・PET・缶・不燃マークをAIが自動検出します">Supports JPG, PNG, WebP • Auto-detects Japanese recycling marks (プラ, PET, 缶)</p>
+                <div class="dropzone-btn-group">
+                  <button type="button" id="camera-start-btn" class="dropzone-btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <span data-i18n-en="Open Camera" data-i18n-ja="カメラ起動">Open Camera</span>
+                  </button>
+                  <button type="button" id="camera-snap-btn" class="dropzone-btn-primary" style="display:none; background:#2e7d32;">
+                    <span>📸</span>
+                    <span data-i18n-en="Capture" data-i18n-ja="撮影">Capture</span>
+                  </button>
+                  <button type="button" class="dropzone-btn-secondary">
+                    <span>📁</span>
+                    <span data-i18n-en="Browse Files" data-i18n-ja="ファイル選択">Browse Files</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Mode: Smart Autocomplete Search & Category Filter -->
+            <div class="scanner-search-panel glass-card">
+              <div>
+                <h3 class="panel-title" data-i18n-en="Or Search by Item Name" data-i18n-ja="または品名・キーワードで検索">Or Search by Item Name</h3>
+                <p class="panel-desc" data-i18n-en="Over 120+ common Japanese items cataloged with official sorting rules." data-i18n-ja="120品目以上の日本の家庭ごみ・包装資材データを即座に検索できます。">Over 120+ common Japanese items cataloged with official sorting rules.</p>
+                
+                <div class="search-box-wrapper">
+                  <span class="search-icon-inside">🔍</span>
+                  <input type="text" id="search-query-input" class="search-input-field" 
+                    placeholder="e.g., Bento box, PET bottle, Umbrella, Natto, Battery..." 
+                    data-i18n-placeholder-en="e.g., Bento box, PET bottle, Umbrella, Natto, Battery..."
+                    data-i18n-placeholder-ja="例：弁当容器、ペットボトル、ビニール傘、納豆パック、電池...">
+                  <div class="search-suggestions-box" id="search-suggestions"></div>
+                </div>
+
+                <div class="quick-categories-wrap">
+                  <div class="quick-cats-label" data-i18n-en="Common Japanese Categories:" data-i18n-ja="日本の主要ごみ区分:">Common Japanese Categories:</div>
+                  <div class="category-chips-row">
+                    <span class="category-chip" style="background:#ffe5ec; color:#e63946;">🥬 可燃 (Burnable)</span>
+                    <span class="category-chip" style="background:#fff0f3; color:#ff4d6d;">♻️ 資源プラ (Plastic)</span>
+                    <span class="category-chip" style="background:#e0f2fe; color:#0077b6;">🧴 ペットボトル (PET)</span>
+                    <span class="category-chip" style="background:#fef3c7; color:#f77f00;">🥫 缶 (Cans)</span>
+                    <span class="category-chip" style="background:#e8f5e9; color:#2a9d8f;">🍾 びん (Glass)</span>
+                    <span class="category-chip" style="background:#f8f9fa; color:#6c757d;">🧊 不燃 (Non-Burnable)</span>
+                    <span class="category-chip" style="background:#ffe3e3; color:#d90429;">🔋 有害 (Hazardous)</span>
+                    <span class="category-chip" style="background:#fae1dd; color:#590d22;">🛋️ 粗大 (Bulky)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:20px; font-size:0.8rem; color:var(--text-muted); border-top:1px solid rgba(230,57,70,0.1); padding-top:12px;">
+                💡 <span data-i18n-en="Pro-Tip: Click any preset below to instantly see AI component breakdown & instructions." data-i18n-ja="ヒント: 下のサンプルをクリックすると、AIによる構成パーツ分解と排出手順がすぐに確認できます。">Pro-Tip: Click any preset below to instantly see AI component breakdown & instructions.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preset Quick-Test Sample Library -->
+          <div class="preset-section-wrapper">
+            <div class="preset-heading-group">
+              <h3 class="preset-title" data-i18n-en="⚡ Quick-Test Real Japanese Waste Samples" data-i18n-ja="⚡ 代表的な日本の廃棄物サンプルですぐにテスト">⚡ Quick-Test Real Japanese Waste Samples</h3>
+              <span class="preset-badge-count" data-i18n-en="8 Ready Presets" data-i18n-ja="8種類のサンプル">8 Ready Presets</span>
+            </div>
+            <div class="preset-grid-layout" id="preset-grid">
+              <!-- Dynamically rendered via ai-classifier.js -->
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+               3 & 4. AI Classification & Step-by-Step Instructions Container
+               ========================================================================== -->
+          <div id="classification-result">
+            <!-- Dynamic Result Card injected by ai-classifier.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. Municipal Collection Schedule
+         ========================================================================== -->
+    <section class="schedule-section-wrap" id="schedule-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n-en="STEP 5: COLLECTION SCHEDULE" data-i18n-ja="ステップ 5: 自治体別ごみ収集カレンダー">STEP 5: COLLECTION SCHEDULE</span>
+          <h2 class="section-title" data-i18n-en="When & How to Put Out Waste" data-i18n-ja="地域ごとの収集曜日とルール">When & How to Put Out Waste</h2>
+          <p class="section-subtitle" data-i18n-en="Select your Tokyo ward or municipality to view official weekly pickup schedules, countdown to the next morning collection, and crow protection netting rules." data-i18n-ja="お住まいの地域を選択すると、曜日ごとの収集スケジュール、次回収集までのカウントダウン、防鳥ネットの出し方が表示されます。">
+            Select your Tokyo ward or municipality to view official weekly pickup schedules, countdown to the next morning collection, and crow protection netting rules.
+          </p>
+        </div>
+
+        <div class="ward-picker-header glass-card">
+          <div class="ward-picker-left">
+            <label for="ward-select" class="ward-label">📍 <span data-i18n-en="Select Municipality / Ward:" data-i18n-ja="お住まいの自治体・区を選択:">Select Municipality / Ward:</span></label>
+            <select id="ward-select" class="ward-dropdown">
+              <option value="shibuya">Tokyo - Shibuya Ward (渋谷区)</option>
+              <option value="shinjuku">Tokyo - Shinjuku Ward (新宿区)</option>
+              <option value="minato">Tokyo - Minato Ward (港区)</option>
+              <option value="osaka_kita">Osaka City - Kita Ward (大阪市北区)</option>
+              <option value="kyoto_nakagyo">Kyoto City - Nakagyo Ward (京都市中京区)</option>
+            </select>
+          </div>
+          <div class="countdown-timer-box" id="next-pickup-countdown">
+            <span class="countdown-badge">🔥 Next Collection in:</span>
+            <span class="countdown-digits">07h 45m 20s</span>
+          </div>
+        </div>
+
+        <div class="schedule-rules-bar">
+          <div class="rule-alert-card rule-bag">
+            <span>🛍️</span>
+            <div>
+              <strong data-i18n-en="Bag Policy:" data-i18n-ja="指定ごみ袋ルール:">Bag Policy:</strong>
+              <span id="schedule-bag-rule">Transparent or semi-transparent bag (max 45L). No mandatory paid bags for general household sorting.</span>
+            </div>
+          </div>
+          <div class="rule-alert-card rule-net">
+            <span>🦅</span>
+            <div>
+              <strong data-i18n-en="Morning Placement & Crow Netting:" data-i18n-ja="朝の排出時刻と防鳥ネット:">Morning Placement & Crow Netting:</strong>
+              <span id="schedule-net-rule">Must cover burnable trash bags with yellow crow protection nets before 8:00 AM.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-grid-cards" id="schedule-grid-container">
+          <!-- Dynamically rendered via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. Nearby Disposal Points (Interactive Leaflet Map)
+         ========================================================================== -->
+    <section class="map-section-wrap" id="map-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n-en="STEP 6: DROP-OFF POINTS" data-i18n-ja="ステップ 6: 近くの回収拠点マップ">STEP 6: DROP-OFF POINTS</span>
+          <h2 class="section-title" data-i18n-en="Find Nearest Disposal Hubs" data-i18n-ja="コンビニ・スーパー・家電量販店の回収拠点">Find Nearest Disposal Hubs</h2>
+          <p class="section-subtitle" data-i18n-en="Need to drop off PET bottles at 7-Eleven, return clean food trays at Life Supermarket, or safely recycle batteries at Bic Camera? Explore interactive drop-off points." data-i18n-ja="コンビニのPET・缶回収BOX、スーパーの白色トレイ・紙パック回収、家電量販店のリチウム電池・小型家電回収BOXの場所を地図で確認できます。">
+            Need to drop off PET bottles at 7-Eleven, return clean food trays at Life Supermarket, or safely recycle batteries at Bic Camera? Explore interactive drop-off points.
+          </p>
+        </div>
+
+        <div class="map-filter-bar">
+          <button class="map-filter-btn active" data-filter="all" data-i18n-en="✨ All Locations" data-i18n-ja="✨ 全ての回収場所">✨ All Locations</button>
+          <button class="map-filter-btn" data-filter="combini" data-i18n-en="🏪 Convenience Stores (7-11/Lawson)" data-i18n-ja="🏪 コンビニ店頭 (7-11/ローソン)">🏪 Convenience Stores (7-11/Lawson)</button>
+          <button class="map-filter-btn" data-filter="supermarket" data-i18n-en="🛒 Supermarkets (Trays & Cartons)" data-i18n-ja="🛒 スーパー (トレイ・紙パック)">🛒 Supermarkets (Trays & Cartons)</button>
+          <button class="map-filter-btn" data-filter="ewaste" data-i18n-en="🔋 E-Waste & Battery Hubs" data-i18n-ja="🔋 家電量販店・有害電池">🔋 E-Waste & Battery Hubs</button>
+          <button class="map-filter-btn" data-filter="bulky" data-i18n-en="🛋️ Bulky (Sodai Gomi) Depots" data-i18n-ja="🛋️ 粗大ごみ持ち込みセンター">🛋️ Bulky (Sodai Gomi) Depots</button>
+        </div>
+
+        <div class="map-layout-grid">
+          <div id="disposal-map-container"></div>
+          <div class="map-locations-sidebar" id="map-locations-list">
+            <!-- Dynamically populated via map.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. Smart Notifications Center
+         ========================================================================== -->
+    <section class="notifications-section-wrap" id="notifications-section">
+      <div class="container">
+        <div class="notification-hub-card glass-card">
+          <div class="notif-hub-left">
+            <span class="section-badge" data-i18n-en="STEP 7: SMART ALERTS" data-i18n-ja="ステップ 7: スマート通知・リマインダー">STEP 7: SMART ALERTS</span>
+            <h3 data-i18n-en="Never Miss Collection Morning" data-i18n-ja="前夜と当朝のスマート通知で出し忘れ防止">Never Miss Collection Morning</h3>
+            <p data-i18n-en="GomiGuide AI sends timely alerts based on your ward schedule: evening preparation reminders, morning 8:00 AM collection calls, and weather alerts against crow interference." data-i18n-ja="明日のプラごみリマインダー、粗大ごみ回収日程、台風接近時のカラス除けネット注意報などをタイムリーにお届けします。">
+              GomiGuide AI sends timely alerts based on your ward schedule: evening preparation reminders, morning 8:00 AM collection calls, and weather alerts against crow interference.
+            </p>
+            <div class="notif-presets-list">
+              <div class="notif-sample-box">
+                <div class="notif-sample-title">🔔 <span data-i18n-en="Evening 20:00 Prep Reminder" data-i18n-ja="前日 20:00 の準備リマインダー">Evening 20:00 Prep Reminder</span></div>
+                <div style="font-size:0.8rem; color:var(--text-muted);" data-i18n-en="'Tomorrow is Plastic recycling day. Please rinse bento containers.'" data-i18n-ja="「明日は資源プラスチックの日です。弁当容器は水洗いしておきましょう」">'Tomorrow is Plastic recycling day. Please rinse bento containers.'</div>
+              </div>
+              <div class="notif-sample-box">
+                <div class="notif-sample-title">🦅 <span data-i18n-en="Morning Crow & Netting Alert" data-i18n-ja="当日 7:30 の防鳥ネット警告">Morning Crow & Netting Alert</span></div>
+                <div style="font-size:0.8rem; color:var(--text-muted);" data-i18n-en="'Heavy crow activity reported in Shibuya. Fasten yellow net securely.'" data-i18n-ja="「カラス注意報：黄色い防鳥ネットの端におもりを載せて隙間を塞いでください」">'Heavy crow activity reported in Shibuya. Fasten yellow net securely.'</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notif-actions-panel">
+            <h4 style="color:var(--text-headline); font-size:1.1rem; margin-bottom:8px;" data-i18n-en="Simulate Smart Notification" data-i18n-ja="スマート通知をシミュレーション">Simulate Smart Notification</h4>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;" data-i18n-en="Experience the real-time audio chime and floating push alert." data-i18n-ja="通知音とアラートトーストを即座に体験できます。">Experience the real-time audio chime and floating push alert.</p>
+            <button id="trigger-sample-notification-btn" class="btn-notif-trigger">
+              <span>🔔</span>
+              <span data-i18n-en="Send Test Smart Notification" data-i18n-ja="テスト通知を送信（チャイム付き）">Send Test Smart Notification</span>
+            </button>
+            <button id="request-push-perm-btn" class="btn-notif-perm">
+              <span data-i18n-en="Enable Browser Notifications" data-i18n-ja="ブラウザ通知を許可する">Enable Browser Notifications</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. Gamification, Dynamic Sakura Tree & Eco Rewards
+         ========================================================================== -->
+    <section class="gamification-section-wrap" id="rewards-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n-en="STEP 8: GAMIFICATION & REWARDS" data-i18n-ja="ステップ 8: ゲーミフィケーション & 特典">STEP 8: GAMIFICATION & REWARDS</span>
+          <h2 class="section-title" data-i18n-en="Grow Your Sakura & Earn Real Perks" data-i18n-ja="桜の木を育てて地域特典をゲット">Grow Your Sakura & Earn Real Perks</h2>
+          <p class="section-subtitle" data-i18n-en="Earn +50 Eco Points each time you correctly sort waste. Watch your digital Sakura Tree bloom, unlock samurai badges, help your ward climb the leaderboard, and redeem convenience store rewards!" data-i18n-ja="正しく分別するたびに+50ポイント獲得。画面上の桜の木が満開になり、コンビニコーヒーや指定ごみ袋などの引換券と交換できます。">
+            Earn +50 Eco Points each time you correctly sort waste. Watch your digital Sakura Tree bloom, unlock samurai badges, help your ward climb the leaderboard, and redeem convenience store rewards!
+          </p>
+        </div>
+
+        <div class="gamification-hub-grid">
+          <!-- Left: Living Sakura Tree Dynamic Canvas -->
+          <div class="sakura-tree-showcase-card glass-card">
+            <div class="tree-card-header">
+              <h4 style="font-size:1.15rem; color:var(--text-headline); font-weight:800;" data-i18n-en="🌸 Your Living Sakura Tree" data-i18n-ja="🌸 あなたの桜の木">🌸 Your Living Sakura Tree</h4>
+              <span class="tree-growth-pill" id="tree-growth-status">70% Blooming 🌸</span>
+            </div>
+            
+            <div id="sakura-tree-container">
+              <!-- Dynamically rendered SVG by gamification.js -->
+            </div>
+
+            <div class="tree-eco-stats-bar">
+              <div class="tree-stat-box">
+                <div class="tree-stat-num user-eco-points-count">850</div>
+                <div class="tree-stat-label" data-i18n-en="Total Eco Points" data-i18n-ja="保有エコポイント">Total Eco Points</div>
+              </div>
+              <div class="tree-stat-box">
+                <div class="tree-stat-num" id="user-level-badge">Lv.4 Eco Citizen</div>
+                <div class="tree-stat-label" data-i18n-en="Eco Rank" data-i18n-ja="エコ市民ランク">Eco Rank</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Badges & Ward Leaderboard -->
+          <div class="badges-leaderboard-card glass-card">
+            <div class="badge-grid-wrapper">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="font-size:1.1rem; color:var(--text-headline); font-weight:800;" data-i18n-en="🏆 Waste Mastery Badges" data-i18n-ja="🏆 獲得バッジコレクション">🏆 Waste Mastery Badges</h4>
+                <span style="font-size:0.78rem; font-weight:700; color:var(--crimson-dark);" data-i18n-en="3 of 5 Unlocked" data-i18n-ja="3/5 達成">3 of 5 Unlocked</span>
+              </div>
+              <div class="badges-grid-layout" id="badges-grid">
+                <!-- Dynamically rendered via gamification.js -->
+              </div>
+            </div>
+
+            <div style="border-top:1px solid rgba(230,57,70,0.12); padding-top:20px;">
+              <h4 style="font-size:1.1rem; color:var(--text-headline); font-weight:800; margin-bottom:8px;" data-i18n-en="🥇 Tokyo Ward Leaderboard" data-i18n-ja="🥇 自治体・区対抗リーダーボード">🥇 Tokyo Ward Leaderboard</h4>
+              <div class="leaderboard-list-wrap" id="leaderboard-list">
+                <!-- Injected via gamification.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redeemable Rewards Catalog -->
+        <div class="rewards-catalog-wrapper">
+          <div style="text-align:center; margin-bottom:20px;">
+            <h3 style="font-size:1.5rem; font-weight:800; color:var(--text-headline);" data-i18n-en="🎁 Redeem Your Eco-Points" data-i18n-ja="🎁 エコポイント交換カタログ">🎁 Redeem Your Eco-Points</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted);" data-i18n-en="Sponsored by Japanese convenience stores and Tokyo municipal eco councils." data-i18n-ja="提携コンビニ各社および東京都環境局協力のクーポン一覧です。">Sponsored by Japanese convenience stores and Tokyo municipal eco councils.</p>
+          </div>
+          <div class="rewards-grid-layout" id="rewards-catalog-grid">
+            <!-- Injected via gamification.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Voucher Redemption Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="voucher-modal">
+    <div class="voucher-modal-card animate-scale-up">
+      <button class="modal-close-btn">&times;</button>
+      <div style="font-size:42px; margin-bottom:12px;">🎉</div>
+      <h3 class="voucher-title" style="font-size:1.25rem; font-weight:800; color:var(--text-headline); margin-bottom:8px;">Reward Claimed!</h3>
+      <p class="voucher-desc" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Present this barcode at 7-Eleven or Lawson cashier.</p>
+      <div class="voucher-barcode">
+        <div class="barcode-lines">||||| | |||| || |||||| | |||</div>
+        <div class="voucher-code">GOMI-711-8942</div>
+      </div>
+      <p style="font-size:0.75rem; color:var(--crimson-dark); font-weight:700;">Valid for 30 Days across Japan</p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>🌸 GomiGuide AI (スマート分別 AI)</h4>
+          <p data-i18n-en="A modern, AI-powered Smart Garbage and Recycling platform designed for Japan. Empowering residents, international travelers, and communities to maintain zero-waste excellence." data-i18n-ja="日本の厳しいごみ分別をAI技術でわかりやすくサポート。市民・外国人住民・観光客の皆さまと共に、循環型社会と清潔な日本の街並みを創ります。">
+            A modern, AI-powered Smart Garbage and Recycling platform designed for Japan. Empowering residents, international travelers, and communities to maintain zero-waste excellence.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n-en="Separation Pillars" data-i18n-ja="分別カテゴリー">Separation Pillars</h5>
+          <ul class="footer-links">
+            <li><a href="#scanner-section">🥬 Burnable (可燃ごみ)</a></li>
+            <li><a href="#scanner-section">♻️ Plastic (プラマーク)</a></li>
+            <li><a href="#scanner-section">🧴 PET Bottles (PET)</a></li>
+            <li><a href="#scanner-section">🥫 Cans & Bottles (缶・びん)</a></li>
+            <li><a href="#scanner-section">🔋 Hazardous (有害ごみ)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n-en="Wards Supported" data-i18n-ja="対応自治体">Wards Supported</h5>
+          <ul class="footer-links">
+            <li><a href="#schedule-section">Tokyo Shibuya Ward (渋谷区)</a></li>
+            <li><a href="#schedule-section">Tokyo Shinjuku Ward (新宿区)</a></li>
+            <li><a href="#schedule-section">Tokyo Minato Ward (港区)</a></li>
+            <li><a href="#schedule-section">Osaka City (大阪市北区)</a></li>
+            <li><a href="#schedule-section">Kyoto City (京都市中京区)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n-en="Eco Gamification" data-i18n-ja="エコ特典">Eco Gamification</h5>
+          <ul class="footer-links">
+            <li><a href="#rewards-section">🌸 Sakura Tree Tracker</a></li>
+            <li><a href="#rewards-section">🏆 Zero-Waste Badges</a></li>
+            <li><a href="#rewards-section">🥇 Ward Leaderboards</a></li>
+            <li><a href="#rewards-section">🎁 Convenience Store Vouchers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GomiGuide AI Japan • Built with Modern Web Standards & Computer Vision Engine • Clean Nippon Initiative</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS for Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Main Application Script (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
