@@ -4,6 +4,16 @@ import { ClerkProvider, useUser } from '@clerk/clerk-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import QuizHome from './pages/QuizHome';
+import QuizPage from './pages/QuizPage';
+import QuizResult from './pages/QuizResult';
+import PuzzleHome from './pages/PuzzleHome';
+import GarbagePuzzle from './pages/GarbagePuzzle';
+import MannersGame from './pages/MannersGame';
+import PackingGame from './pages/PackingGame';
+import SurvivalMission from './pages/SurvivalMission';
+import MemoryGame from './pages/MemoryGame';
+import CultureGame from './pages/CultureGame';
 import './index.css';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -57,8 +67,17 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/lifestyle" element={<div style={{padding: '8rem 2rem', textAlign: 'center'}}>Lifestyle</div>} />
-            <Route path="/quiz" element={<div style={{padding: '8rem 2rem', textAlign: 'center'}}>Quiz</div>} />
-            <Route path="/garbage-collection" element={<div style={{padding: '8rem 2rem', textAlign: 'center'}}>Garbage Collection</div>} />
+            <Route path="/quiz" element={<QuizHome />} />
+            <Route path="/quiz/:level" element={<QuizPage />} />
+            <Route path="/quiz/result" element={<QuizResult />} />
+            <Route path="/puzzles" element={<PuzzleHome />} />
+            <Route path="/puzzles/garbage" element={<GarbagePuzzle />} />
+            <Route path="/puzzles/manners" element={<MannersGame />} />
+            <Route path="/puzzles/packing" element={<PackingGame />} />
+            <Route path="/puzzles/survival" element={<SurvivalMission />} />
+            <Route path="/puzzles/memory" element={<MemoryGame />} />
+            <Route path="/puzzles/culture" element={<CultureGame />} />
+            <Route path="/garbage-collection" element={<GarbagePuzzle />} />
           </Routes>
           <Footer />
         </div>

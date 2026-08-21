@@ -24,8 +24,8 @@ const Navbar = () => {
         <div className="flex gap-8 items-center">
           <Link to="/" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/')}`}>Home</Link>
           <Link to="/lifestyle" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/lifestyle')}`}>Lifestyle</Link>
-          <Link to="/quiz" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/quiz')}`}>Quiz</Link>
-          <Link to="/garbage-collection" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/garbage-collection')}`}>Garbage Collection</Link>
+          <Link to="/learn-japanese" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/quiz')}`}>Learn Japanese</Link>
+          <Link to="/puzzles" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/puzzles')}`}>Puzzles</Link>
         </div>
 
         <div className="flex gap-4 items-center">
