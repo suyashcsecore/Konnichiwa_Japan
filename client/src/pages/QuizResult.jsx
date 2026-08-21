@@ -112,7 +112,10 @@ function QuizResult() {
 
           <button
             className="home-button"
-            onClick={() => navigate("/")}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              navigate("/");
+            }}
           >
             <Home size={18} />
             Home

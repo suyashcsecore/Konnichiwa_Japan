@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import QuizHome from './pages/QuizHome';
 import QuizPage from './pages/QuizPage';
 import QuizResult from './pages/QuizResult';
+import Lifestyle from './pages/Lifestyle';
 import PuzzleHome from './pages/PuzzleHome';
 import GarbagePuzzle from './pages/GarbagePuzzle';
 import MannersGame from './pages/MannersGame';
@@ -66,7 +67,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/lifestyle" element={<div style={{padding: '8rem 2rem', textAlign: 'center'}}>Lifestyle</div>} />
+            <Route path="/lifestyle" element={<Lifestyle />} />
             <Route path="/learn-japanese" element={<QuizHome />} />
             <Route path="/learn-japanese/:level" element={<QuizPage />} />
             <Route path="/learn-japanese/result" element={<QuizResult />} />
