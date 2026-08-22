@@ -8,19 +8,19 @@ function QuizHome() {
     {
       id: "beginner",
       title: "Beginner",
-      description: "Learn the basics of Japanese culture and daily life.",
+      description: "Test Your Basic Hiragana And Katakana Skills.",
       icon: "🟢"
     },
     {
       id: "intermediate",
       title: "Intermediate",
-      description: "Test your knowledge of life and etiquette in Japan.",
+      description: "Test your knowledge of Japanese Vocabulary and Basic Kanji.",
       icon: "🟡"
     },
     {
       id: "pro",
       title: "Pro",
-      description: "Challenge yourself with advanced Japan-life questions.",
+      description: "Challenge yourself with Sentences and Some Kanji",
       icon: "🔴"
     }
   ];
