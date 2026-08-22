@@ -211,11 +211,218 @@ const beginnerQuestions = [
   }
 ];
 
-const intermediateQuestions = beginnerQuestions.map((question, index) => ({
-  ...question,
-  id: index + 1,
-  question: `Lorem ipsum dolor sit amet, intermediate question ${index + 1}?`
-}));
+const intermediateQuestions = [
+  {
+    id: 1,
+    question: "What is the correct pronunciation of たべもの?",
+    options: ["tabemono", "tabemona", "tatemono", "kobemono"],
+    answer: "tabemono",
+    explanation: "たべもの (食べ物) is pronounced 'tabemono' and means 'food'."
+  },
+  {
+    id: 2,
+    question: "What does でんしゃ mean?",
+    options: ["Bicycle", "Train", "Car", "Bus"],
+    answer: "Train",
+    explanation: "でんしゃ means 'train'."
+  },
+  {
+    id: 3,
+    question: "What is the correct pronunciation of スーパー?",
+    options: ["suupaa", "supa", "supara", "sūpae"],
+    answer: "suupaa",
+    explanation: "スーパー is pronounced 'suupaa' and means 'supermarket'."
+  },
+  {
+    id: 4,
+    question: "What does おいしい mean?",
+    options: ["Hot", "Delicious", "Expensive", "Small"],
+    answer: "Delicious",
+    explanation: "おいしい means 'delicious' or 'tasty'."
+  },
+  {
+    id: 5,
+    question: "What is the pronunciation of 山?",
+    options: ["yama", "kawa", "sora", "mori"],
+    answer: "yama",
+    explanation: "山 is pronounced 'yama' and means 'mountain'."
+  },
+  {
+    id: 6,
+    question: "What does きょう mean?",
+    options: ["Tomorrow", "Yesterday", "Today", "Morning"],
+    answer: "Today",
+    explanation: "きょう means 'today'."
+  },
+  {
+    id: 7,
+    question: "What is the correct pronunciation of こうえん?",
+    options: ["kouen", "kounen", "koen", "kouin"],
+    answer: "kouen",
+    explanation: "こうえん is pronounced 'kouen' and means 'park'."
+  },
+  {
+    id: 8,
+    question: "What does コーヒー mean?",
+    options: ["Tea", "Juice", "Coffee", "Water"],
+    answer: "Coffee",
+    explanation: "コーヒー means 'coffee'."
+  },
+  {
+    id: 9,
+    question: "What does 水 mean?",
+    options: ["Fire", "Water", "Mountain", "Tree"],
+    answer: "Water",
+    explanation: "水 is pronounced 'mizu' and means 'water'."
+  },
+  {
+    id: 10,
+    question: "What is the correct pronunciation of せんせい?",
+    options: ["sensei", "sensai", "sensee", "senzei"],
+    answer: "sensei",
+    explanation: "せんせい is pronounced 'sensei' and means 'teacher'."
+  },
+  {
+    id: 11,
+    question: "What does みず mean?",
+    options: ["Milk", "Water", "Rice", "Soup"],
+    answer: "Water",
+    explanation: "みず means 'water'. The kanji is 水."
+  },
+  {
+    id: 12,
+    question: "What is the correct pronunciation of びょういん?",
+    options: ["byouin", "byouan", "biyouin", "byoin"],
+    answer: "byouin",
+    explanation: "びょういん is pronounced 'byouin' and means 'hospital'."
+  },
+  {
+    id: 13,
+    question: "What does たかい mean?",
+    options: ["Cheap", "High / Expensive", "Fast", "Quiet"],
+    answer: "High / Expensive",
+    explanation: "たかい can mean 'high' or 'expensive', depending on context."
+  },
+  {
+    id: 14,
+    question: "What is the pronunciation of 大?",
+    options: ["dai", "suki", "chiisai", "naka"],
+    answer: "dai",
+    explanation: "大 can be read 'dai' in words such as 大学. Its basic meaning is 'big' or 'large'."
+  },
+  {
+    id: 15,
+    question: "What does テレビ mean?",
+    options: ["Radio", "Television", "Computer", "Telephone"],
+    answer: "Television",
+    explanation: "テレビ means 'television' or 'TV'."
+  },
+  {
+    id: 16,
+    question: "What is the correct pronunciation of ともだち?",
+    options: ["tomodachi", "tomodaki", "tomotachi", "tomodate"],
+    answer: "tomodachi",
+    explanation: "ともだち is pronounced 'tomodachi' and means 'friend'."
+  },
+  {
+    id: 17,
+    question: "What does 人 mean?",
+    options: ["Person", "Woman", "Child", "Teacher"],
+    answer: "Person",
+    explanation: "人 is pronounced 'hito' and means 'person'."
+  },
+  {
+    id: 18,
+    question: "What does あたらしい mean?",
+    options: ["Old", "New", "Interesting", "Difficult"],
+    answer: "New",
+    explanation: "あたらしい means 'new'."
+  },
+  {
+    id: 19,
+    question: "What is the correct pronunciation of レストラン?",
+    options: ["resutoran", "resutoranto", "resutaran", "restoran"],
+    answer: "resutoran",
+    explanation: "レストラン is pronounced 'resutoran' and means 'restaurant'."
+  },
+  {
+    id: 20,
+    question: "What does しごと mean?",
+    options: ["School", "Work / Job", "Holiday", "House"],
+    answer: "Work / Job",
+    explanation: "しごと means 'work' or 'job'."
+  },
+  {
+    id: 21,
+    question: "What is the pronunciation of 日?",
+    options: ["hi", "mizu", "ki", "tsuki"],
+    answer: "hi",
+    explanation: "日 can be pronounced 'hi' and means 'sun' or 'day' in basic usage."
+  },
+  {
+    id: 22,
+    question: "What does えき mean?",
+    options: ["Station", "Airport", "School", "Store"],
+    answer: "Station",
+    explanation: "えき means 'station'."
+  },
+  {
+    id: 23,
+    question: "What is the correct pronunciation of くだもの?",
+    options: ["kudamono", "kudamona", "kukumomo", "kupamono"],
+    answer: "kudamono",
+    explanation: "くだもの is pronounced 'kudamono' and means 'fruit'."
+  },
+  {
+    id: 24,
+    question: "What does コンビニ mean?",
+    options: ["Convenience store", "Supermarket", "Restaurant", "Department store"],
+    answer: "Convenience store",
+    explanation: "コンビニ means 'convenience store'."
+  },
+  {
+    id: 25,
+    question: "What is the pronunciation of 川?",
+    options: ["kawa", "yama", "mizu", "sora"],
+    answer: "kawa",
+    explanation: "川 is pronounced 'kawa' and means 'river'."
+  },
+  {
+    id: 26,
+    question: "What does 早い mean?",
+    options: ["Late", "Early / Fast", "Slow", "Near"],
+    answer: "Early / Fast",
+    explanation: "早い(hayai) can mean 'early' or 'fast', depending on context."
+  },
+  {
+    id: 27,
+    question: "What is the correct pronunciation of きょうしつ?",
+    options: ["kyoushitsu", "knoushitsu", "kyousuru", "kyoushito"],
+    answer: "kyoushitsu",
+    explanation: "きょうしつ is pronounced 'kyoushitsu' and means 'classroom'."
+  },
+  {
+    id: 28,
+    question: "What does 月 mean?",
+    options: ["Sun", "Moon", "Mountain", "Rain"],
+    answer: "Moon",
+    explanation: "月 is pronounced 'tsuki' and means 'moon'."
+  },
+  {
+    id: 29,
+    question: "What is the correct pronunciation of ばんごはん?",
+    options: ["bangohan", "bangohon", "bangan", "banrgoan"],
+    answer: "bangohan",
+    explanation: "ばんごはん is pronounced 'bangohan' and means 'dinner'."
+  },
+  {
+    id: 30,
+    question: "What does 木 mean?",
+    options: ["Tree / Wood", "Flower", "Mountain", "Grass"],
+    answer: "Tree / Wood",
+    explanation: "木 is pronounced 'ki' and means 'tree' or 'wood'."
+  }
+];
 
 const proQuestions = beginnerQuestions.map((question, index) => ({
   ...question,
