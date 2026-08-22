@@ -8,7 +8,7 @@ const garbageRoutes = require('./routes/garbageRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+ 4
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
