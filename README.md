@@ -263,7 +263,7 @@ To run the project locally:
 git clone https://github.com/suyashcsecore/Konnichiwa_Japan.git
 
 # Enter the project
-cd Konnichiwa-Japan
+cd Konnichiwa_Japan
 
 # Install frontend dependencies
 cd client
