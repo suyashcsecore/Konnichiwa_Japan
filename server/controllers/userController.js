@@ -29,6 +29,31 @@ const syncUser = async (req, res) => {
   }
 };
 
+const updateCity = async (req, res) => {
+  try {
+    const { clerkId, city } = req.body;
+    if (!clerkId) {
+      return res.status(400).json({ error: 'Missing clerkId' });
+    }
+
+    const user = await User.findOneAndUpdate(
+      { clerkId },
+      { city },
+      { new: true }
+    );
+    
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json({ success: true, user });
+  } catch (error) {
+    console.error('Error updating city:', error);
+    res.status(500).json({ error: 'Failed to update city' });
+  }
+};
+
 module.exports = {
-  syncUser
+  syncUser,
+  updateCity
 };

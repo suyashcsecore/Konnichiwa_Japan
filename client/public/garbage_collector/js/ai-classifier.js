@@ -37,10 +37,16 @@ export class AIWasteClassifier {
   bindEvents() {
     // Camera trigger
     if (this.cameraStartBtn) {
-      this.cameraStartBtn.addEventListener('click', () => this.toggleCamera());
+      this.cameraStartBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleCamera();
+      });
     }
     if (this.cameraSnapBtn) {
-      this.cameraSnapBtn.addEventListener('click', () => this.captureSnapshot());
+      this.cameraSnapBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.captureSnapshot();
+      });
     }
 
     // Drag and Drop / File upload
@@ -370,12 +376,15 @@ export class AIWasteClassifier {
     if (this.scanProgressBar) this.scanProgressBar.style.width = '20%';
 
     try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const city = urlParams.get('city');
+
       const response = await fetch('/api/garbage/analyze', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ imageBase64 })
+        body: JSON.stringify({ imageBase64, city })
       });
 
       if (!response.ok) {
@@ -407,19 +416,26 @@ export class AIWasteClassifier {
             mark: categoryObj.symbol
           }
         ],
-        prepStepsEn: [
+        prepStepsEn: data.analyzed.instructionsEn 
+          ? [data.analyzed.instructionsEn]
+          : [
           `Identify category: ${categoryObj.nameEn} (${categoryObj.symbol}).`,
           `Inspect item for food contamination, liquid, or residue. Clean if necessary.`,
           `Verify municipal bag type: ${categoryObj.bagTypeEn}.`,
           `Put out during designated ${categoryObj.nameEn} collection window (${categoryObj.scheduleFrequency}).`
         ],
-        prepStepsJa: [
+        prepStepsJa: data.analyzed.instructionsJa
+          ? [data.analyzed.instructionsJa]
+          : [
           `分別区分：${categoryObj.nameJa}（マーク：${categoryObj.symbol}）`,
           `汚れや残液がある場合は水洗いして綺麗に落とします。`,
           `指定袋の確認：${categoryObj.bagTypeJa}`,
           `地域の収集日程（${categoryObj.scheduleFrequency}）の朝に指定集積所へ出します。`
         ],
         designatedBag: categoryObj.bagTypeEn,
+        collectionDay: data.analyzed.collectionDay || categoryObj.scheduleFrequency,
+        disposalMethod: data.analyzed.disposalMethod || 'Place in designated area',
+        specialBagRequired: data.analyzed.specialBagRequired ? 'Yes (Special Bag Required)' : 'No (Use standard transparent bag)',
         proTipEn: `Analyzed by Grok AI. Always follow local ward guidelines.`,
         proTipJa: `Grok AIによる解析です。地域の分別ルールを遵守してください。`
       };
@@ -556,9 +572,13 @@ export class AIWasteClassifier {
 
             <div class="bag-requirement-card" style="border-left: 4px solid ${category.color}">
               <div class="bag-title">
-                <span>🛍️</span> <strong>${isJa ? '指定収集袋・容器ルール' : 'Designated Bag / Bin Requirements'}</strong>
+                <span>🏙️</span> <strong>${isJa ? '自治体のルール' : 'City Rules'}</strong>
               </div>
-              <p class="bag-text">${isJa ? category.bagTypeJa : category.bagTypeEn}</p>
+              <p class="bag-text">
+                <strong>${isJa ? '収集日' : 'Collection Day'}:</strong> ${item.collectionDay || category.scheduleFrequency || 'N/A'}<br/>
+                <strong>${isJa ? '廃棄方法' : 'Disposal Method'}:</strong> ${item.disposalMethod || (isJa ? '指定集積所へ' : 'Place in designated area')}<br/>
+                <strong>${isJa ? '専用袋' : 'Special Bag'}:</strong> ${item.specialBagRequired || (isJa ? category.bagTypeJa : category.bagTypeEn) || 'N/A'}
+              </p>
             </div>
           </div>
 
@@ -588,19 +608,15 @@ export class AIWasteClassifier {
         </div>
 
         <div class="result-actions-footer">
-          <div class="reward-trigger-info">
-            <span class="reward-sparkle">✨</span>
-            <span>${isJa ? '正しく分別して +50 エコポイントを獲得！' : 'Earn +50 Eco Points for proper sorting!'}</span>
-          </div>
-          <div class="result-btn-group">
-            <button id="speak-instructions-btn" class="btn btn-secondary-action">
-              <span>🔊</span> <span>${isJa ? '音声案内 (日本語)' : 'Read Aloud'}</span>
+          <div class="result-btn-group" style="width: 100%; justify-content: space-between;">
+            <button id="copy-instructions-btn" class="btn btn-secondary-action">
+              <span>📋</span> <span id="copy-btn-text">${isJa ? 'ルールをコピー' : 'Copy Rules'}</span>
             </button>
             <button id="check-schedule-btn" class="btn btn-crimson-action">
-              <span>📅</span> <span>${isJa ? '地域のごみ収集日を確認' : 'View Collection Day'}</span>
+              <span>📅</span> <span>${isJa ? '地域のごみ収集日' : 'Collection Day'}</span>
             </button>
             <button id="find-dropoff-btn" class="btn btn-outline-action">
-              <span>📍</span> <span>${isJa ? '近くの回収BOX' : 'Nearby Drop-offs'}</span>
+              <span>📍</span> <span>${isJa ? '近くの回収BOX' : 'Drop-offs'}</span>
             </button>
           </div>
         </div>
@@ -611,10 +627,10 @@ export class AIWasteClassifier {
     this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     // Hook internal buttons
-    const speakBtn = document.getElementById('speak-instructions-btn');
-    if (speakBtn) {
-      speakBtn.addEventListener('click', () => {
-        this.speakInstructions(item, category);
+    const copyBtn = document.getElementById('copy-instructions-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        this.copyInstructions(item, category, copyBtn);
       });
     }
 
@@ -638,23 +654,24 @@ export class AIWasteClassifier {
     this.onClassificationComplete(item, category);
   }
 
-  speakInstructions(item, category) {
-    if (!('speechSynthesis' in window)) {
-      alert('Speech synthesis is not supported on this browser.');
-      return;
-    }
-    window.speechSynthesis.cancel();
-
+  copyInstructions(item, category, btnElement) {
     const isJa = this.currentLanguage === 'ja';
-    const textToSpeak = isJa
-      ? `判定結果は、${item.nameJa}です。区分は、${category.nameJa}です。${item.prepStepsJa.join('。')}`
-      : `Classification result: ${item.nameEn}. Category: ${category.nameEn}. Preparation steps: ${item.prepStepsEn.join('. ')}`;
+    const textToCopy = isJa
+      ? `品名: ${item.nameJa}\n区分: ${category.nameJa}\n\n【分別手順】\n${item.prepStepsJa.join('\n')}\n\n収集日: ${item.collectionDay || category.scheduleFrequency || 'N/A'}\n廃棄方法: ${item.disposalMethod || '指定集積所へ'}\n専用袋: ${item.specialBagRequired || category.bagTypeJa || 'N/A'}`
+      : `Item: ${item.nameEn}\nCategory: ${category.nameEn}\n\n[Preparation Steps]\n${item.prepStepsEn.join('\n')}\n\nCollection Day: ${item.collectionDay || category.scheduleFrequency || 'N/A'}\nDisposal Method: ${item.disposalMethod || 'Place in designated area'}\nSpecial Bag: ${item.specialBagRequired || category.bagTypeEn || 'N/A'}`;
 
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
-    utterance.lang = isJa ? 'ja-JP' : 'en-US';
-    utterance.rate = 1.0;
-    utterance.pitch = 1.0;
-    window.speechSynthesis.speak(utterance);
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      const textSpan = btnElement.querySelector('#copy-btn-text');
+      if (textSpan) {
+        const originalText = textSpan.innerText;
+        textSpan.innerText = isJa ? 'コピーしました！' : 'Copied!';
+        setTimeout(() => {
+          textSpan.innerText = originalText;
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
   }
 
   playBeepSound(freq = 520, duration = 0.08) {

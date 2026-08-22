@@ -30,6 +30,27 @@ const Navbar = () => {
         </div>
 
         <div className="flex gap-4 items-center">
+          <select 
+            className="border border-gray-300 rounded-md px-2 py-1 text-sm bg-white"
+            onChange={(e) => {
+              const city = e.target.value;
+              localStorage.setItem('selectedCity', city);
+              if (user) {
+                fetch('/api/users/city', {
+                  method: 'PUT',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ clerkId: user.id, city })
+                }).catch(console.error);
+              }
+              // Dispatch event so iframe can pick it up if on same page
+              window.dispatchEvent(new Event('cityChanged'));
+            }}
+            defaultValue={localStorage.getItem('selectedCity') || 'Tokyo'}
+          >
+            <option value="Tokyo">Tokyo</option>
+            <option value="Osaka">Osaka</option>
+            <option value="Kyoto">Kyoto</option>
+          </select>
           <SignedOut>
             <SignInButton mode="modal">
               <button className="px-5 py-2 rounded-lg font-medium cursor-pointer transition-all duration-200 text-gray-900 border border-japan-red/15 bg-transparent hover:bg-black/5">Log in</button>

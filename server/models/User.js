@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema({
   profileImageUrl: {
     type: String,
     default: ''
+  },
+  city: {
+    type: String,
+    default: ''
   }
 }, { timestamps: true });
 

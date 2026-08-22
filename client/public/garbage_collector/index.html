@@ -13,7 +13,7 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
   <!-- Sakura Petals Dynamic Canvas Background -->
   <canvas id="sakura-canvas"></canvas>
 
@@ -22,7 +22,7 @@
        ========================================================================== -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#home" class="brand-logo" id="nav-brand">
+      <a href="#top" class="brand-logo" id="nav-brand">
         <div class="brand-icon-box">🌸</div>
         <div class="brand-text-group">
           <div class="brand-title">GomiGuide<span>.AI</span></div>
@@ -31,12 +31,11 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#home" class="nav-link" data-i18n-en="Home" data-i18n-ja="ホーム">Home</a></li>
+        <li><a href="#top" class="nav-link" data-i18n-en="Home" data-i18n-ja="ホーム">Home</a></li>
         <li><a href="#problem-section" class="nav-link" data-i18n-en="How Japan Sorts" data-i18n-ja="日本の分別ルール">How Japan Sorts</a></li>
         <li><a href="#scanner-section" class="nav-link" data-i18n-en="AI Scanner" data-i18n-ja="AIスキャナー">AI Scanner</a></li>
         <li><a href="#schedule-section" class="nav-link" data-i18n-en="Ward Schedule" data-i18n-ja="収集カレンダー">Ward Schedule</a></li>
         <li><a href="#map-section" class="nav-link" data-i18n-en="Drop-off Map" data-i18n-ja="回収マップ">Drop-off Map</a></li>
-        <li><a href="#rewards-section" class="nav-link" data-i18n-en="Eco Rewards" data-i18n-ja="エコ特典">Eco Rewards</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -369,115 +368,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         7. Smart Notifications Center
-         ========================================================================== -->
-    <section class="notifications-section-wrap" id="notifications-section">
-      <div class="container">
-        <div class="notification-hub-card glass-card">
-          <div class="notif-hub-left">
-            <span class="section-badge" data-i18n-en="STEP 7: SMART ALERTS" data-i18n-ja="ステップ 7: スマート通知・リマインダー">STEP 7: SMART ALERTS</span>
-            <h3 data-i18n-en="Never Miss Collection Morning" data-i18n-ja="前夜と当朝のスマート通知で出し忘れ防止">Never Miss Collection Morning</h3>
-            <p data-i18n-en="GomiGuide AI sends timely alerts based on your ward schedule: evening preparation reminders, morning 8:00 AM collection calls, and weather alerts against crow interference." data-i18n-ja="明日のプラごみリマインダー、粗大ごみ回収日程、台風接近時のカラス除けネット注意報などをタイムリーにお届けします。">
-              GomiGuide AI sends timely alerts based on your ward schedule: evening preparation reminders, morning 8:00 AM collection calls, and weather alerts against crow interference.
-            </p>
-            <div class="notif-presets-list">
-              <div class="notif-sample-box">
-                <div class="notif-sample-title">🔔 <span data-i18n-en="Evening 20:00 Prep Reminder" data-i18n-ja="前日 20:00 の準備リマインダー">Evening 20:00 Prep Reminder</span></div>
-                <div style="font-size:0.8rem; color:var(--text-muted);" data-i18n-en="'Tomorrow is Plastic recycling day. Please rinse bento containers.'" data-i18n-ja="「明日は資源プラスチックの日です。弁当容器は水洗いしておきましょう」">'Tomorrow is Plastic recycling day. Please rinse bento containers.'</div>
-              </div>
-              <div class="notif-sample-box">
-                <div class="notif-sample-title">🦅 <span data-i18n-en="Morning Crow & Netting Alert" data-i18n-ja="当日 7:30 の防鳥ネット警告">Morning Crow & Netting Alert</span></div>
-                <div style="font-size:0.8rem; color:var(--text-muted);" data-i18n-en="'Heavy crow activity reported in Shibuya. Fasten yellow net securely.'" data-i18n-ja="「カラス注意報：黄色い防鳥ネットの端におもりを載せて隙間を塞いでください」">'Heavy crow activity reported in Shibuya. Fasten yellow net securely.'</div>
-              </div>
-            </div>
-          </div>
 
-          <div class="notif-actions-panel">
-            <h4 style="color:var(--text-headline); font-size:1.1rem; margin-bottom:8px;" data-i18n-en="Simulate Smart Notification" data-i18n-ja="スマート通知をシミュレーション">Simulate Smart Notification</h4>
-            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;" data-i18n-en="Experience the real-time audio chime and floating push alert." data-i18n-ja="通知音とアラートトーストを即座に体験できます。">Experience the real-time audio chime and floating push alert.</p>
-            <button id="trigger-sample-notification-btn" class="btn-notif-trigger">
-              <span>🔔</span>
-              <span data-i18n-en="Send Test Smart Notification" data-i18n-ja="テスト通知を送信（チャイム付き）">Send Test Smart Notification</span>
-            </button>
-            <button id="request-push-perm-btn" class="btn-notif-perm">
-              <span data-i18n-en="Enable Browser Notifications" data-i18n-ja="ブラウザ通知を許可する">Enable Browser Notifications</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         8. Gamification, Dynamic Sakura Tree & Eco Rewards
-         ========================================================================== -->
-    <section class="gamification-section-wrap" id="rewards-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge" data-i18n-en="STEP 8: GAMIFICATION & REWARDS" data-i18n-ja="ステップ 8: ゲーミフィケーション & 特典">STEP 8: GAMIFICATION & REWARDS</span>
-          <h2 class="section-title" data-i18n-en="Grow Your Sakura & Earn Real Perks" data-i18n-ja="桜の木を育てて地域特典をゲット">Grow Your Sakura & Earn Real Perks</h2>
-          <p class="section-subtitle" data-i18n-en="Earn +50 Eco Points each time you correctly sort waste. Watch your digital Sakura Tree bloom, unlock samurai badges, help your ward climb the leaderboard, and redeem convenience store rewards!" data-i18n-ja="正しく分別するたびに+50ポイント獲得。画面上の桜の木が満開になり、コンビニコーヒーや指定ごみ袋などの引換券と交換できます。">
-            Earn +50 Eco Points each time you correctly sort waste. Watch your digital Sakura Tree bloom, unlock samurai badges, help your ward climb the leaderboard, and redeem convenience store rewards!
-          </p>
-        </div>
-
-        <div class="gamification-hub-grid">
-          <!-- Left: Living Sakura Tree Dynamic Canvas -->
-          <div class="sakura-tree-showcase-card glass-card">
-            <div class="tree-card-header">
-              <h4 style="font-size:1.15rem; color:var(--text-headline); font-weight:800;" data-i18n-en="🌸 Your Living Sakura Tree" data-i18n-ja="🌸 あなたの桜の木">🌸 Your Living Sakura Tree</h4>
-              <span class="tree-growth-pill" id="tree-growth-status">70% Blooming 🌸</span>
-            </div>
-            
-            <div id="sakura-tree-container">
-              <!-- Dynamically rendered SVG by gamification.js -->
-            </div>
-
-            <div class="tree-eco-stats-bar">
-              <div class="tree-stat-box">
-                <div class="tree-stat-num user-eco-points-count">850</div>
-                <div class="tree-stat-label" data-i18n-en="Total Eco Points" data-i18n-ja="保有エコポイント">Total Eco Points</div>
-              </div>
-              <div class="tree-stat-box">
-                <div class="tree-stat-num" id="user-level-badge">Lv.4 Eco Citizen</div>
-                <div class="tree-stat-label" data-i18n-en="Eco Rank" data-i18n-ja="エコ市民ランク">Eco Rank</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Badges & Ward Leaderboard -->
-          <div class="badges-leaderboard-card glass-card">
-            <div class="badge-grid-wrapper">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <h4 style="font-size:1.1rem; color:var(--text-headline); font-weight:800;" data-i18n-en="🏆 Waste Mastery Badges" data-i18n-ja="🏆 獲得バッジコレクション">🏆 Waste Mastery Badges</h4>
-                <span style="font-size:0.78rem; font-weight:700; color:var(--crimson-dark);" data-i18n-en="3 of 5 Unlocked" data-i18n-ja="3/5 達成">3 of 5 Unlocked</span>
-              </div>
-              <div class="badges-grid-layout" id="badges-grid">
-                <!-- Dynamically rendered via gamification.js -->
-              </div>
-            </div>
-
-            <div style="border-top:1px solid rgba(230,57,70,0.12); padding-top:20px;">
-              <h4 style="font-size:1.1rem; color:var(--text-headline); font-weight:800; margin-bottom:8px;" data-i18n-en="🥇 Tokyo Ward Leaderboard" data-i18n-ja="🥇 自治体・区対抗リーダーボード">🥇 Tokyo Ward Leaderboard</h4>
-              <div class="leaderboard-list-wrap" id="leaderboard-list">
-                <!-- Injected via gamification.js -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Redeemable Rewards Catalog -->
-        <div class="rewards-catalog-wrapper">
-          <div style="text-align:center; margin-bottom:20px;">
-            <h3 style="font-size:1.5rem; font-weight:800; color:var(--text-headline);" data-i18n-en="🎁 Redeem Your Eco-Points" data-i18n-ja="🎁 エコポイント交換カタログ">🎁 Redeem Your Eco-Points</h3>
-            <p style="font-size:0.9rem; color:var(--text-muted);" data-i18n-en="Sponsored by Japanese convenience stores and Tokyo municipal eco councils." data-i18n-ja="提携コンビニ各社および東京都環境局協力のクーポン一覧です。">Sponsored by Japanese convenience stores and Tokyo municipal eco councils.</p>
-          </div>
-          <div class="rewards-grid-layout" id="rewards-catalog-grid">
-            <!-- Injected via gamification.js -->
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ==========================================================================
@@ -500,50 +391,7 @@
   <!-- ==========================================================================
        Footer
        ========================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h4>🌸 GomiGuide AI (スマート分別 AI)</h4>
-          <p data-i18n-en="A modern, AI-powered Smart Garbage and Recycling platform designed for Japan. Empowering residents, international travelers, and communities to maintain zero-waste excellence." data-i18n-ja="日本の厳しいごみ分別をAI技術でわかりやすくサポート。市民・外国人住民・観光客の皆さまと共に、循環型社会と清潔な日本の街並みを創ります。">
-            A modern, AI-powered Smart Garbage and Recycling platform designed for Japan. Empowering residents, international travelers, and communities to maintain zero-waste excellence.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n-en="Separation Pillars" data-i18n-ja="分別カテゴリー">Separation Pillars</h5>
-          <ul class="footer-links">
-            <li><a href="#scanner-section">🥬 Burnable (可燃ごみ)</a></li>
-            <li><a href="#scanner-section">♻️ Plastic (プラマーク)</a></li>
-            <li><a href="#scanner-section">🧴 PET Bottles (PET)</a></li>
-            <li><a href="#scanner-section">🥫 Cans & Bottles (缶・びん)</a></li>
-            <li><a href="#scanner-section">🔋 Hazardous (有害ごみ)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n-en="Wards Supported" data-i18n-ja="対応自治体">Wards Supported</h5>
-          <ul class="footer-links">
-            <li><a href="#schedule-section">Tokyo Shibuya Ward (渋谷区)</a></li>
-            <li><a href="#schedule-section">Tokyo Shinjuku Ward (新宿区)</a></li>
-            <li><a href="#schedule-section">Tokyo Minato Ward (港区)</a></li>
-            <li><a href="#schedule-section">Osaka City (大阪市北区)</a></li>
-            <li><a href="#schedule-section">Kyoto City (京都市中京区)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5 data-i18n-en="Eco Gamification" data-i18n-ja="エコ特典">Eco Gamification</h5>
-          <ul class="footer-links">
-            <li><a href="#rewards-section">🌸 Sakura Tree Tracker</a></li>
-            <li><a href="#rewards-section">🏆 Zero-Waste Badges</a></li>
-            <li><a href="#rewards-section">🥇 Ward Leaderboards</a></li>
-            <li><a href="#rewards-section">🎁 Convenience Store Vouchers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 GomiGuide AI Japan • Built with Modern Web Standards & Computer Vision Engine • Clean Nippon Initiative</p>
-      </div>
-    </div>
-  </footer>
+
 
   <!-- Leaflet JS for Map -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

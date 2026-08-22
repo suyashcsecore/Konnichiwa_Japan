@@ -53,7 +53,7 @@ router.post('/analyze', async (req, res) => {
     const grokReq = https.request(options, (grokRes) => {
       let grokBody = '';
       grokRes.on('data', d => { grokBody += d; });
-      grokRes.on('end', () => {
+      grokRes.on('end', async () => {
         if (grokRes.statusCode !== 200) {
           console.warn(`Grok API Error (${grokRes.statusCode}): ${grokBody}. Falling back to simulated response.`);
           setTimeout(() => {
@@ -84,6 +84,32 @@ router.post('/analyze', async (req, res) => {
           const jsonStr = match[0];
           const analyzed = JSON.parse(jsonStr);
           
+          // Verify with database
+          const WasteItem = require('../models/WasteItem');
+          const CityRule = require('../models/CityRule');
+          
+          const wasteItem = await WasteItem.findOne({ category_key: analyzed.category });
+          let cityRules = null;
+          
+          if (req.body.city) {
+            cityRules = await CityRule.findOne({ city_name: req.body.city, category_key: analyzed.category });
+          }
+
+          if (wasteItem) {
+            analyzed.instructionsEn = wasteItem.instructions_en;
+            analyzed.instructionsJa = wasteItem.instructions_ja;
+          }
+
+          if (cityRules) {
+            analyzed.collectionDay = cityRules.collection_day;
+            analyzed.disposalMethod = cityRules.disposal_method;
+            analyzed.specialBagRequired = cityRules.special_bag_required;
+          } else if (req.body.city) {
+             analyzed.collectionDay = "Check local schedule";
+             analyzed.disposalMethod = "Follow standard separation rules";
+             analyzed.specialBagRequired = false;
+          }
+          
           res.status(200).json({
             success: true,
             analyzed
@@ -96,7 +122,12 @@ router.post('/analyze', async (req, res) => {
               nameEn: "PET Bottle (Simulated)",
               nameJa: "ペットボトル",
               category: "pet_bottle",
-              confidence: 0.98
+              confidence: 0.98,
+              collectionDay: "Wednesday",
+              disposalMethod: "Place in yellow recycling box",
+              specialBagRequired: false,
+              instructionsEn: "Remove cap and label. Rinse inside. Crush lightly.",
+              instructionsJa: "キャップとラベルを外し、中をすすいでお出しください。"
             }
           });
         }
@@ -111,7 +142,12 @@ router.post('/analyze', async (req, res) => {
           nameEn: "Plastic Container (Simulated)",
           nameJa: "プラスチック製容器",
           category: "plastic",
-          confidence: 0.95
+          confidence: 0.95,
+          collectionDay: "Wednesday",
+          disposalMethod: "Place in designated collection net",
+          specialBagRequired: false,
+          instructionsEn: "Wash and dry completely.",
+          instructionsJa: "きれいに洗って乾かしてください。"
         }
       });
     });
