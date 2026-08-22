@@ -232,7 +232,7 @@ The initial prototype focuses on three core areas:
 ---
 
 
-## 💡 Why Konnichiwa Japan?
+## Why Konnichiwa Japan?
 
 Students moving to Japan often have to search across multiple websites, government pages, guides, and informal sources to understand basic procedures and everyday rules.
 
