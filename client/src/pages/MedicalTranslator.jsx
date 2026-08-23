@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import HealthHeader from "../components/health/HealthHeader";
 import { getHealthProfile } from "../utils/healthStorage";
+import "../health.css";
 
 export default function MedicalTranslator() {
   const navigate = useNavigate();

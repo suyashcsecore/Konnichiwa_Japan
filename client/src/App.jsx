@@ -8,6 +8,7 @@ import QuizHome from './pages/QuizHome';
 import QuizPage from './pages/QuizPage';
 import QuizResult from './pages/QuizResult';
 import Lifestyle from './pages/Lifestyle';
+import HealthHome from './pages/HealthHome';
 import GarbageCollectorIframe from './pages/GarbageCollectorIframe';
 import PuzzleHome from './pages/PuzzleHome';
 import GarbagePuzzle from './pages/GarbagePuzzle';
@@ -16,6 +17,11 @@ import PackingGame from './pages/PackingGame';
 import SurvivalMission from './pages/SurvivalMission';
 import MemoryGame from './pages/MemoryGame';
 import CultureGame from './pages/CultureGame';
+import HealthPassport from './pages/HealthPassport';
+import MedicalTranslator from './pages/MedicalTranslator';
+import DoctorCommunication from './pages/DoctorCommunication';
+import EmergencyCard from './pages/EmergencyCard';
+import MedicalHistory from './pages/MedicalHistory';
 import './index.css';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -69,6 +75,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/lifestyle" element={<Lifestyle />} />
+            <Route path="/health" element={<HealthHome />} />
+            <Route path="/health/passport" element={<HealthPassport />} />
+            <Route path="/health/translator" element={<MedicalTranslator />} />
+            <Route path="/health/doctor" element={<DoctorCommunication />} />
+            <Route path="/health/emergency" element={<EmergencyCard />} />
+            <Route path="/health/history" element={<MedicalHistory />} />
             <Route path="/learn-japanese" element={<QuizHome />} />
             <Route path="/learn-japanese/:level" element={<QuizPage />} />
             <Route path="/learn-japanese/result" element={<QuizResult />} />
