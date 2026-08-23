@@ -14,6 +14,11 @@ import HealthHeader from "../components/health/HealthHeader";
 export default function HealthHome() {
   const navigate = useNavigate();
 
+  const handleNavigate = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   const features = [
     {
       title: "My Health Passport",
@@ -75,7 +80,7 @@ export default function HealthHome() {
 
           <button
             className="health-primary-button"
-            onClick={() => navigate("/health/passport")}
+            onClick={() => handleNavigate("/health/passport")}
           >
             Open Health Passport
             <ArrowRight size={18} />
@@ -98,7 +103,7 @@ export default function HealthHome() {
           <button
             key={feature.title}
             className="health-feature-card"
-            onClick={() => navigate(feature.path)}
+            onClick={() => handleNavigate(feature.path)}
           >
             <div className="health-feature-icon">{feature.icon}</div>
 

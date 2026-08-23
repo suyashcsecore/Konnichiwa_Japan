@@ -1,8 +1,13 @@
 import { HeartPulse } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function HealthHeader() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path ? "active" : "";
+  };
 
   return (
     <header className="health-header">
@@ -19,15 +24,24 @@ export default function HealthHeader() {
       </div>
 
       <nav className="health-nav">
-        <button onClick={() => navigate("/health")}>
+        <button 
+          className={isActive("/health")} 
+          onClick={() => navigate("/health")}
+        >
           Health Home
         </button>
 
-        <button onClick={() => navigate("/health/passport")}>
+        <button 
+          className={isActive("/health/passport")} 
+          onClick={() => navigate("/health/passport")}
+        >
           Passport
         </button>
 
-        <button onClick={() => navigate("/health/translator")}>
+        <button 
+          className={isActive("/health/translator")} 
+          onClick={() => navigate("/health/translator")}
+        >
           Translator
         </button>
       </nav>

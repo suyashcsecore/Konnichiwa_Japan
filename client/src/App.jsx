@@ -16,7 +16,14 @@ import PackingGame from './pages/PackingGame';
 import SurvivalMission from './pages/SurvivalMission';
 import MemoryGame from './pages/MemoryGame';
 import CultureGame from './pages/CultureGame';
+import HealthHome from './pages/HealthHome';
+import HealthPassport from './pages/HealthPassport';
+import MedicalTranslator from './pages/MedicalTranslator';
+import DoctorCommunication from './pages/DoctorCommunication';
+import EmergencyCard from './pages/EmergencyCard';
+import MedicalHistory from './pages/MedicalHistory';
 import './index.css';
+import './health.css';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -81,6 +88,12 @@ function App() {
             <Route path="/puzzles/memory" element={<MemoryGame />} />
             <Route path="/puzzles/culture" element={<CultureGame />} />
             <Route path="/garbage-collection" element={<GarbagePuzzle />} />
+            <Route path="/health" element={<HealthHome />} />
+            <Route path="/health/passport" element={<HealthPassport />} />
+            <Route path="/health/translator" element={<MedicalTranslator />} />
+            <Route path="/health/doctor" element={<DoctorCommunication />} />
+            <Route path="/health/emergency" element={<EmergencyCard />} />
+            <Route path="/health/history" element={<MedicalHistory />} />
           </Routes>
           <Footer />
         </div>
