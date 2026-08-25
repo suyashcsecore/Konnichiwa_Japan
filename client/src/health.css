@@ -247,7 +247,7 @@
 }
 
 .health-back-button {
-  margin-top: 24px;
+  margin-top: 5px;
   margin-bottom: 16px;
   background: white;
   border: 1px solid #d7e3ff;
@@ -273,7 +273,7 @@
 
 .health-page-title {
   width: min(1180px, 90%);
-  margin: 45px auto 30px;
+  margin: 20px auto 30px;
 }
 
 .health-page-title h2 {
