@@ -6,10 +6,14 @@ import {
   Siren,
   ShieldCheck,
   ArrowRight,
-  History
+  History,
+  QrCode,
+  MapPin
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HealthHeader from "../components/health/HealthHeader";
+import { ClipboardCheck } from "lucide-react";
+import "../health.css";
 
 export default function HealthHome() {
   const navigate = useNavigate();
@@ -54,6 +58,27 @@ export default function HealthHome() {
     "Store previous medical reports and create a doctor-friendly summary for hospital visits.",
   icon: <History />,
   path: "/health/history"
+    },
+    {
+  title: "QR Medical Card",
+  description:
+    "Generate a QR code containing essential medical information for quick sharing.",
+  icon: <QrCode />,
+  path: "/health/qr-card"
+    },
+    {
+  title: "Find Hospital / Clinic",
+  description:
+    "Find nearby hospitals and clinics in Japan and get essential location and contact information.",
+  icon: <MapPin />,
+  path: "/health/hospitals"
+    },
+    {
+  title: "Hospital Visit Guide",
+  description:
+    "Prepare for your hospital visit with useful guidelines and a simple checklist.",
+  icon: <ClipboardCheck size={28} />,
+  path: "/health/hospital-guide"
 }
   ];
 

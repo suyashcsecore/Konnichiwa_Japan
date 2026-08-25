@@ -24,22 +24,25 @@ export default function HealthHeader() {
       </div>
 
       <nav className="health-nav">
-        <button 
-          className={isActive("/health")} 
+        <button
+          type="button"
+          className={isActive("/health")}
           onClick={() => navigate("/health")}
         >
           Health Home
         </button>
 
-        <button 
-          className={isActive("/health/passport")} 
+        <button
+          type="button"
+          className={isActive("/health/passport")}
           onClick={() => navigate("/health/passport")}
         >
           Passport
         </button>
 
-        <button 
-          className={isActive("/health/translator")} 
+        <button
+          type="button"
+          className={isActive("/health/translator")}
           onClick={() => navigate("/health/translator")}
         >
           Translator

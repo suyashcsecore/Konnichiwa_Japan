@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HealthHeader from "../components/health/HealthHeader";
+import "../health.css";
 
 const communicationCategories = [
   {
