@@ -26,6 +26,7 @@ import QRMedicalCard from "./pages/QRMedicalCard";
 import HospitalFinder from "./pages/HospitalFinder";
 import HospitalVisitGuide from "./pages/HospitalVisitGuide";
 import './index.css';
+import './health.css';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
