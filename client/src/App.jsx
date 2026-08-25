@@ -22,6 +22,9 @@ import MedicalTranslator from './pages/MedicalTranslator';
 import DoctorCommunication from './pages/DoctorCommunication';
 import EmergencyCard from './pages/EmergencyCard';
 import MedicalHistory from './pages/MedicalHistory';
+import QRMedicalCard from "./pages/QRMedicalCard";
+import HospitalFinder from "./pages/HospitalFinder";
+import HospitalVisitGuide from "./pages/HospitalVisitGuide";
 import './index.css';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -93,6 +96,18 @@ function App() {
             <Route path="/puzzles/memory" element={<MemoryGame />} />
             <Route path="/puzzles/culture" element={<CultureGame />} />
             <Route path="/garbage-collection" element={<GarbagePuzzle />} />
+            <Route
+                path="/health/qr-card"
+                element={<QRMedicalCard />}
+            />
+            <Route
+            path="/health/hospitals"
+            element={<HospitalFinder />}
+            />
+            <Route
+  path="/health/hospital-guide"
+  element={<HospitalVisitGuide />}
+/>
           </Routes>
           <Footer />
         </div>

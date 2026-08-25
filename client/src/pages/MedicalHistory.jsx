@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   FileText,
   Upload,
-  Trash2,
   Eye,
   Languages,
   X,
@@ -12,27 +11,27 @@ import {
   AlertTriangle,
   ArrowLeft,
   ShieldCheck,
-  Image as ImageIcon
+  Trash2
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import {
+  getHealthProfile,
+  saveHealthProfile
+} from "../utils/healthStorage";
+import { useUser } from "@clerk/clerk-react";
 import HealthHeader from "../components/health/HealthHeader";
+
+const API_URL = "http://localhost:5000/api/health";
 
 export default function MedicalHistory() {
   const navigate = useNavigate();
+  const { user, isLoaded, isSignedIn } = useUser();
 
-  const [reports, setReports] = useState(() => {
-    const saved = localStorage.getItem("japanMedicalHistory");
-
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        return [];
-      }
-    }
-
-    return [];
-  });
+  const [reports, setReports] = useState([]);
+  const [loadingReports, setLoadingReports] = useState(true);
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const [form, setForm] = useState({
     title: "",
@@ -41,13 +40,71 @@ export default function MedicalHistory() {
     doctor: "",
     diagnosis: "",
     notes: "",
-    fileName: "",
-    fileType: "",
-    filePreview: ""
+    file: null,
+    fileName: ""
   });
 
   const [selectedReport, setSelectedReport] = useState(null);
   const [language, setLanguage] = useState("en");
+
+  const fetchMedicalHistory = useCallback(async (clerkId) => {
+    try {
+      const response = await fetch(
+        `${API_URL}/medical-history/${clerkId}`
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "Failed to load medical history"
+        );
+      }
+
+      return data.reports || [];
+    } catch (err) {
+      console.error("Medical history loading error:", err);
+      throw err;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isLoaded || !isSignedIn || !user?.id) {
+      return;
+    }
+
+    let cancelled = false;
+
+    const loadMedicalHistory = async () => {
+      try {
+        const data = await fetchMedicalHistory(user.id);
+
+        if (!cancelled) {
+          setReports(data);
+          setError("");
+          setLoadingReports(false);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          setError(
+            err.message || "Failed to load medical history"
+          );
+          setLoadingReports(false);
+        }
+      }
+    };
+
+    loadMedicalHistory();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    isLoaded,
+    isSignedIn,
+    user?.id,
+    fetchMedicalHistory
+  ]);
 
   const handleChange = (field, value) => {
     setForm((current) => ({
@@ -63,108 +120,179 @@ export default function MedicalHistory() {
       return;
     }
 
-    if (
-      file.type !== "application/pdf" &&
-      !file.type.startsWith("image/")
-    ) {
-      alert("Please upload a PDF or image file.");
+    if (file.type !== "application/pdf") {
+      setError("Please upload a PDF medical report.");
       return;
     }
 
     if (file.size > 10 * 1024 * 1024) {
-      alert("Please choose a file smaller than 10 MB.");
+      setError("Please choose a PDF smaller than 10 MB.");
       return;
     }
 
-    if (file.type.startsWith("image/")) {
-      const reader = new FileReader();
+    setError("");
+    setSuccess("");
 
-      reader.onload = () => {
-        setForm((current) => ({
-          ...current,
-          fileName: file.name,
-          fileType: file.type,
-          filePreview: reader.result
-        }));
-      };
+    setForm((current) => ({
+      ...current,
+      file,
+      fileName: file.name
+    }));
+  };
 
-      reader.readAsDataURL(file);
-    } else {
-      setForm((current) => ({
-        ...current,
-        fileName: file.name,
-        fileType: file.type,
-        filePreview: ""
-      }));
+  const addReport = async () => {
+    if (!user?.id) {
+      setError(
+        "Please sign in before uploading a medical report."
+      );
+      return;
     }
-  };
 
-  const saveReports = (updatedReports) => {
-    setReports(updatedReports);
+    if (!form.file) {
+      setError("Please select a PDF medical report.");
+      return;
+    }
 
-    localStorage.setItem(
-      "japanMedicalHistory",
-      JSON.stringify(updatedReports)
-    );
-  };
-
-  const addReport = () => {
     if (!form.title.trim()) {
-      alert("Please enter the report title.");
+      setError("Please enter the report title.");
       return;
     }
 
     if (!form.diagnosis.trim()) {
-      alert("Please enter the diagnosis or medical issue.");
+      setError(
+        "Please enter the diagnosis or medical issue."
+      );
       return;
     }
 
-    const newReport = {
-      id: Date.now(),
-      title: form.title,
-      date: form.date,
-      hospital: form.hospital,
-      doctor: form.doctor,
-      diagnosis: form.diagnosis,
-      notes: form.notes,
-      fileName: form.fileName,
-      fileType: form.fileType,
-      filePreview: form.filePreview
-    };
+    try {
+      setUploading(true);
+      setError("");
+      setSuccess("");
 
-    const updatedReports = [
-      newReport,
-      ...reports
-    ];
+      const formData = new FormData();
 
-    saveReports(updatedReports);
+      formData.append("medicalReport", form.file);
+      formData.append("clerkId", user.id);
+      formData.append("title", form.title);
+      formData.append("date", form.date);
+      formData.append("hospital", form.hospital);
+      formData.append("doctor", form.doctor);
+      formData.append("diagnosis", form.diagnosis);
+      formData.append("notes", form.notes);
 
-    setForm({
-      title: "",
-      date: "",
-      hospital: "",
-      doctor: "",
-      diagnosis: "",
-      notes: "",
-      fileName: "",
-      fileType: "",
-      filePreview: ""
-    });
-  };
+      const response = await fetch(
+        `${API_URL}/medical-history/upload`,
+        {
+          method: "POST",
+          body: formData
+        }
+      );
 
-  const deleteReport = (id) => {
-    const updatedReports = reports.filter(
-      (report) => report.id !== id
-    );
+      const data = await response.json();
 
-    saveReports(updatedReports);
+      if (!response.ok) {
+        throw new Error(
+          data.message || "Failed to process medical report"
+        );
+      }
 
-    if (selectedReport?.id === id) {
-      setSelectedReport(null);
+      setSuccess(
+        "Medical report uploaded and processed successfully."
+      );
+
+      setReports((current) => [
+        data.report,
+        ...current
+      ]);
+
+      setForm({
+        title: "",
+        date: "",
+        hospital: "",
+        doctor: "",
+        diagnosis: "",
+        notes: "",
+        file: null,
+        fileName: ""
+      });
+    } catch (err) {
+      console.error(
+        "Medical report upload error:",
+        err
+      );
+
+      setError(
+        err.message || "Failed to upload medical report"
+      );
+    } finally {
+      setUploading(false);
     }
   };
 
+  const deleteReport = async (report) => {
+  const confirmed = window.confirm(
+    `Are you sure you want to delete "${report.title || "Medical Report"}"?`
+  );
+
+  if (!confirmed) {
+    return;
+  }
+
+  try {
+    setError("");
+    setSuccess("");
+
+    const response = await fetch(
+      `${API_URL}/medical-history/${report._id}`,
+      {
+        method: "DELETE"
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.message || "Failed to delete medical report"
+      );
+    }
+
+    setReports((current) =>
+      current.filter(
+        (item) => item._id !== report._id
+      )
+    );
+
+    if (selectedReport?._id === report._id) {
+      setSelectedReport(null);
+    }
+
+    setSuccess("Medical report deleted successfully.");
+
+  } catch (err) {
+    console.error("Delete medical report error:", err);
+
+    setError(
+      err.message || "Failed to delete medical report"
+    );
+  }
+};
+  const openReport = (
+    report,
+    selectedLanguage = "en"
+  ) => {
+    setSelectedReport(report);
+    setLanguage(selectedLanguage);
+    setError("");
+    setSuccess("");
+  };
+
   const getEnglishSummary = (report) => {
+    if (report.englishSummary) {
+      return report.englishSummary;
+    }
+
     return `
 PREVIOUS MEDICAL HISTORY
 
@@ -185,13 +313,14 @@ ${report.diagnosis || "Not provided"}
 
 Additional Notes:
 ${report.notes || "None provided"}
-
-Previous Report:
-${report.fileName || "No report attached"}
 `;
   };
 
   const getJapaneseSummary = (report) => {
+    if (report.japaneseSummary) {
+      return report.japaneseSummary;
+    }
+
     return `
 過去の医療情報
 
@@ -212,11 +341,101 @@ ${report.diagnosis || "未記入"}
 
 追加情報：
 ${report.notes || "記載なし"}
-
-以前の診療記録：
-${report.fileName || "ファイルなし"}
 `;
   };
+
+  const addToHealthPassport = (report) => {
+    if (!report) {
+      setError("No medical report selected.");
+      return;
+    }
+
+    const profile = getHealthProfile() || {};
+
+    const existingConditions = Array.isArray(
+      profile.conditions
+    )
+      ? profile.conditions
+      : [];
+
+    const newCondition =
+      typeof report.diagnosis === "string"
+        ? report.diagnosis.trim()
+        : "";
+
+    if (!newCondition) {
+      setError(
+        "This report does not contain a diagnosis or medical issue."
+      );
+      return;
+    }
+
+    const alreadyExists = existingConditions.some(
+      (condition) =>
+        String(condition).trim().toLowerCase() ===
+        newCondition.toLowerCase()
+    );
+
+    if (alreadyExists) {
+      setSuccess(
+        "This medical condition is already in your Health Passport."
+      );
+      return;
+    }
+
+    const updatedConditions = [
+      ...existingConditions,
+      newCondition
+    ];
+
+    const updatedProfile = {
+      ...profile,
+      conditions: updatedConditions
+    };
+
+    saveHealthProfile(updatedProfile);
+
+    setSuccess(
+      `"${newCondition}" has been added to your Health Passport.`
+    );
+
+    setSelectedReport(null);
+
+    navigate("/health/passport");
+  };
+
+  if (!isLoaded) {
+    return (
+      <div className="health-page">
+        <HealthHeader />
+
+        <div className="medical-history-empty">
+          <h3>Loading...</h3>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isSignedIn) {
+    return (
+      <div className="health-page">
+        <HealthHeader />
+
+        <div className="medical-history-empty">
+          <div>
+            <ShieldCheck size={28} />
+          </div>
+
+          <h3>Please sign in</h3>
+
+          <p>
+            You need to sign in to access your medical
+            history.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="health-page">
@@ -240,8 +459,8 @@ ${report.fileName || "ファイルなし"}
             <h2>Previous Medical History</h2>
 
             <p>
-              Keep previous medical reports and important
-              health information ready for future hospital visits.
+              Upload previous medical reports and generate
+              doctor-friendly English and Japanese summaries.
             </p>
           </div>
         </div>
@@ -257,11 +476,39 @@ ${report.fileName || "ファイルなし"}
 
           <span>
             This feature organizes information from previous
-            medical visits. It does not diagnose conditions or
+            medical reports. It does not diagnose conditions or
             recommend treatment.
           </span>
         </div>
       </div>
+
+      {error && (
+        <div
+          style={{
+            margin: "20px 0",
+            padding: "14px 18px",
+            borderRadius: "10px",
+            background: "#fee2e2",
+            color: "#991b1b"
+          }}
+        >
+          {error}
+        </div>
+      )}
+
+      {success && (
+        <div
+          style={{
+            margin: "20px 0",
+            padding: "14px 18px",
+            borderRadius: "10px",
+            background: "#dcfce7",
+            color: "#166534"
+          }}
+        >
+          {success}
+        </div>
+      )}
 
       <div className="medical-upload-card">
         <div className="medical-upload-header">
@@ -273,28 +520,15 @@ ${report.fileName || "ファイルなし"}
             <h3>Add Previous Medical Report</h3>
 
             <p>
-              Upload a previous report and add the important
-              information for future doctor visits.
+              Upload a PDF. The backend will extract the text,
+              use AI to summarize it, translate it into
+              Japanese, and save the result in MongoDB.
             </p>
           </div>
         </div>
 
         <label className="medical-file-upload">
-          {form.filePreview ? (
-            <img
-              src={form.filePreview}
-              alt="Medical report preview"
-              style={{
-                width: "100%",
-                maxWidth: "260px",
-                maxHeight: "180px",
-                objectFit: "contain",
-                borderRadius: "10px"
-              }}
-            />
-          ) : (
-            <Upload size={28} />
-          )}
+          <Upload size={28} />
 
           <strong>
             {form.fileName
@@ -303,12 +537,12 @@ ${report.fileName || "ファイルなし"}
           </strong>
 
           <span>
-            PDF, JPG, JPEG or PNG • Maximum 10 MB
+            PDF only • Maximum 10 MB
           </span>
 
           <input
             type="file"
-            accept=".pdf,.jpg,.jpeg,.png"
+            accept=".pdf,application/pdf"
             onChange={handleFileChange}
             hidden
           />
@@ -431,9 +665,13 @@ ${report.fileName || "ファイルなし"}
         <button
           className="medical-add-report-button"
           onClick={addReport}
+          disabled={uploading}
         >
           <Upload size={17} />
-          Add Medical Report
+
+          {uploading
+            ? "Processing Medical Report..."
+            : "Add Medical Report"}
         </button>
       </div>
 
@@ -445,8 +683,8 @@ ${report.fileName || "ファイルなし"}
             <h3>Previous Reports</h3>
 
             <p>
-              Previous medical information available for
-              healthcare communication.
+              Previous medical information stored in your
+              medical history.
             </p>
           </div>
 
@@ -455,7 +693,19 @@ ${report.fileName || "ファイルなし"}
           </div>
         </div>
 
-        {reports.length === 0 ? (
+        {loadingReports ? (
+          <div className="medical-history-empty">
+            <div>
+              <FileText size={28} />
+            </div>
+
+            <h3>Loading medical history...</h3>
+
+            <p>
+              Retrieving your previous medical reports.
+            </p>
+          </div>
+        ) : reports.length === 0 ? (
           <div className="medical-history-empty">
             <div>
               <FileText size={28} />
@@ -464,9 +714,9 @@ ${report.fileName || "ファイルなし"}
             <h3>No previous reports yet</h3>
 
             <p>
-              Upload your previous medical reports above to
-              create a useful medical history for future
-              hospital visits.
+              Upload your previous medical report above.
+              Your report will be processed and stored
+              securely in the database.
             </p>
           </div>
         ) : (
@@ -474,36 +724,22 @@ ${report.fileName || "ファイルなし"}
             {reports.map((report) => (
               <div
                 className="medical-report-card"
-                key={report.id}
+                key={report._id}
               >
                 <div className="medical-report-card-top">
                   <div className="medical-report-file-icon">
-                    {report.fileType?.startsWith(
-                      "image/"
-                    ) ? (
-                      <ImageIcon size={22} />
-                    ) : (
-                      <FileText size={22} />
-                    )}
+                    <FileText size={22} />
                   </div>
 
                   <div className="medical-report-main">
-                    <h3>{report.title}</h3>
+                    <h3>
+                      {report.title || "Medical Report"}
+                    </h3>
 
                     <span className="medical-report-type">
                       Previous Medical Report
                     </span>
                   </div>
-
-                  <button
-                    className="medical-delete-button"
-                    onClick={() =>
-                      deleteReport(report.id)
-                    }
-                    title="Delete report"
-                  >
-                    <Trash2 size={17} />
-                  </button>
                 </div>
 
                 <div className="medical-report-details">
@@ -526,28 +762,48 @@ ${report.fileName || "ファイルなし"}
                   </div>
                 </div>
 
-                <div className="medical-report-actions">
-                  <button
-                    className="medical-view-button"
-                    onClick={() =>
-                      setSelectedReport(report)
-                    }
-                  >
-                    <Eye size={15} />
-                    View Summary
-                  </button>
+               <div className="medical-report-actions">
+  <button
+    className="medical-view-button"
+    onClick={() =>
+      openReport(report, "en")
+    }
+  >
+    <Eye size={15} />
+    View Summary
+  </button>
 
-                  <button
-                    className="medical-japanese-button"
-                    onClick={() => {
-                      setSelectedReport(report);
-                      setLanguage("ja");
-                    }}
-                  >
-                    <Languages size={15} />
-                    Japanese
-                  </button>
-                </div>
+  <button
+    className="medical-japanese-button"
+    onClick={() =>
+      openReport(report, "ja")
+    }
+  >
+    <Languages size={15} />
+    Japanese
+  </button>
+
+  <button
+    className="medical-pdf-button"
+    onClick={() => {
+      window.open(
+        `${API_URL}/medical-history/report/${report._id}/pdf`,
+        "_blank"
+      );
+    }}
+  >
+    <FileText size={15} />
+    View Original PDF
+  </button>
+
+  <button
+    className="medical-delete-button"
+    onClick={() => deleteReport(report)}
+  >
+    <Trash2 size={15} />
+    Delete
+  </button>
+</div>
               </div>
             ))}
           </div>
@@ -574,12 +830,14 @@ ${report.fileName || "ファイルなし"}
                 </span>
 
                 <h2>
-                  {selectedReport.title}
+                  {selectedReport.title ||
+                    "Medical Report"}
                 </h2>
               </div>
 
               <button
                 className="medical-modal-close"
+                type="button"
                 onClick={() =>
                   setSelectedReport(null)
                 }
@@ -590,6 +848,7 @@ ${report.fileName || "ファイルなし"}
 
             <div className="medical-summary-language">
               <button
+                type="button"
                 className={
                   language === "en"
                     ? "active"
@@ -603,6 +862,7 @@ ${report.fileName || "ファイルなし"}
               </button>
 
               <button
+                type="button"
                 className={
                   language === "ja"
                     ? "active"
@@ -722,38 +982,35 @@ ${report.fileName || "ファイルなし"}
                 <div>
                   <span>
                     {language === "en"
-                      ? "Additional Notes"
-                      : "追加情報"}
+                      ? "AI Medical Summary"
+                      : "AI 医療概要"}
                   </span>
 
                   <strong>
-                    {selectedReport.notes ||
-                      (language === "en"
-                        ? "No additional notes"
-                        : "追加情報なし")}
+                    {language === "en"
+                      ? getEnglishSummary(
+                          selectedReport
+                        )
+                      : getJapaneseSummary(
+                          selectedReport
+                        )}
                   </strong>
                 </div>
               </div>
 
-              {selectedReport.fileName && (
+              {selectedReport.originalFileName && (
                 <div className="history-highlight">
-                  {selectedReport.fileType?.startsWith(
-                    "image/"
-                  ) ? (
-                    <ImageIcon size={20} />
-                  ) : (
-                    <FileText size={20} />
-                  )}
+                  <FileText size={20} />
 
                   <div>
                     <span>
                       {language === "en"
-                        ? "Attached Report"
-                        : "添付された診療記録"}
+                        ? "Original Report"
+                        : "元の診療記録"}
                     </span>
 
                     <strong>
-                      {selectedReport.fileName}
+                      {selectedReport.originalFileName}
                     </strong>
                   </div>
                 </div>
@@ -775,6 +1032,37 @@ ${report.fileName || "ファイルなし"}
                       : "この概要はコミュニケーションのみを目的としています。重要な医療情報は医療従事者に確認してください。"}
                   </strong>
                 </div>
+              </div>
+
+              <div className="health-passport-add-section">
+                <div className="health-passport-add-info">
+                  <ShieldCheck size={20} />
+
+                  <div>
+                    <strong>
+                      Add to Health Passport
+                    </strong>
+
+                    <span>
+                      Add the medical issue from this
+                      report to your saved Health
+                      Passport.
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  className="health-passport-add-button"
+                  onClick={() =>
+                    addToHealthPassport(
+                      selectedReport
+                    )
+                  }
+                >
+                  <ShieldCheck size={17} />
+                  Add to Health Passport
+                </button>
               </div>
 
               <div className="medical-history-text">
