@@ -29,7 +29,7 @@ function QuizHome() {
     <div className="page">
       <div className="hero">
 
-        <div className="hero-icon">
+        <div className="hero-icon" style={{ marginTop: '3rem' }}>
           <Brain size={42} />
         </div>
 

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ClerkProvider, useUser } from '@clerk/clerk-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import QuizHome from './pages/QuizHome';
 import QuizPage from './pages/QuizPage';
@@ -74,6 +75,7 @@ function App() {
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
       <UserSync />
       <Router>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <Routes>

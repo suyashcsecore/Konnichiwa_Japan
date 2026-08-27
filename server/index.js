@@ -22,6 +22,9 @@ const garbageRoutes = require('./routes/garbageRoutes');
 app.use('/api/users', userRoutes);
 app.use('/api/garbage', garbageRoutes);
 
+const healthRoutes = require("./routes/healthRoutes");
+app.use("/api/health", healthRoutes);
+
 app.get('/', (req, res) => {
   res.send('Konnichiwa Japan API is running');
 });
@@ -29,8 +32,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-
-const healthRoutes = require("./routes/healthRoutes");
-
-app.use("/api/health", healthRoutes);

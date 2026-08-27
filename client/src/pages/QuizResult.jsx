@@ -114,7 +114,7 @@ function QuizResult() {
             className="home-button"
             onClick={() => {
               window.scrollTo(0, 0);
-              navigate("/");
+              navigate("/learn-japanese");
             }}
           >
             <Home size={18} />

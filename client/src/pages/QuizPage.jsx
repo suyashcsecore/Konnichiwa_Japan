@@ -110,7 +110,7 @@ function QuizPage() {
   return (
     <div className="page">
 
-      <div className="quiz-container">
+      <div className="quiz-container" style={{ marginTop: '5rem' }}>
 
         <div className="quiz-top-row">
 
