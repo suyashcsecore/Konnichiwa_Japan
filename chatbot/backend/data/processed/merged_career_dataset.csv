@@ -1,0 +1,1167 @@
+education_level,skills,certifications,experience_score,cgpa,career_label
+Bachelor,"TensorFlow, NLP, Pytorch",None,9,100,AI Researcher
+Master,"Deep Learning, Machine Learning, Python, SQL",Google ML,5.5,100,Data Scientist
+Master,"Ethical Hacking, Cybersecurity, Linux",Deep Learning Specialization,4,70,Cybersecurity Analyst
+Bachelor,"Python, Pytorch, TensorFlow",AWS Certified,3.5,95,AI Researcher
+PhD,"SQL, React, Java",None,6.5,100,Software Engineer
+Bachelor,"Cybersecurity, Networking, Linux, Ethical Hacking",Google ML,7.5,100,Cybersecurity Analyst
+Master,"Networking, Cybersecurity, Ethical Hacking",AWS Certified,6.5,100,Cybersecurity Analyst
+Master,"TensorFlow, Pytorch, NLP",AWS Certified,5,90,AI Researcher
+Master,"Networking, Ethical Hacking",Deep Learning Specialization,5,100,Cybersecurity Analyst
+Master,"Python, TensorFlow, Pytorch, NLP",AWS Certified,0.5,35,AI Researcher
+PhD,"SQL, Java, C++",Deep Learning Specialization,4,70,Software Engineer
+Master,"Cybersecurity, Ethical Hacking, Networking",Google ML,2.5,50,Cybersecurity Analyst
+Master,"Cybersecurity, Networking",Deep Learning Specialization,4.5,65,Cybersecurity Analyst
+Bachelor,"SQL, C++, Java",Deep Learning Specialization,7,100,Software Engineer
+Master,"Pytorch, NLP",Deep Learning Specialization,2.5,45,AI Researcher
+PhD,"Cybersecurity, Networking",Google ML,3.5,60,Cybersecurity Analyst
+PhD,"SQL, Python",None,6,100,Data Scientist
+Bachelor,"Linux, Networking, Cybersecurity, Ethical Hacking",None,4.5,80,Cybersecurity Analyst
+Master,"SQL, Python, Deep Learning",None,6.5,95,Data Scientist
+Bachelor,"Machine Learning, SQL, Python",Deep Learning Specialization,9.5,100,Data Scientist
+Bachelor,"SQL, Java, C++, React",None,4.5,90,Software Engineer
+Bachelor,"Python, TensorFlow, Pytorch, NLP",Google ML,8,100,AI Researcher
+Master,"Machine Learning, Deep Learning, SQL",AWS Certified,6,100,Data Scientist
+Master,"TensorFlow, Pytorch, NLP, Python",Deep Learning Specialization,4,100,AI Researcher
+Bachelor,"Pytorch, TensorFlow, NLP, Python",Deep Learning Specialization,5,80,AI Researcher
+Bachelor,"Python, NLP",Deep Learning Specialization,8.5,100,AI Researcher
+Bachelor,"Ethical Hacking, Cybersecurity",Deep Learning Specialization,2.5,60,Cybersecurity Analyst
+Master,"Pytorch, NLP",None,3,45,AI Researcher
+Bachelor,"NLP, Pytorch, Python",Google ML,6,100,AI Researcher
+Bachelor,"SQL, Python",AWS Certified,7,100,Data Scientist
+PhD,"Python, SQL",None,7,100,Data Scientist
+Bachelor,"Ethical Hacking, Networking, Linux",None,5.5,75,Cybersecurity Analyst
+Master,"Deep Learning, Machine Learning, SQL, Python",AWS Certified,6,100,Data Scientist
+Bachelor,"TensorFlow, Python, Pytorch",Deep Learning Specialization,6.5,100,AI Researcher
+Master,"Networking, Linux, Ethical Hacking",Deep Learning Specialization,5,75,Cybersecurity Analyst
+PhD,"NLP, Pytorch",AWS Certified,6.5,100,AI Researcher
+Master,"Python, NLP",Google ML,5,100,AI Researcher
+Bachelor,"C++, SQL, Java",Google ML,6,100,Software Engineer
+PhD,"Linux, Cybersecurity",None,3.5,80,Cybersecurity Analyst
+Master,"SQL, Python",AWS Certified,4.5,70,Data Scientist
+Master,"C++, React",AWS Certified,9.5,100,Software Engineer
+Master,"Networking, Linux",AWS Certified,5.5,80,Cybersecurity Analyst
+Master,"NLP, TensorFlow, Python",None,6.5,95,AI Researcher
+Master,"Machine Learning, Python",Deep Learning Specialization,4.5,70,Data Scientist
+Master,"SQL, Python, Machine Learning",AWS Certified,5,95,Data Scientist
+Bachelor,"SQL, Java",AWS Certified,4.5,90,Software Engineer
+Master,"SQL, Java, C++, React",AWS Certified,6.5,100,Software Engineer
+PhD,"Python, Machine Learning",Google ML,8.5,100,Data Scientist
+Master,"React, SQL, Java",Deep Learning Specialization,5,80,Software Engineer
+Bachelor,"Pytorch, Python",Deep Learning Specialization,3,75,AI Researcher
+PhD,"Python, NLP, TensorFlow, Pytorch",None,7,100,AI Researcher
+Master,"Ethical Hacking, Cybersecurity, Linux",None,6,100,Cybersecurity Analyst
+Master,"SQL, Deep Learning, Machine Learning",None,2.5,45,Data Scientist
+Bachelor,"Python, SQL, Machine Learning",Google ML,5.5,100,Data Scientist
+Bachelor,"Python, SQL, Machine Learning",AWS Certified,3.5,60,Data Scientist
+Bachelor,"Cybersecurity, Networking, Ethical Hacking",Google ML,2.5,55,Cybersecurity Analyst
+Bachelor,"C++, Java, SQL, React",Google ML,3,75,Software Engineer
+Bachelor,"Networking, Cybersecurity, Ethical Hacking, Linux",AWS Certified,2,55,Cybersecurity Analyst
+Bachelor,"TensorFlow, Pytorch",None,1.5,35,AI Researcher
+PhD,"Java, React",Google ML,5,100,Software Engineer
+Bachelor,"Python, Pytorch",Deep Learning Specialization,5,70,AI Researcher
+Bachelor,"SQL, Deep Learning, Machine Learning, Python",None,8.5,100,Data Scientist
+Master,"Machine Learning, Deep Learning, Python",Google ML,6,100,Data Scientist
+Master,"C++, React, Java, SQL",None,8.5,100,Software Engineer
+Master,"Deep Learning, Python, Machine Learning, SQL",Deep Learning Specialization,6,100,Data Scientist
+PhD,"Java, React, C++",None,2,40,Software Engineer
+Bachelor,"Java, C++, React, SQL",None,4.5,100,Software Engineer
+Master,"Pytorch, Python, TensorFlow, NLP",Google ML,6.5,100,AI Researcher
+Master,"Linux, Networking, Ethical Hacking, Cybersecurity",Google ML,6,100,Cybersecurity Analyst
+Bachelor,"SQL, Python, Machine Learning, Deep Learning",AWS Certified,1,45,Data Scientist
+PhD,"Pytorch, TensorFlow, NLP",Deep Learning Specialization,4,100,AI Researcher
+Master,"Ethical Hacking, Networking, Linux",Google ML,3.5,60,Cybersecurity Analyst
+Master,"Python, SQL, Machine Learning, Deep Learning",Deep Learning Specialization,3,60,Data Scientist
+Master,"Java, SQL",AWS Certified,5.5,100,Software Engineer
+Bachelor,"TensorFlow, NLP",Deep Learning Specialization,6.5,100,AI Researcher
+Bachelor,"Java, React, SQL, C++",Deep Learning Specialization,6,100,Software Engineer
+Master,"Python, Machine Learning",Deep Learning Specialization,0,20,Data Scientist
+PhD,"Cybersecurity, Ethical Hacking, Linux, Networking",None,4,95,Cybersecurity Analyst
+Master,"TensorFlow, Python",None,3.5,50,AI Researcher
+Bachelor,"Deep Learning, Python, Machine Learning, SQL",Deep Learning Specialization,5,100,Data Scientist
+Master,"NLP, TensorFlow, Pytorch",None,5.5,100,AI Researcher
+PhD,"React, C++",Deep Learning Specialization,5.5,80,Software Engineer
+Master,"C++, Java",Deep Learning Specialization,6.5,100,Software Engineer
+Bachelor,"Python, NLP, TensorFlow",None,6,100,AI Researcher
+Bachelor,"Java, SQL, C++",AWS Certified,1,35,Software Engineer
+Master,"Java, React, C++",None,5,100,Software Engineer
+Master,"SQL, Deep Learning, Python, Machine Learning",Deep Learning Specialization,8,100,Data Scientist
+Bachelor,"Python, Pytorch",None,7,100,AI Researcher
+PhD,"React, SQL, Java",Google ML,7.5,100,Software Engineer
+Master,"Linux, Ethical Hacking, Cybersecurity, Networking",None,9,100,Cybersecurity Analyst
+Master,"NLP, TensorFlow",Google ML,5.5,95,AI Researcher
+Master,"Pytorch, TensorFlow, Python",Google ML,5,95,AI Researcher
+Bachelor,"TensorFlow, NLP, Pytorch",AWS Certified,2.5,75,AI Researcher
+Bachelor,"NLP, Pytorch",Deep Learning Specialization,5,70,AI Researcher
+Bachelor,"Java, SQL, C++",Google ML,8.5,100,Software Engineer
+Bachelor,"TensorFlow, Pytorch, Python, NLP",AWS Certified,2.5,60,AI Researcher
+PhD,"TensorFlow, NLP, Pytorch, Python",Deep Learning Specialization,3,80,AI Researcher
+Bachelor,"TensorFlow, Pytorch, NLP, Python",AWS Certified,7.5,100,AI Researcher
+PhD,"Python, Deep Learning",Google ML,7,100,Data Scientist
+Bachelor,"SQL, Java, React",Google ML,4.5,100,Software Engineer
+Master,"Linux, Cybersecurity",Google ML,2,45,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Cybersecurity",Deep Learning Specialization,5.5,100,Cybersecurity Analyst
+Master,"Ethical Hacking, Networking",Deep Learning Specialization,2.5,55,Cybersecurity Analyst
+PhD,"Ethical Hacking, Networking, Linux",None,7.5,100,Cybersecurity Analyst
+Bachelor,"Java, SQL",Google ML,3,75,Software Engineer
+Bachelor,"Deep Learning, Machine Learning, SQL",AWS Certified,6.5,100,Data Scientist
+Bachelor,"NLP, Python, TensorFlow",AWS Certified,4.5,100,AI Researcher
+Bachelor,"Python, Deep Learning, Machine Learning",Deep Learning Specialization,2,55,Data Scientist
+Bachelor,"Python, Machine Learning, SQL",None,5,85,Data Scientist
+Master,"Ethical Hacking, Linux, Networking, Cybersecurity",None,5,100,Cybersecurity Analyst
+Bachelor,"Java, React",Google ML,4.5,100,Software Engineer
+Bachelor,"Machine Learning, SQL, Deep Learning",Deep Learning Specialization,4.5,95,Data Scientist
+Master,"SQL, Python, Machine Learning, Deep Learning",Deep Learning Specialization,2,65,Data Scientist
+Bachelor,"Pytorch, TensorFlow",Deep Learning Specialization,1.5,35,AI Researcher
+Master,"C++, Java",Deep Learning Specialization,2,50,Software Engineer
+PhD,"NLP, TensorFlow, Pytorch",None,9,100,AI Researcher
+Bachelor,"Networking, Cybersecurity, Linux, Ethical Hacking",None,10,100,Cybersecurity Analyst
+PhD,"React, C++, Java",AWS Certified,7.5,100,Software Engineer
+Master,"React, Java, SQL",Google ML,6.5,100,Software Engineer
+Master,"React, C++, Java, SQL",Deep Learning Specialization,6.5,100,Software Engineer
+Bachelor,"Java, React",Google ML,3,80,Software Engineer
+Bachelor,"Python, TensorFlow, Pytorch, NLP",AWS Certified,3,80,AI Researcher
+PhD,"Linux, Networking, Cybersecurity, Ethical Hacking",None,5,100,Cybersecurity Analyst
+PhD,"SQL, Java",AWS Certified,5,75,Software Engineer
+Master,"Java, C++, React",AWS Certified,8,100,Software Engineer
+Bachelor,"SQL, Python",Deep Learning Specialization,5.5,100,Data Scientist
+Master,"Machine Learning, Python, Deep Learning, SQL",Deep Learning Specialization,5,100,Data Scientist
+Master,"Pytorch, Python",Deep Learning Specialization,1.5,50,AI Researcher
+Bachelor,"Linux, Networking, Ethical Hacking, Cybersecurity",AWS Certified,6.5,100,Cybersecurity Analyst
+Bachelor,"Python, NLP, Pytorch",Deep Learning Specialization,1.5,55,AI Researcher
+Bachelor,"NLP, Python, Pytorch, TensorFlow",AWS Certified,2.5,60,AI Researcher
+Bachelor,"Java, C++, SQL",None,1.5,30,Software Engineer
+Bachelor,"Ethical Hacking, Networking, Linux, Cybersecurity",Deep Learning Specialization,6,100,Cybersecurity Analyst
+PhD,"C++, Java, React, SQL",None,0.5,30,Software Engineer
+Bachelor,"TensorFlow, NLP, Python, Pytorch",Deep Learning Specialization,4.5,100,AI Researcher
+Bachelor,"Networking, Cybersecurity",None,3.5,80,Cybersecurity Analyst
+Master,"Linux, Cybersecurity, Ethical Hacking",None,4.5,80,Cybersecurity Analyst
+Master,"Machine Learning, Python, SQL",Google ML,6.5,100,Data Scientist
+Master,"Deep Learning, SQL, Python, Machine Learning",None,5.5,95,Data Scientist
+Master,"Ethical Hacking, Cybersecurity, Networking, Linux",Google ML,2,65,Cybersecurity Analyst
+Bachelor,"Deep Learning, Python, SQL",Google ML,2.5,65,Data Scientist
+Bachelor,"Cybersecurity, Ethical Hacking, Linux",Deep Learning Specialization,5.5,100,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning, Deep Learning, Python",None,4,85,Data Scientist
+Master,"Networking, Linux, Cybersecurity, Ethical Hacking",Deep Learning Specialization,5,100,Cybersecurity Analyst
+Bachelor,"TensorFlow, Pytorch, Python",Google ML,5,100,AI Researcher
+Master,"TensorFlow, Pytorch, NLP",AWS Certified,9,100,AI Researcher
+PhD,"SQL, Python, Deep Learning, Machine Learning",None,5.5,100,Data Scientist
+PhD,"Python, Machine Learning",AWS Certified,6,100,Data Scientist
+Bachelor,"TensorFlow, NLP, Pytorch",Deep Learning Specialization,3,85,AI Researcher
+Bachelor,"Python, Machine Learning",Google ML,5.5,100,Data Scientist
+Bachelor,"Ethical Hacking, Networking, Linux",Google ML,5,90,Cybersecurity Analyst
+PhD,"SQL, React, Java",AWS Certified,8,100,Software Engineer
+PhD,"Python, Machine Learning, SQL, Deep Learning",AWS Certified,4.5,100,Data Scientist
+Bachelor,"Python, Deep Learning, SQL, Machine Learning",Google ML,3.5,100,Data Scientist
+Master,"Ethical Hacking, Linux, Cybersecurity",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+Master,"Cybersecurity, Ethical Hacking, Networking, Linux",None,4,90,Cybersecurity Analyst
+Bachelor,"Linux, Ethical Hacking, Networking, Cybersecurity",AWS Certified,5.5,100,Cybersecurity Analyst
+PhD,"Pytorch, TensorFlow, Python",None,1.5,40,AI Researcher
+Bachelor,"Ethical Hacking, Linux",AWS Certified,7.5,100,Cybersecurity Analyst
+Master,"Cybersecurity, Linux",Deep Learning Specialization,1.5,45,Cybersecurity Analyst
+PhD,"SQL, Machine Learning",Deep Learning Specialization,6,95,Data Scientist
+Master,"SQL, Machine Learning",AWS Certified,6.5,100,Data Scientist
+Master,"Linux, Cybersecurity",None,7.5,100,Cybersecurity Analyst
+Master,"TensorFlow, NLP, Python",None,1.5,35,AI Researcher
+Master,"Networking, Cybersecurity, Linux, Ethical Hacking",Google ML,8.5,100,Cybersecurity Analyst
+PhD,"Deep Learning, SQL",None,2.5,45,Data Scientist
+Master,"Pytorch, NLP, Python",AWS Certified,4.5,85,AI Researcher
+Bachelor,"Networking, Cybersecurity, Ethical Hacking",Google ML,4.5,80,Cybersecurity Analyst
+Bachelor,"Java, C++, React, SQL",Deep Learning Specialization,5.5,100,Software Engineer
+Master,"Python, Machine Learning",None,3.5,80,Data Scientist
+Master,"Networking, Ethical Hacking, Cybersecurity",None,4.5,100,Cybersecurity Analyst
+Bachelor,"Deep Learning, SQL, Python",AWS Certified,4.5,85,Data Scientist
+Bachelor,"React, SQL, C++",Google ML,4,80,Software Engineer
+PhD,"SQL, Python",Deep Learning Specialization,8.5,100,Data Scientist
+Master,"Machine Learning, Deep Learning, Python, SQL",None,5,100,Data Scientist
+Bachelor,"SQL, Machine Learning, Python, Deep Learning",Google ML,5.5,100,Data Scientist
+Master,"C++, React",None,2,35,Software Engineer
+Bachelor,"SQL, Deep Learning, Python, Machine Learning",Google ML,6.5,100,Data Scientist
+Master,"Pytorch, TensorFlow",None,5,75,AI Researcher
+Master,"Networking, Cybersecurity, Ethical Hacking",None,6,100,Cybersecurity Analyst
+PhD,"Java, React",Deep Learning Specialization,6.5,100,Software Engineer
+PhD,"Machine Learning, Deep Learning, SQL, Python",None,4,65,Data Scientist
+Bachelor,"Pytorch, NLP",None,3.5,45,AI Researcher
+PhD,"SQL, Deep Learning, Python",None,4,80,Data Scientist
+Master,"React, Java, C++, SQL",Deep Learning Specialization,5,100,Software Engineer
+Master,"Java, C++, React, SQL",Deep Learning Specialization,6,100,Software Engineer
+Bachelor,"Pytorch, Python",Deep Learning Specialization,3.5,55,AI Researcher
+Master,"NLP, TensorFlow, Python",Deep Learning Specialization,1.5,40,AI Researcher
+Master,"SQL, Python, Machine Learning, Deep Learning",Google ML,4,85,Data Scientist
+PhD,"React, SQL, Java, C++",AWS Certified,3,65,Software Engineer
+Bachelor,"Linux, Cybersecurity, Ethical Hacking",Deep Learning Specialization,8,100,Cybersecurity Analyst
+PhD,"Linux, Ethical Hacking",AWS Certified,2,45,Cybersecurity Analyst
+Master,"TensorFlow, NLP, Python",Deep Learning Specialization,6.5,100,AI Researcher
+PhD,"Machine Learning, SQL, Python",None,8,100,Data Scientist
+Bachelor,"Pytorch, Python, TensorFlow, NLP",AWS Certified,7,100,AI Researcher
+Bachelor,"Pytorch, Python",None,6.5,100,AI Researcher
+PhD,"Python, Deep Learning",None,9,100,Data Scientist
+PhD,"C++, SQL, Java",Deep Learning Specialization,4,70,Software Engineer
+Master,"Ethical Hacking, Cybersecurity, Linux",Deep Learning Specialization,1.5,55,Cybersecurity Analyst
+Bachelor,"Python, TensorFlow",Deep Learning Specialization,2.5,50,AI Researcher
+Master,"Cybersecurity, Ethical Hacking, Linux, Networking",Google ML,8,100,Cybersecurity Analyst
+PhD,"TensorFlow, NLP",Google ML,3.5,85,AI Researcher
+Bachelor,"Ethical Hacking, Cybersecurity, Networking",None,4,95,Cybersecurity Analyst
+PhD,"NLP, Python, TensorFlow",Deep Learning Specialization,4,70,AI Researcher
+Master,"Java, C++",Google ML,6,100,Software Engineer
+Bachelor,"NLP, Pytorch, Python, TensorFlow",None,7,100,AI Researcher
+Master,"Ethical Hacking, Linux, Cybersecurity, Networking",None,8.5,100,Cybersecurity Analyst
+Bachelor,"C++, React",AWS Certified,3.5,65,Software Engineer
+Master,"Cybersecurity, Ethical Hacking, Networking, Linux",Deep Learning Specialization,3.5,70,Cybersecurity Analyst
+Master,"Python, NLP, TensorFlow",Google ML,3,65,AI Researcher
+Bachelor,"Machine Learning, Python, Deep Learning",AWS Certified,3.5,75,Data Scientist
+Bachelor,"Networking, Linux, Ethical Hacking",Google ML,5,100,Cybersecurity Analyst
+Master,"C++, SQL",Google ML,1.5,45,Software Engineer
+Bachelor,"SQL, Java",Google ML,4,65,Software Engineer
+Bachelor,"TensorFlow, Python, NLP",None,3,60,AI Researcher
+Master,"Linux, Ethical Hacking, Cybersecurity, Networking",AWS Certified,5.5,100,Cybersecurity Analyst
+Bachelor,"SQL, Deep Learning, Python, Machine Learning",None,8.5,100,Data Scientist
+Master,"TensorFlow, Python, NLP, Pytorch",AWS Certified,8,100,AI Researcher
+Bachelor,"Linux, Networking, Cybersecurity, Ethical Hacking",None,5.5,80,Cybersecurity Analyst
+PhD,"Pytorch, TensorFlow, Python, NLP",Google ML,6,100,AI Researcher
+PhD,"Cybersecurity, Linux",None,4.5,100,Cybersecurity Analyst
+Master,"Python, NLP",Google ML,1,35,AI Researcher
+Bachelor,"Python, TensorFlow, Pytorch, NLP",None,5,100,AI Researcher
+Master,"Java, SQL",Deep Learning Specialization,6,100,Software Engineer
+PhD,"Linux, Ethical Hacking, Cybersecurity",AWS Certified,2.5,70,Cybersecurity Analyst
+Bachelor,"Cybersecurity, Networking",Google ML,3.5,60,Cybersecurity Analyst
+Bachelor,"Python, Deep Learning, Machine Learning",Deep Learning Specialization,3,65,Data Scientist
+Bachelor,"Linux, Networking, Ethical Hacking",None,6.5,100,Cybersecurity Analyst
+PhD,"Python, Pytorch",Deep Learning Specialization,5.5,90,AI Researcher
+Master,"Cybersecurity, Networking, Ethical Hacking",AWS Certified,6,95,Cybersecurity Analyst
+Master,"Python, NLP, Pytorch",Google ML,1,40,AI Researcher
+Master,"React, C++, Java, SQL",AWS Certified,4,70,Software Engineer
+Master,"Deep Learning, Python",AWS Certified,3.5,70,Data Scientist
+Master,"SQL, Java, C++, React",None,7,100,Software Engineer
+Master,"Cybersecurity, Linux, Networking",Deep Learning Specialization,3.5,60,Cybersecurity Analyst
+Bachelor,"React, SQL",AWS Certified,3.5,90,Software Engineer
+Bachelor,"Ethical Hacking, Linux, Cybersecurity, Networking",Deep Learning Specialization,4.5,80,Cybersecurity Analyst
+Bachelor,"Python, Deep Learning",None,4,75,Data Scientist
+PhD,"Python, TensorFlow, NLP, Pytorch",AWS Certified,6.5,100,AI Researcher
+Master,"Deep Learning, SQL",Google ML,2.5,50,Data Scientist
+Master,"Linux, Ethical Hacking",Deep Learning Specialization,5,100,Cybersecurity Analyst
+Bachelor,"Deep Learning, Machine Learning, Python, SQL",AWS Certified,6,100,Data Scientist
+Bachelor,"C++, SQL, React",Google ML,6,100,Software Engineer
+Bachelor,"Linux, Networking",AWS Certified,3,50,Cybersecurity Analyst
+Bachelor,"NLP, Pytorch",Deep Learning Specialization,5,80,AI Researcher
+Bachelor,"Deep Learning, Python, SQL",Deep Learning Specialization,5,85,Data Scientist
+Master,"Cybersecurity, Ethical Hacking, Linux",AWS Certified,5.5,100,Cybersecurity Analyst
+Bachelor,"Deep Learning, Machine Learning, SQL",Google ML,4.5,95,Data Scientist
+Master,"SQL, Java, React, C++",Deep Learning Specialization,4.5,95,Software Engineer
+Master,"React, Java",AWS Certified,5,80,Software Engineer
+Bachelor,"Python, NLP, TensorFlow, Pytorch",AWS Certified,9.5,100,AI Researcher
+Master,"Pytorch, NLP, TensorFlow, Python",AWS Certified,8,100,AI Researcher
+PhD,"TensorFlow, Python, Pytorch",None,4.5,100,AI Researcher
+Bachelor,"SQL, Machine Learning",None,2,40,Data Scientist
+Master,"React, C++, SQL, Java",Deep Learning Specialization,6,100,Software Engineer
+Bachelor,"NLP, Pytorch, TensorFlow",Deep Learning Specialization,5,100,AI Researcher
+Master,"Java, C++, React",None,5,100,Software Engineer
+Bachelor,"Cybersecurity, Linux",Google ML,9,100,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning, Deep Learning",Deep Learning Specialization,1,35,Data Scientist
+Bachelor,"TensorFlow, Pytorch, Python",AWS Certified,7,100,AI Researcher
+Bachelor,"Python, Pytorch",Google ML,4.5,100,AI Researcher
+PhD,"Ethical Hacking, Linux, Networking",AWS Certified,5.5,85,Cybersecurity Analyst
+Bachelor,"TensorFlow, NLP",AWS Certified,6,100,AI Researcher
+Master,"Python, TensorFlow",AWS Certified,0.5,25,AI Researcher
+Master,"NLP, Python, Pytorch",AWS Certified,0.5,35,AI Researcher
+Master,"NLP, TensorFlow",Google ML,4,95,AI Researcher
+Master,"Networking, Ethical Hacking",AWS Certified,2.5,45,Cybersecurity Analyst
+Bachelor,"SQL, React",Deep Learning Specialization,7.5,100,Software Engineer
+Master,"SQL, Machine Learning, Deep Learning, Python",Google ML,8,100,Data Scientist
+PhD,"Cybersecurity, Linux, Networking, Ethical Hacking",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+PhD,"Machine Learning, SQL, Python",Google ML,3.5,60,Data Scientist
+Bachelor,"Ethical Hacking, Cybersecurity",None,4,50,Cybersecurity Analyst
+PhD,"Linux, Cybersecurity",AWS Certified,1.5,45,Cybersecurity Analyst
+Master,"NLP, Pytorch, Python",None,5.5,100,AI Researcher
+Master,"Networking, Linux",Deep Learning Specialization,5,85,Cybersecurity Analyst
+PhD,"NLP, TensorFlow",Deep Learning Specialization,3.5,90,AI Researcher
+Master,"Deep Learning, Machine Learning, Python",AWS Certified,2,60,Data Scientist
+Bachelor,"React, C++, SQL, Java",Deep Learning Specialization,5.5,100,Software Engineer
+Master,"Cybersecurity, Networking, Ethical Hacking",AWS Certified,7,100,Cybersecurity Analyst
+PhD,"Deep Learning, Machine Learning",Google ML,0.5,25,Data Scientist
+Master,"C++, SQL, React",Deep Learning Specialization,7.5,100,Software Engineer
+Master,"Python, TensorFlow, Pytorch, NLP",Google ML,5,100,AI Researcher
+Master,"Pytorch, Python, NLP, TensorFlow",Deep Learning Specialization,4.5,75,AI Researcher
+Bachelor,"Python, TensorFlow",None,3,55,AI Researcher
+Bachelor,"Python, Deep Learning",None,4.5,90,Data Scientist
+PhD,"Ethical Hacking, Cybersecurity, Networking",Deep Learning Specialization,3.5,70,Cybersecurity Analyst
+Master,"C++, React, SQL, Java",None,1.5,45,Software Engineer
+Bachelor,"Python, SQL, Deep Learning",None,9,100,Data Scientist
+Master,"Python, Deep Learning, SQL, Machine Learning",None,4.5,75,Data Scientist
+Master,"Ethical Hacking, Networking",Deep Learning Specialization,5,100,Cybersecurity Analyst
+PhD,"TensorFlow, Python",Deep Learning Specialization,5.5,85,AI Researcher
+Bachelor,"Cybersecurity, Networking, Linux",AWS Certified,2.5,60,Cybersecurity Analyst
+Bachelor,"Machine Learning, Python, SQL",None,5.5,100,Data Scientist
+Bachelor,"Java, C++, React, SQL",None,6,100,Software Engineer
+Master,"Pytorch, Python, NLP, TensorFlow",Deep Learning Specialization,6,100,AI Researcher
+Bachelor,"Deep Learning, Python, Machine Learning, SQL",None,4,70,Data Scientist
+Bachelor,"Networking, Linux, Ethical Hacking, Cybersecurity",Deep Learning Specialization,2,60,Cybersecurity Analyst
+Master,"Networking, Cybersecurity, Linux, Ethical Hacking",Google ML,6,100,Cybersecurity Analyst
+Bachelor,"SQL, Deep Learning",Google ML,6,100,Data Scientist
+Master,"Python, Pytorch, TensorFlow",None,5.5,75,AI Researcher
+Master,"Linux, Ethical Hacking",Google ML,9.5,100,Cybersecurity Analyst
+PhD,"React, Java, SQL, C++",Deep Learning Specialization,7.5,100,Software Engineer
+PhD,"NLP, Python, TensorFlow, Pytorch",Deep Learning Specialization,6,100,AI Researcher
+Bachelor,"Python, NLP",Google ML,9,100,AI Researcher
+Bachelor,"SQL, Python, Machine Learning",AWS Certified,7.5,100,Data Scientist
+Master,"React, SQL, C++",None,5.5,75,Software Engineer
+Bachelor,"Machine Learning, SQL, Python",Google ML,6,100,Data Scientist
+Master,"Python, SQL",Deep Learning Specialization,4,65,Data Scientist
+Bachelor,"Deep Learning, SQL",AWS Certified,3,80,Data Scientist
+Bachelor,"SQL, Java",None,5.5,80,Software Engineer
+Bachelor,"Cybersecurity, Ethical Hacking, Networking",None,3.5,50,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning, Python, Deep Learning",Google ML,7,100,Data Scientist
+PhD,"Deep Learning, SQL, Python, Machine Learning",Deep Learning Specialization,1,45,Data Scientist
+Master,"C++, SQL",Google ML,5,95,Software Engineer
+Master,"Networking, Ethical Hacking, Linux, Cybersecurity",Google ML,7.5,100,Cybersecurity Analyst
+Master,"Cybersecurity, Ethical Hacking, Linux",AWS Certified,5.5,85,Cybersecurity Analyst
+Bachelor,"Cybersecurity, Networking, Ethical Hacking, Linux",None,3,60,Cybersecurity Analyst
+Bachelor,"Machine Learning, Python, Deep Learning",Deep Learning Specialization,4.5,80,Data Scientist
+Master,"TensorFlow, Python, NLP",AWS Certified,4.5,100,AI Researcher
+Bachelor,"SQL, Java, C++, React",AWS Certified,4,70,Software Engineer
+Master,"Deep Learning, SQL",Google ML,6.5,100,Data Scientist
+Master,"Networking, Linux, Cybersecurity, Ethical Hacking",Deep Learning Specialization,4,95,Cybersecurity Analyst
+Bachelor,"Python, Deep Learning",None,7.5,100,Data Scientist
+Bachelor,"Ethical Hacking, Linux",Deep Learning Specialization,5,100,Cybersecurity Analyst
+PhD,"C++, Java, SQL",Deep Learning Specialization,3.5,75,Software Engineer
+Master,"Deep Learning, Python",AWS Certified,6.5,100,Data Scientist
+Bachelor,"Machine Learning, Python, Deep Learning",None,4.5,100,Data Scientist
+Master,"Ethical Hacking, Linux, Cybersecurity",None,6.5,100,Cybersecurity Analyst
+Bachelor,"SQL, React, C++",AWS Certified,3.5,95,Software Engineer
+PhD,"Networking, Cybersecurity, Ethical Hacking, Linux",AWS Certified,2.5,55,Cybersecurity Analyst
+Master,"SQL, Java",AWS Certified,6,100,Software Engineer
+Bachelor,"Python, Deep Learning, SQL, Machine Learning",AWS Certified,5,85,Data Scientist
+PhD,"TensorFlow, Pytorch",AWS Certified,4.5,90,AI Researcher
+Bachelor,"Linux, Cybersecurity, Networking",AWS Certified,1.5,50,Cybersecurity Analyst
+Master,"Ethical Hacking, Linux",Deep Learning Specialization,3.5,90,Cybersecurity Analyst
+Bachelor,"Java, SQL, React, C++",Deep Learning Specialization,7,100,Software Engineer
+Master,"Pytorch, TensorFlow",AWS Certified,4,70,AI Researcher
+Master,"C++, SQL",AWS Certified,7.5,100,Software Engineer
+Bachelor,"Networking, Linux, Ethical Hacking, Cybersecurity",None,2,60,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning",AWS Certified,4,60,Data Scientist
+Bachelor,"C++, Java",None,4,50,Software Engineer
+Master,"Deep Learning, SQL, Python, Machine Learning",AWS Certified,4,100,Data Scientist
+Bachelor,"Python, NLP, TensorFlow",Google ML,7.5,100,AI Researcher
+Master,"Cybersecurity, Networking",None,6,85,Cybersecurity Analyst
+Master,"Deep Learning, Machine Learning, SQL, Python",Deep Learning Specialization,5.5,90,Data Scientist
+Master,"Cybersecurity, Ethical Hacking, Networking, Linux",Google ML,8,100,Cybersecurity Analyst
+Master,"Ethical Hacking, Cybersecurity, Linux, Networking",Google ML,3.5,65,Cybersecurity Analyst
+Bachelor,"SQL, Java, React",None,6,90,Software Engineer
+Master,"Machine Learning, Python",AWS Certified,2,45,Data Scientist
+Master,"Ethical Hacking, Linux",None,4.5,65,Cybersecurity Analyst
+Master,"Networking, Ethical Hacking",AWS Certified,3.5,60,Cybersecurity Analyst
+Master,"React, C++, SQL, Java",None,0,20,Software Engineer
+PhD,"Python, Deep Learning, SQL, Machine Learning",None,7,100,Data Scientist
+Bachelor,"Python, Machine Learning, Deep Learning",Google ML,1.5,40,Data Scientist
+Bachelor,"Pytorch, TensorFlow",Deep Learning Specialization,8.5,100,AI Researcher
+Bachelor,"Python, Pytorch, TensorFlow, NLP",Google ML,7,100,AI Researcher
+PhD,"Python, NLP",Deep Learning Specialization,5,70,AI Researcher
+Master,"SQL, C++, React, Java",Google ML,6.5,100,Software Engineer
+Master,"SQL, Deep Learning, Machine Learning",None,4,85,Data Scientist
+Bachelor,"Networking, Ethical Hacking",None,2,30,Cybersecurity Analyst
+Master,"Linux, Ethical Hacking",AWS Certified,3,60,Cybersecurity Analyst
+Bachelor,"Networking, Linux, Cybersecurity, Ethical Hacking",AWS Certified,4.5,100,Cybersecurity Analyst
+Bachelor,"SQL, Java",None,4.5,70,Software Engineer
+Bachelor,"TensorFlow, Python, NLP, Pytorch",AWS Certified,1,45,AI Researcher
+Master,"React, Java, SQL",Deep Learning Specialization,4.5,90,Software Engineer
+Master,"TensorFlow, Pytorch",Deep Learning Specialization,7,100,AI Researcher
+Bachelor,"Linux, Cybersecurity, Ethical Hacking",None,2,45,Cybersecurity Analyst
+Bachelor,"Python, NLP",None,6.5,100,AI Researcher
+Master,"Deep Learning, Python",Deep Learning Specialization,6.5,100,Data Scientist
+Bachelor,"Linux, Networking, Ethical Hacking",None,7.5,100,Cybersecurity Analyst
+PhD,"Java, C++, React",None,6.5,100,Software Engineer
+Bachelor,"React, Java, SQL",None,1.5,45,Software Engineer
+PhD,"NLP, Pytorch, Python",Google ML,6.5,100,AI Researcher
+Master,"Java, SQL, C++, React",Google ML,5,100,Software Engineer
+Bachelor,"Cybersecurity, Linux, Ethical Hacking",AWS Certified,4,80,Cybersecurity Analyst
+Master,"Ethical Hacking, Networking, Linux",Google ML,1.5,45,Cybersecurity Analyst
+Bachelor,"C++, React",Deep Learning Specialization,7.5,100,Software Engineer
+Bachelor,"Python, Machine Learning, Deep Learning",Deep Learning Specialization,5,75,Data Scientist
+Bachelor,"SQL, Python",Deep Learning Specialization,9,100,Data Scientist
+Bachelor,"SQL, Python, Deep Learning, Machine Learning",Google ML,6,100,Data Scientist
+Master,"Pytorch, NLP, Python, TensorFlow",AWS Certified,5.5,100,AI Researcher
+Master,"NLP, TensorFlow, Pytorch",AWS Certified,4.5,85,AI Researcher
+Bachelor,"Pytorch, TensorFlow, NLP",AWS Certified,5,100,AI Researcher
+Bachelor,"TensorFlow, Python, NLP, Pytorch",None,4,80,AI Researcher
+Bachelor,"React, C++",Google ML,6.5,100,Software Engineer
+Bachelor,"Linux, Ethical Hacking, Networking",Deep Learning Specialization,5.5,100,Cybersecurity Analyst
+Bachelor,"NLP, Pytorch, TensorFlow",AWS Certified,1,40,AI Researcher
+Master,"C++, SQL, Java",Deep Learning Specialization,6,100,Software Engineer
+Master,"Pytorch, NLP, Python",Google ML,6,100,AI Researcher
+PhD,"Deep Learning, Python, SQL, Machine Learning",AWS Certified,2,55,Data Scientist
+Master,"NLP, TensorFlow",None,4.5,95,AI Researcher
+Master,"NLP, Python",None,7,100,AI Researcher
+Bachelor,"C++, React, Java",Deep Learning Specialization,8.5,100,Software Engineer
+PhD,"Python, Machine Learning, SQL",None,3.5,80,Data Scientist
+Bachelor,"Python, Pytorch, TensorFlow, NLP",AWS Certified,8,100,AI Researcher
+Bachelor,"Java, SQL",Deep Learning Specialization,2,55,Software Engineer
+Master,"Machine Learning, Deep Learning, SQL, Python",AWS Certified,1.5,60,Data Scientist
+PhD,"Ethical Hacking, Linux",None,5,65,Cybersecurity Analyst
+Master,"Machine Learning, Python, Deep Learning",Deep Learning Specialization,2.5,55,Data Scientist
+Bachelor,"Pytorch, NLP, Python, TensorFlow",None,5.5,100,AI Researcher
+Master,"Cybersecurity, Linux, Ethical Hacking",AWS Certified,5,100,Cybersecurity Analyst
+Bachelor,"Cybersecurity, Networking, Linux, Ethical Hacking",None,6.5,100,Cybersecurity Analyst
+Bachelor,"Networking, Linux, Ethical Hacking, Cybersecurity",Google ML,10,100,Cybersecurity Analyst
+Master,"Python, Machine Learning, Deep Learning",Deep Learning Specialization,3,55,Data Scientist
+Master,"Cybersecurity, Linux, Ethical Hacking",None,6,90,Cybersecurity Analyst
+Bachelor,"React, SQL, Java",Google ML,5,80,Software Engineer
+Master,"NLP, Pytorch, TensorFlow",Deep Learning Specialization,7,100,AI Researcher
+Master,"TensorFlow, NLP, Python",AWS Certified,5,95,AI Researcher
+Master,"Networking, Linux",None,4.5,70,Cybersecurity Analyst
+PhD,"Python, SQL",Deep Learning Specialization,4.5,65,Data Scientist
+Master,"Deep Learning, SQL",Google ML,2.5,70,Data Scientist
+PhD,"Cybersecurity, Networking",None,2,50,Cybersecurity Analyst
+Master,"C++, Java, React",Google ML,2,65,Software Engineer
+Master,"Pytorch, TensorFlow, NLP",AWS Certified,5,80,AI Researcher
+Bachelor,"React, C++",Deep Learning Specialization,3,75,Software Engineer
+PhD,"Java, React, C++, SQL",Deep Learning Specialization,6.5,100,Software Engineer
+Master,"Deep Learning, SQL, Machine Learning, Python",AWS Certified,2.5,60,Data Scientist
+Bachelor,"Deep Learning, Machine Learning, Python, SQL",None,2.5,70,Data Scientist
+Master,"SQL, Machine Learning, Python, Deep Learning",AWS Certified,4,80,Data Scientist
+Bachelor,"Cybersecurity, Ethical Hacking, Linux",Google ML,4,70,Cybersecurity Analyst
+Master,"Linux, Networking, Cybersecurity",None,3.5,80,Cybersecurity Analyst
+Bachelor,"Python, Deep Learning",AWS Certified,3.5,65,Data Scientist
+Bachelor,"NLP, TensorFlow, Pytorch, Python",Deep Learning Specialization,4,100,AI Researcher
+Bachelor,"C++, React, Java, SQL",AWS Certified,6.5,100,Software Engineer
+Bachelor,"SQL, C++",Deep Learning Specialization,3.5,70,Software Engineer
+Bachelor,"Python, NLP, Pytorch, TensorFlow",None,6,100,AI Researcher
+Master,"Cybersecurity, Linux, Ethical Hacking",Deep Learning Specialization,8.5,100,Cybersecurity Analyst
+PhD,"React, Java",None,6.5,100,Software Engineer
+Master,"Networking, Linux",Google ML,7,100,Cybersecurity Analyst
+PhD,"SQL, Python, Machine Learning",AWS Certified,5,100,Data Scientist
+Bachelor,"Pytorch, NLP",Google ML,7,100,AI Researcher
+Bachelor,"Cybersecurity, Ethical Hacking",Deep Learning Specialization,3.5,65,Cybersecurity Analyst
+Master,"SQL, C++, React",AWS Certified,5.5,100,Software Engineer
+PhD,"SQL, React, C++, Java",Deep Learning Specialization,5.5,100,Software Engineer
+Bachelor,"Networking, Cybersecurity, Linux, Ethical Hacking",None,6,100,Cybersecurity Analyst
+Master,"Python, Deep Learning, SQL",Deep Learning Specialization,6,100,Data Scientist
+PhD,"Java, React, C++",Deep Learning Specialization,1,35,Software Engineer
+PhD,"Python, Deep Learning, Machine Learning, SQL",Google ML,6.5,100,Data Scientist
+Bachelor,"Java, React",AWS Certified,5,100,Software Engineer
+Master,"C++, SQL",AWS Certified,4.5,95,Software Engineer
+Master,"Deep Learning, Python, Machine Learning",Google ML,9.5,100,Data Scientist
+Master,"Networking, Cybersecurity",None,5.5,90,Cybersecurity Analyst
+Master,"Machine Learning, SQL, Deep Learning",Google ML,6.5,100,Data Scientist
+Bachelor,"Java, C++, SQL, React",None,5.5,95,Software Engineer
+PhD,"Java, React, SQL",AWS Certified,2,65,Software Engineer
+Bachelor,"Java, React",Deep Learning Specialization,8,100,Software Engineer
+Master,"TensorFlow, Python, NLP",None,5,100,AI Researcher
+Bachelor,"Machine Learning, Python",None,7.5,100,Data Scientist
+Bachelor,"React, SQL, Java",Deep Learning Specialization,5,100,Software Engineer
+Master,"SQL, React, Java",None,0,15,Software Engineer
+Bachelor,"Networking, Ethical Hacking, Cybersecurity",Google ML,7.5,100,Cybersecurity Analyst
+Bachelor,"Python, Machine Learning, Deep Learning",Deep Learning Specialization,4,100,Data Scientist
+Master,"Java, SQL, React",None,6.5,100,Software Engineer
+Bachelor,"Java, React, C++, SQL",Google ML,6,100,Software Engineer
+Bachelor,"SQL, Java",AWS Certified,8,100,Software Engineer
+Master,"NLP, TensorFlow, Python, Pytorch",Google ML,4,70,AI Researcher
+Master,"Cybersecurity, Ethical Hacking, Linux, Networking",Deep Learning Specialization,8,100,Cybersecurity Analyst
+PhD,"Linux, Networking",None,7.5,100,Cybersecurity Analyst
+Bachelor,"Java, C++",Deep Learning Specialization,6,100,Software Engineer
+Bachelor,"TensorFlow, Python, NLP",Google ML,5,100,AI Researcher
+Master,"NLP, Pytorch, TensorFlow",Deep Learning Specialization,8.5,100,AI Researcher
+Master,"Ethical Hacking, Networking, Linux",Google ML,3.5,65,Cybersecurity Analyst
+Bachelor,"Pytorch, Python",AWS Certified,9,100,AI Researcher
+Master,"C++, Java",Deep Learning Specialization,1.5,35,Software Engineer
+Master,"Ethical Hacking, Networking",AWS Certified,8,100,Cybersecurity Analyst
+Master,"TensorFlow, Pytorch, Python, NLP",AWS Certified,3,80,AI Researcher
+Bachelor,"Pytorch, Python, TensorFlow, NLP",Google ML,7.5,100,AI Researcher
+PhD,"Cybersecurity, Ethical Hacking, Networking, Linux",None,4,75,Cybersecurity Analyst
+Master,"C++, Java, SQL",Google ML,4.5,80,Software Engineer
+Bachelor,"Pytorch, Python",AWS Certified,6.5,100,AI Researcher
+PhD,"Python, TensorFlow, Pytorch, NLP",AWS Certified,9,100,AI Researcher
+PhD,"SQL, Deep Learning, Machine Learning, Python",None,3.5,60,Data Scientist
+Master,"TensorFlow, NLP, Python",Google ML,1,35,AI Researcher
+Bachelor,"SQL, Machine Learning, Deep Learning",None,4.5,100,Data Scientist
+Master,"Machine Learning, SQL, Python, Deep Learning",Google ML,4,80,Data Scientist
+Master,"Python, Machine Learning",Google ML,7.5,100,Data Scientist
+Bachelor,"Deep Learning, Machine Learning, SQL",None,3.5,55,Data Scientist
+Master,"SQL, Python",Deep Learning Specialization,9,100,Data Scientist
+Master,"Networking, Ethical Hacking, Linux, Cybersecurity",Google ML,5,100,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning",Deep Learning Specialization,1,35,Data Scientist
+Master,"Machine Learning, Python, SQL",Google ML,2.5,50,Data Scientist
+Bachelor,"Linux, Cybersecurity, Ethical Hacking, Networking",AWS Certified,6,100,Cybersecurity Analyst
+Master,"React, C++, Java",Deep Learning Specialization,5.5,100,Software Engineer
+Master,"Networking, Cybersecurity, Linux",Google ML,6.5,100,Cybersecurity Analyst
+Master,"C++, Java, React, SQL",Deep Learning Specialization,9.5,100,Software Engineer
+Bachelor,"Ethical Hacking, Networking",None,4.5,95,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Linux",Deep Learning Specialization,4,90,Cybersecurity Analyst
+Master,"TensorFlow, Python, NLP",None,8,100,AI Researcher
+Master,"C++, React, SQL, Java",Google ML,5,85,Software Engineer
+PhD,"SQL, Machine Learning, Deep Learning, Python",None,6,95,Data Scientist
+PhD,"Python, Pytorch, NLP",Google ML,4.5,70,AI Researcher
+Bachelor,"C++, React, Java",Google ML,9,100,Software Engineer
+PhD,"Deep Learning, Machine Learning, SQL",Deep Learning Specialization,6,95,Data Scientist
+Bachelor,"Machine Learning, Python, SQL",Deep Learning Specialization,7,100,Data Scientist
+Bachelor,"React, SQL, Java, C++",Deep Learning Specialization,3,90,Software Engineer
+Bachelor,"Machine Learning, Deep Learning, Python",AWS Certified,6,100,Data Scientist
+Bachelor,"Linux, Ethical Hacking, Cybersecurity, Networking",AWS Certified,4,100,Cybersecurity Analyst
+Master,"Java, SQL",Deep Learning Specialization,5,100,Software Engineer
+Master,"Java, React, SQL, C++",Google ML,7.5,100,Software Engineer
+Bachelor,"Java, SQL, C++, React",Deep Learning Specialization,1.5,60,Software Engineer
+PhD,"NLP, TensorFlow, Python, Pytorch",AWS Certified,9.5,100,AI Researcher
+Master,"Pytorch, TensorFlow, NLP, Python",AWS Certified,2.5,80,AI Researcher
+Bachelor,"SQL, Deep Learning, Python, Machine Learning",None,4.5,100,Data Scientist
+Master,"Linux, Networking",None,2,50,Cybersecurity Analyst
+Master,"SQL, C++, React",Deep Learning Specialization,2.5,55,Software Engineer
+PhD,"Networking, Ethical Hacking",Deep Learning Specialization,2.5,45,Cybersecurity Analyst
+Bachelor,"TensorFlow, Python, NLP",Deep Learning Specialization,8,100,AI Researcher
+Bachelor,"Machine Learning, Python",Google ML,4.5,90,Data Scientist
+PhD,"Pytorch, TensorFlow",Google ML,5.5,100,AI Researcher
+PhD,"Ethical Hacking, Linux",None,3.5,80,Cybersecurity Analyst
+Bachelor,"Networking, Ethical Hacking, Linux, Cybersecurity",Deep Learning Specialization,7,100,Cybersecurity Analyst
+Master,"Networking, Ethical Hacking, Cybersecurity, Linux",Deep Learning Specialization,7,100,Cybersecurity Analyst
+Bachelor,"Cybersecurity, Linux, Ethical Hacking",AWS Certified,5,80,Cybersecurity Analyst
+Master,"Cybersecurity, Linux, Networking, Ethical Hacking",AWS Certified,2,50,Cybersecurity Analyst
+Bachelor,"Java, React, SQL, C++",None,5.5,80,Software Engineer
+Bachelor,"React, C++",None,7.5,100,Software Engineer
+Master,"SQL, React, Java, C++",Google ML,8,100,Software Engineer
+Bachelor,"Ethical Hacking, Linux",Deep Learning Specialization,4.5,85,Cybersecurity Analyst
+Bachelor,"SQL, Java, C++",AWS Certified,1.5,50,Software Engineer
+PhD,"C++, React, SQL",Google ML,7,100,Software Engineer
+PhD,"Python, NLP, Pytorch",AWS Certified,1.5,50,AI Researcher
+Bachelor,"NLP, Pytorch, TensorFlow",None,9.5,100,AI Researcher
+Bachelor,"Linux, Networking, Cybersecurity, Ethical Hacking",Deep Learning Specialization,6,100,Cybersecurity Analyst
+Bachelor,"Machine Learning, Deep Learning, SQL",AWS Certified,3,55,Data Scientist
+Bachelor,"SQL, C++",AWS Certified,7,100,Software Engineer
+PhD,"Networking, Cybersecurity",None,3.5,80,Cybersecurity Analyst
+PhD,"Java, React, SQL",None,1,30,Software Engineer
+Bachelor,"Ethical Hacking, Networking, Linux",Google ML,4.5,70,Cybersecurity Analyst
+Master,"SQL, Machine Learning, Deep Learning, Python",Deep Learning Specialization,5.5,100,Data Scientist
+Master,"TensorFlow, NLP, Pytorch, Python",AWS Certified,5.5,100,AI Researcher
+Master,"Deep Learning, Machine Learning, SQL",None,7,100,Data Scientist
+Bachelor,"Python, Machine Learning",AWS Certified,4.5,100,Data Scientist
+Master,"C++, SQL",Google ML,2.5,70,Software Engineer
+Master,"Python, Deep Learning, SQL, Machine Learning",Google ML,2.5,80,Data Scientist
+Bachelor,"Networking, Linux",None,1,30,Cybersecurity Analyst
+PhD,"React, SQL",None,7,100,Software Engineer
+Bachelor,"Java, React, C++, SQL",Google ML,7.5,100,Software Engineer
+Bachelor,"Pytorch, TensorFlow, NLP",None,4.5,80,AI Researcher
+Master,"Java, C++, SQL",Deep Learning Specialization,4.5,100,Software Engineer
+PhD,"TensorFlow, Pytorch, NLP, Python",Google ML,8,100,AI Researcher
+Master,"SQL, Java, C++, React",Deep Learning Specialization,7,100,Software Engineer
+Bachelor,"Deep Learning, Python, Machine Learning",Google ML,4,95,Data Scientist
+Bachelor,"SQL, C++, React",None,5,80,Software Engineer
+Bachelor,"Ethical Hacking, Networking",AWS Certified,4,90,Cybersecurity Analyst
+Bachelor,"Machine Learning, Deep Learning",AWS Certified,7.5,100,Data Scientist
+Bachelor,"SQL, Java, React",Deep Learning Specialization,7,100,Software Engineer
+Master,"Pytorch, NLP",None,1.5,30,AI Researcher
+Master,"Machine Learning, Deep Learning, SQL",Deep Learning Specialization,8.5,100,Data Scientist
+Master,"Networking, Linux, Ethical Hacking, Cybersecurity",AWS Certified,6,100,Cybersecurity Analyst
+PhD,"TensorFlow, NLP, Python",AWS Certified,5,90,AI Researcher
+Bachelor,"Python, Deep Learning, Machine Learning, SQL",Google ML,9,100,Data Scientist
+Bachelor,"React, C++, Java, SQL",None,4,85,Software Engineer
+PhD,"Python, TensorFlow, Pytorch, NLP",Google ML,2.5,80,AI Researcher
+Master,"React, C++, Java, SQL",Deep Learning Specialization,7,100,Software Engineer
+Bachelor,"Machine Learning, Python, Deep Learning, SQL",Google ML,2.5,60,Data Scientist
+PhD,"React, SQL, Java, C++",None,1,35,Software Engineer
+Master,"Ethical Hacking, Networking, Cybersecurity",Deep Learning Specialization,9,100,Cybersecurity Analyst
+Bachelor,"Machine Learning, Deep Learning, Python",Deep Learning Specialization,3.5,95,Data Scientist
+Master,"Cybersecurity, Linux, Networking, Ethical Hacking",None,5,70,Cybersecurity Analyst
+PhD,"Cybersecurity, Ethical Hacking",AWS Certified,3,55,Cybersecurity Analyst
+Bachelor,"NLP, Python",AWS Certified,4,85,AI Researcher
+PhD,"TensorFlow, Python",AWS Certified,8,100,AI Researcher
+Master,"NLP, Pytorch, Python",None,0,15,AI Researcher
+Bachelor,"React, Java, C++",AWS Certified,5.5,100,Software Engineer
+PhD,"Networking, Linux",None,6,100,Cybersecurity Analyst
+Bachelor,"SQL, Deep Learning",Google ML,5,95,Data Scientist
+Master,"C++, Java, React, SQL",AWS Certified,6.5,100,Software Engineer
+Master,"React, Java",AWS Certified,6,95,Software Engineer
+PhD,"Linux, Cybersecurity, Ethical Hacking",Deep Learning Specialization,8,100,Cybersecurity Analyst
+Master,"C++, SQL",AWS Certified,3,60,Software Engineer
+Master,"TensorFlow, Python, NLP, Pytorch",None,4.5,100,AI Researcher
+Bachelor,"Machine Learning, Python, Deep Learning",None,7.5,100,Data Scientist
+Bachelor,"C++, React",Deep Learning Specialization,7,100,Software Engineer
+Bachelor,"Python, TensorFlow, Pytorch",Deep Learning Specialization,4,70,AI Researcher
+Master,"Ethical Hacking, Networking",None,6.5,100,Cybersecurity Analyst
+Bachelor,"Python, Machine Learning",None,3,65,Data Scientist
+Bachelor,"React, Java, SQL, C++",AWS Certified,5,100,Software Engineer
+Master,"React, C++, Java",AWS Certified,4,100,Software Engineer
+Master,"SQL, Java, React, C++",Google ML,6,100,Software Engineer
+Bachelor,"Deep Learning, SQL",AWS Certified,2.5,50,Data Scientist
+Bachelor,"Python, Machine Learning, SQL",AWS Certified,2,45,Data Scientist
+Bachelor,"React, Java",AWS Certified,6.5,100,Software Engineer
+PhD,"C++, Java",Google ML,6.5,100,Software Engineer
+Bachelor,"TensorFlow, Python",None,5.5,90,AI Researcher
+Master,"Ethical Hacking, Cybersecurity, Linux",Google ML,3.5,90,Cybersecurity Analyst
+Master,"TensorFlow, Python",Deep Learning Specialization,2.5,50,AI Researcher
+Master,"Python, SQL, Machine Learning",Deep Learning Specialization,5.5,100,Data Scientist
+Bachelor,"Linux, Networking, Ethical Hacking",AWS Certified,3,70,Cybersecurity Analyst
+Master,"C++, React",Deep Learning Specialization,7.5,100,Software Engineer
+Master,"Linux, Ethical Hacking",AWS Certified,2.5,60,Cybersecurity Analyst
+Master,"SQL, React, Java",Google ML,1.5,50,Software Engineer
+Master,"Machine Learning, Python, SQL, Deep Learning",None,9.5,100,Data Scientist
+PhD,"Deep Learning, SQL, Machine Learning, Python",Google ML,2,65,Data Scientist
+Master,"Pytorch, TensorFlow, NLP",Deep Learning Specialization,5,100,AI Researcher
+Bachelor,"Pytorch, Python, TensorFlow",None,5,100,AI Researcher
+Master,"Pytorch, NLP, Python",Deep Learning Specialization,6,100,AI Researcher
+Bachelor,"Python, Machine Learning",Deep Learning Specialization,5,100,Data Scientist
+Master,"Machine Learning, Python, Deep Learning",None,5,80,Data Scientist
+Bachelor,"NLP, Python, TensorFlow",None,8,100,AI Researcher
+Bachelor,"NLP, Pytorch, TensorFlow",Deep Learning Specialization,5.5,100,AI Researcher
+Bachelor,"C++, React, SQL, Java",Google ML,9,100,Software Engineer
+Bachelor,"NLP, TensorFlow, Pytorch, Python",Google ML,0.5,35,AI Researcher
+Bachelor,"SQL, Java",AWS Certified,2.5,70,Software Engineer
+Master,"React, SQL",AWS Certified,5,100,Software Engineer
+Master,"Python, Deep Learning, Machine Learning",None,7.5,100,Data Scientist
+Bachelor,"Cybersecurity, Networking, Ethical Hacking, Linux",AWS Certified,4,95,Cybersecurity Analyst
+Bachelor,"Pytorch, TensorFlow, NLP",None,3.5,70,AI Researcher
+Master,"C++, React, SQL, Java",None,5.5,100,Software Engineer
+Master,"NLP, TensorFlow, Python, Pytorch",None,5.5,100,AI Researcher
+Master,"Linux, Ethical Hacking, Cybersecurity, Networking",None,5,100,Cybersecurity Analyst
+Master,"Java, React, C++, SQL",Google ML,3,85,Software Engineer
+PhD,"Java, SQL",Google ML,6.5,100,Software Engineer
+Bachelor,"NLP, Pytorch",AWS Certified,6,100,AI Researcher
+Bachelor,"Java, C++, SQL, React",Google ML,8,100,Software Engineer
+Master,"Pytorch, Python, TensorFlow",None,3,65,AI Researcher
+Master,"Networking, Ethical Hacking, Linux",None,5.5,85,Cybersecurity Analyst
+Bachelor,"TensorFlow, Python, Pytorch, NLP",Deep Learning Specialization,3,70,AI Researcher
+Master,"SQL, React, C++, Java",Google ML,7.5,100,Software Engineer
+Master,"TensorFlow, NLP, Python, Pytorch",Deep Learning Specialization,7.5,100,AI Researcher
+Master,"Deep Learning, SQL, Machine Learning",Deep Learning Specialization,7,100,Data Scientist
+Master,"TensorFlow, NLP, Python, Pytorch",AWS Certified,7,100,AI Researcher
+Master,"Python, TensorFlow, NLP",None,9,100,AI Researcher
+Bachelor,"Cybersecurity, Ethical Hacking, Networking, Linux",Google ML,2.5,65,Cybersecurity Analyst
+Master,"Pytorch, NLP",AWS Certified,4.5,90,AI Researcher
+Bachelor,"Cybersecurity, Ethical Hacking, Linux, Networking",AWS Certified,6,100,Cybersecurity Analyst
+Master,"Python, Deep Learning, SQL",AWS Certified,5,95,Data Scientist
+Bachelor,"SQL, C++",Google ML,2.5,45,Software Engineer
+Master,"Python, TensorFlow, Pytorch",None,0.5,20,AI Researcher
+Bachelor,"SQL, Deep Learning",AWS Certified,4,75,Data Scientist
+Bachelor,"TensorFlow, NLP, Python, Pytorch",None,5.5,90,AI Researcher
+PhD,"Cybersecurity, Networking",None,3,60,Cybersecurity Analyst
+PhD,"Linux, Ethical Hacking, Cybersecurity",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Networking, Linux, Cybersecurity",Google ML,5,85,Cybersecurity Analyst
+Bachelor,"TensorFlow, Pytorch, Python, NLP",AWS Certified,8,100,AI Researcher
+PhD,"C++, React",None,4,85,Software Engineer
+Bachelor,"React, SQL, Java",AWS Certified,1.5,40,Software Engineer
+Bachelor,"Pytorch, TensorFlow, Python",None,6.5,100,AI Researcher
+Bachelor,"TensorFlow, NLP, Pytorch",Deep Learning Specialization,6,100,AI Researcher
+Master,"TensorFlow, NLP",Deep Learning Specialization,6.5,100,AI Researcher
+Bachelor,"SQL, Machine Learning",Deep Learning Specialization,5.5,100,Data Scientist
+PhD,"Ethical Hacking, Linux, Networking, Cybersecurity",None,3.5,70,Cybersecurity Analyst
+PhD,"Networking, Cybersecurity",None,5,65,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Networking",Deep Learning Specialization,7,100,Cybersecurity Analyst
+Bachelor,"Networking, Ethical Hacking",Google ML,1.5,50,Cybersecurity Analyst
+PhD,"Cybersecurity, Networking, Ethical Hacking, Linux",AWS Certified,4.5,100,Cybersecurity Analyst
+Master,"NLP, TensorFlow, Pytorch",None,6.5,95,AI Researcher
+Bachelor,"SQL, Java",AWS Certified,3,50,Software Engineer
+PhD,"Pytorch, Python, TensorFlow",Google ML,3,55,AI Researcher
+Bachelor,"Machine Learning, Python",Deep Learning Specialization,2.5,60,Data Scientist
+Master,"Linux, Cybersecurity, Ethical Hacking",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+PhD,"Python, Pytorch, NLP, TensorFlow",Deep Learning Specialization,6,100,AI Researcher
+Bachelor,"Pytorch, TensorFlow",AWS Certified,6,95,AI Researcher
+Master,"SQL, Java",None,0.5,20,Software Engineer
+Bachelor,"Networking, Cybersecurity, Ethical Hacking, Linux",Deep Learning Specialization,4,90,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Networking",Google ML,5,100,Cybersecurity Analyst
+PhD,"C++, SQL, React, Java",AWS Certified,7.5,100,Software Engineer
+PhD,"Deep Learning, Machine Learning, Python, SQL",None,8.5,100,Data Scientist
+Master,"Networking, Linux, Ethical Hacking, Cybersecurity",None,1,30,Cybersecurity Analyst
+Bachelor,"NLP, TensorFlow, Python",AWS Certified,6,100,AI Researcher
+Bachelor,"Pytorch, NLP, Python",None,3.5,60,AI Researcher
+Master,"Java, SQL",Google ML,8,100,Software Engineer
+PhD,"Linux, Cybersecurity",None,4.5,65,Cybersecurity Analyst
+PhD,"Deep Learning, Python, SQL, Machine Learning",None,1,30,Data Scientist
+Master,"Cybersecurity, Ethical Hacking, Networking",Google ML,8,100,Cybersecurity Analyst
+Bachelor,"Python, NLP, Pytorch, TensorFlow",AWS Certified,5.5,100,AI Researcher
+PhD,"C++, Java, SQL, React",None,9,100,Software Engineer
+Bachelor,"React, Java",None,1.5,40,Software Engineer
+Master,"Python, Pytorch",Deep Learning Specialization,7.5,100,AI Researcher
+PhD,"Deep Learning, Python, SQL",Deep Learning Specialization,2.5,60,Data Scientist
+Bachelor,"Python, NLP, Pytorch, TensorFlow",Google ML,1.5,45,AI Researcher
+Master,"Python, TensorFlow, NLP, Pytorch",None,6,100,AI Researcher
+Master,"C++, React",None,5.5,100,Software Engineer
+Bachelor,"Ethical Hacking, Linux, Networking, Cybersecurity",Google ML,2.5,55,Cybersecurity Analyst
+PhD,"SQL, Python",AWS Certified,8.5,100,Data Scientist
+Bachelor,"Ethical Hacking, Networking, Linux, Cybersecurity",Google ML,4,70,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning, Deep Learning",None,2.5,60,Data Scientist
+Master,"SQL, Java, React, C++",Deep Learning Specialization,6,100,Software Engineer
+Master,"React, SQL, C++",Google ML,8,100,Software Engineer
+Bachelor,"Machine Learning, Python, Deep Learning, SQL",AWS Certified,4,100,Data Scientist
+PhD,"Networking, Ethical Hacking",AWS Certified,4.5,75,Cybersecurity Analyst
+PhD,"Python, TensorFlow, Pytorch, NLP",None,5.5,90,AI Researcher
+Master,"Linux, Cybersecurity",Google ML,4,60,Cybersecurity Analyst
+PhD,"Java, C++",Deep Learning Specialization,5,85,Software Engineer
+Master,"React, Java",None,6,95,Software Engineer
+Master,"TensorFlow, NLP",None,6,80,AI Researcher
+Bachelor,"SQL, Java, C++, React",Deep Learning Specialization,7,100,Software Engineer
+Bachelor,"Linux, Cybersecurity, Ethical Hacking",None,7.5,100,Cybersecurity Analyst
+Bachelor,"Pytorch, TensorFlow, Python, NLP",Google ML,4.5,95,AI Researcher
+Bachelor,"Python, TensorFlow",AWS Certified,3,65,AI Researcher
+Master,"C++, Java",Deep Learning Specialization,3,70,Software Engineer
+Master,"NLP, Python, TensorFlow",AWS Certified,8.5,100,AI Researcher
+Bachelor,"Cybersecurity, Linux",Deep Learning Specialization,5,100,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Linux, Networking, Cybersecurity",Google ML,5.5,100,Cybersecurity Analyst
+Master,"Cybersecurity, Ethical Hacking",Deep Learning Specialization,4.5,75,Cybersecurity Analyst
+Master,"Cybersecurity, Linux, Ethical Hacking, Networking",Deep Learning Specialization,5.5,100,Cybersecurity Analyst
+Master,"Machine Learning, Python, Deep Learning",Google ML,2,55,Data Scientist
+Bachelor,"Linux, Ethical Hacking",None,5.5,85,Cybersecurity Analyst
+Master,"Cybersecurity, Networking, Linux",Google ML,6,100,Cybersecurity Analyst
+Master,"Java, SQL",AWS Certified,6,90,Software Engineer
+Bachelor,"Networking, Cybersecurity, Ethical Hacking, Linux",None,3,70,Cybersecurity Analyst
+Bachelor,"React, SQL",Deep Learning Specialization,8,100,Software Engineer
+Bachelor,"SQL, Java, C++",AWS Certified,7.5,100,Software Engineer
+Bachelor,"Pytorch, TensorFlow",Google ML,8,100,AI Researcher
+Bachelor,"Networking, Cybersecurity, Ethical Hacking, Linux",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+Master,"Pytorch, TensorFlow, NLP",Google ML,7,100,AI Researcher
+Master,"Java, SQL, React",AWS Certified,5.5,95,Software Engineer
+PhD,"Machine Learning, Python, SQL",AWS Certified,3.5,70,Data Scientist
+Bachelor,"NLP, TensorFlow",AWS Certified,6,90,AI Researcher
+PhD,"Networking, Cybersecurity",None,3.5,60,Cybersecurity Analyst
+Bachelor,"Python, TensorFlow, NLP, Pytorch",None,5,90,AI Researcher
+PhD,"C++, SQL, Java",AWS Certified,7,100,Software Engineer
+Master,"Python, TensorFlow",Google ML,0.5,25,AI Researcher
+Master,"NLP, TensorFlow, Python, Pytorch",Google ML,1.5,50,AI Researcher
+Master,"C++, SQL, Java",AWS Certified,0,25,Software Engineer
+Bachelor,"Python, TensorFlow",Google ML,4,90,AI Researcher
+PhD,"C++, SQL, React, Java",Deep Learning Specialization,6.5,100,Software Engineer
+PhD,"Networking, Ethical Hacking, Linux, Cybersecurity",None,3,70,Cybersecurity Analyst
+Master,"SQL, Machine Learning",Google ML,4.5,85,Data Scientist
+Master,"Pytorch, TensorFlow, Python, NLP",Google ML,3.5,85,AI Researcher
+PhD,"SQL, Deep Learning",None,6,90,Data Scientist
+PhD,"Cybersecurity, Networking",None,6,85,Cybersecurity Analyst
+Bachelor,"Python, Machine Learning",AWS Certified,5,100,Data Scientist
+Master,"Ethical Hacking, Cybersecurity",None,7.5,100,Cybersecurity Analyst
+Master,"C++, Java, SQL, React",AWS Certified,1,50,Software Engineer
+Bachelor,"Python, Deep Learning, Machine Learning",Deep Learning Specialization,8.5,100,Data Scientist
+Bachelor,"Machine Learning, Python, SQL",None,7.5,100,Data Scientist
+PhD,"SQL, Machine Learning, Deep Learning",None,2.5,55,Data Scientist
+Bachelor,"Pytorch, Python, NLP",None,3,55,AI Researcher
+Master,"React, C++",AWS Certified,8.5,100,Software Engineer
+Master,"Linux, Networking, Cybersecurity",Deep Learning Specialization,2,60,Cybersecurity Analyst
+Bachelor,"Networking, Linux",Google ML,2,50,Cybersecurity Analyst
+PhD,"SQL, Machine Learning, Deep Learning, Python",AWS Certified,7.5,100,Data Scientist
+Master,"C++, Java, React",AWS Certified,7.5,100,Software Engineer
+PhD,"Networking, Ethical Hacking",Google ML,4.5,70,Cybersecurity Analyst
+Bachelor,"React, Java, C++",Google ML,2.5,75,Software Engineer
+Master,"Ethical Hacking, Linux, Networking",None,3,60,Cybersecurity Analyst
+Master,"Cybersecurity, Ethical Hacking",AWS Certified,7,100,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Linux, Networking",Deep Learning Specialization,5,100,Cybersecurity Analyst
+PhD,"Deep Learning, SQL, Machine Learning",None,4,85,Data Scientist
+Master,"Pytorch, Python, TensorFlow",AWS Certified,5.5,100,AI Researcher
+Bachelor,"TensorFlow, Pytorch, Python, NLP",AWS Certified,5.5,100,AI Researcher
+Bachelor,"React, SQL, C++, Java",Google ML,1,40,Software Engineer
+Master,"Deep Learning, SQL, Python, Machine Learning",AWS Certified,3,85,Data Scientist
+Bachelor,"Pytorch, NLP, TensorFlow",Deep Learning Specialization,4.5,100,AI Researcher
+PhD,"Java, C++, React",Deep Learning Specialization,1,35,Software Engineer
+Bachelor,"NLP, TensorFlow",Google ML,8,100,AI Researcher
+Bachelor,"NLP, Pytorch, Python",AWS Certified,6,95,AI Researcher
+PhD,"NLP, Pytorch, TensorFlow",Deep Learning Specialization,2.5,60,AI Researcher
+Master,"C++, React, Java, SQL",None,2,45,Software Engineer
+PhD,"Cybersecurity, Networking, Linux",Deep Learning Specialization,5,100,Cybersecurity Analyst
+Bachelor,"Deep Learning, Python, SQL",None,3.5,70,Data Scientist
+PhD,"React, C++, SQL, Java",Deep Learning Specialization,9,100,Software Engineer
+Bachelor,"Machine Learning, Python, Deep Learning",Deep Learning Specialization,0.5,30,Data Scientist
+Master,"Python, Pytorch, TensorFlow",AWS Certified,5,100,AI Researcher
+Bachelor,"C++, Java",Deep Learning Specialization,2.5,70,Software Engineer
+PhD,"Python, Pytorch, TensorFlow, NLP",Deep Learning Specialization,5,100,AI Researcher
+Bachelor,"Pytorch, Python, TensorFlow",None,2,35,AI Researcher
+Bachelor,"NLP, TensorFlow, Pytorch, Python",Google ML,3,90,AI Researcher
+Master,"Deep Learning, SQL",Google ML,3.5,60,Data Scientist
+Bachelor,"Ethical Hacking, Linux, Cybersecurity, Networking",Deep Learning Specialization,8,100,Cybersecurity Analyst
+Master,"Machine Learning, Deep Learning, SQL",None,6.5,100,Data Scientist
+Bachelor,"SQL, Java, React",None,3,55,Software Engineer
+Bachelor,"SQL, Deep Learning",Deep Learning Specialization,3.5,85,Data Scientist
+Bachelor,"SQL, Deep Learning, Python",Google ML,2.5,50,Data Scientist
+Master,"Python, TensorFlow, NLP",AWS Certified,4.5,75,AI Researcher
+Master,"Ethical Hacking, Cybersecurity",AWS Certified,2,40,Cybersecurity Analyst
+Bachelor,"React, SQL, Java, C++",Deep Learning Specialization,4.5,100,Software Engineer
+Master,"Python, Deep Learning, SQL, Machine Learning",None,4.5,100,Data Scientist
+Master,"SQL, Python",AWS Certified,7,100,Data Scientist
+PhD,"Networking, Linux, Cybersecurity, Ethical Hacking",Google ML,7,100,Cybersecurity Analyst
+PhD,"TensorFlow, Pytorch, Python",Google ML,5.5,100,AI Researcher
+PhD,"SQL, Machine Learning",Deep Learning Specialization,2.5,50,Data Scientist
+Master,"Python, Pytorch, TensorFlow",Deep Learning Specialization,3,55,AI Researcher
+Bachelor,"Machine Learning, Deep Learning, Python, SQL",None,6,100,Data Scientist
+PhD,"TensorFlow, Python, Pytorch, NLP",Deep Learning Specialization,2.5,65,AI Researcher
+Master,"Python, SQL, Deep Learning, Machine Learning",Deep Learning Specialization,9,100,Data Scientist
+Bachelor,"SQL, C++, Java",None,5,95,Software Engineer
+Bachelor,"Deep Learning, Machine Learning, Python",None,7,100,Data Scientist
+Master,"Java, React, C++",None,7.5,100,Software Engineer
+PhD,"Python, NLP, Pytorch, TensorFlow",Deep Learning Specialization,4.5,100,AI Researcher
+Bachelor,"Python, SQL",Google ML,5,70,Data Scientist
+Master,"SQL, C++",Deep Learning Specialization,6,100,Software Engineer
+PhD,"Ethical Hacking, Cybersecurity",Google ML,5,95,Cybersecurity Analyst
+Bachelor,"Linux, Ethical Hacking",AWS Certified,6,100,Cybersecurity Analyst
+Master,"Python, Pytorch, TensorFlow, NLP",None,9,100,AI Researcher
+Bachelor,"Python, Deep Learning",AWS Certified,5,100,Data Scientist
+PhD,"Networking, Linux, Ethical Hacking, Cybersecurity",None,7,100,Cybersecurity Analyst
+Bachelor,"TensorFlow, NLP",Google ML,6.5,100,AI Researcher
+Bachelor,"Linux, Cybersecurity",Deep Learning Specialization,8,100,Cybersecurity Analyst
+Master,"Java, C++, SQL",None,5.5,100,Software Engineer
+PhD,"Deep Learning, Machine Learning, SQL, Python",None,4.5,70,Data Scientist
+Master,"SQL, Deep Learning, Python, Machine Learning",Google ML,7,100,Data Scientist
+Master,"SQL, Deep Learning, Python, Machine Learning",None,7,100,Data Scientist
+Bachelor,"TensorFlow, Python, NLP, Pytorch",Deep Learning Specialization,6,100,AI Researcher
+PhD,"React, Java, C++, SQL",Google ML,2.5,70,Software Engineer
+PhD,"Networking, Cybersecurity, Ethical Hacking",None,3.5,85,Cybersecurity Analyst
+Master,"Ethical Hacking, Networking, Cybersecurity",None,5,70,Cybersecurity Analyst
+Bachelor,"SQL, Java, C++",Deep Learning Specialization,6,100,Software Engineer
+Bachelor,"Machine Learning, SQL, Python, Deep Learning",Google ML,3.5,100,Data Scientist
+Master,"TensorFlow, NLP, Pytorch, Python",Google ML,7,100,AI Researcher
+Bachelor,"Networking, Ethical Hacking",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+Master,"Deep Learning, Python, SQL, Machine Learning",None,6.5,100,Data Scientist
+Bachelor,"SQL, C++",AWS Certified,5.5,80,Software Engineer
+Master,"SQL, C++, Java, React",None,3.5,75,Software Engineer
+Master,"TensorFlow, Python, NLP, Pytorch",Google ML,9,100,AI Researcher
+Bachelor,"Python, Deep Learning, Machine Learning, SQL",None,5,100,Data Scientist
+Master,"Python, Machine Learning, Deep Learning",AWS Certified,5,100,Data Scientist
+Bachelor,"SQL, Machine Learning, Python, Deep Learning",Deep Learning Specialization,5,100,Data Scientist
+Master,"Linux, Ethical Hacking",AWS Certified,8.5,100,Cybersecurity Analyst
+Bachelor,"Deep Learning, SQL, Machine Learning, Python",AWS Certified,6,100,Data Scientist
+Bachelor,"Deep Learning, Python, SQL",Deep Learning Specialization,1,45,Data Scientist
+Master,"SQL, Python, Machine Learning, Deep Learning",Deep Learning Specialization,6.5,100,Data Scientist
+Master,"TensorFlow, Pytorch",Deep Learning Specialization,8,100,AI Researcher
+Master,"Ethical Hacking, Networking",Deep Learning Specialization,4.5,90,Cybersecurity Analyst
+Master,"Linux, Cybersecurity, Ethical Hacking",Deep Learning Specialization,8.5,100,Cybersecurity Analyst
+PhD,"Java, React, SQL",Deep Learning Specialization,5.5,100,Software Engineer
+PhD,"TensorFlow, NLP, Pytorch, Python",AWS Certified,2,55,AI Researcher
+Bachelor,"SQL, Machine Learning, Python, Deep Learning",Deep Learning Specialization,3.5,85,Data Scientist
+PhD,"Networking, Linux, Ethical Hacking",None,3,65,Cybersecurity Analyst
+Bachelor,"Cybersecurity, Ethical Hacking, Linux, Networking",Google ML,1.5,50,Cybersecurity Analyst
+Bachelor,"Ethical Hacking, Networking, Linux, Cybersecurity",None,1,30,Cybersecurity Analyst
+Bachelor,"SQL, Machine Learning",Google ML,8.5,100,Data Scientist
+PhD,"Java, C++, React, SQL",Deep Learning Specialization,10,100,Software Engineer
+Bachelor,"Java, C++, React, SQL",Deep Learning Specialization,5,100,Software Engineer
+Master,"Linux, Cybersecurity, Ethical Hacking",AWS Certified,2.5,70,Cybersecurity Analyst
+PhD,"TensorFlow, Python",AWS Certified,5,100,AI Researcher
+Master,"React, SQL",AWS Certified,7,100,Software Engineer
+Master,"TensorFlow, NLP, Python",Google ML,9.5,100,AI Researcher
+Master,"Cybersecurity, Ethical Hacking, Networking, Linux",None,5,85,Cybersecurity Analyst
+Master,"Pytorch, NLP, Python, TensorFlow",None,5,75,AI Researcher
+Bachelor,"React, C++, Java, SQL",Google ML,6,100,Software Engineer
+Master,"Pytorch, Python",AWS Certified,2.5,65,AI Researcher
+Master,"Python, SQL, Machine Learning",Deep Learning Specialization,2.5,65,Data Scientist
+Bachelor,"Ethical Hacking, Cybersecurity, Networking, Linux",AWS Certified,7,100,Cybersecurity Analyst
+PhD,"Java, SQL, C++",None,5.5,100,Software Engineer
+Bachelor,"Deep Learning, Python",Google ML,8.5,100,Data Scientist
+PhD,"React, C++",None,8.5,100,Software Engineer
+Bachelor,"Ethical Hacking, Networking, Cybersecurity, Linux",None,4.5,100,Cybersecurity Analyst
+Master,"Machine Learning, Python, SQL",Deep Learning Specialization,3,65,Data Scientist
+Master,"Cybersecurity, Networking, Linux, Ethical Hacking",Deep Learning Specialization,9.5,100,Cybersecurity Analyst
+Master,"Python, Pytorch",AWS Certified,6,100,AI Researcher
+Master,"Python, SQL, Deep Learning",AWS Certified,6.5,100,Data Scientist
+Bachelor,"Deep Learning, Machine Learning, SQL",None,8.5,100,Data Scientist
+Bachelor,"React, SQL, C++, Java",None,9,100,Software Engineer
+Bachelor,"Deep Learning, Machine Learning",Google ML,3,70,Data Scientist
+PhD,"Python, SQL, Deep Learning",AWS Certified,5,85,Data Scientist
+Master,"SQL, Java, React",AWS Certified,2,50,Software Engineer
+Bachelor,"Machine Learning, Python, SQL",None,3,55,Data Scientist
+Bachelor,"Ethical Hacking, Linux, Networking",None,8.5,100,Cybersecurity Analyst
+Bachelor,"Python, Pytorch, NLP, TensorFlow",Google ML,1.5,50,AI Researcher
+Master,"Cybersecurity, Ethical Hacking, Networking, Linux",AWS Certified,4,85,Cybersecurity Analyst
+Master,"Python, Pytorch, TensorFlow, NLP",None,7,100,AI Researcher
+Master,"SQL, Java",AWS Certified,5.5,100,Software Engineer
+Master,"Machine Learning, Python, SQL, Deep Learning",AWS Certified,4,100,Data Scientist
+Master,"SQL, Deep Learning, Python",Deep Learning Specialization,5,100,Data Scientist
+Bachelor,"Networking, Cybersecurity, Linux",Google ML,4.5,100,Cybersecurity Analyst
+PhD,"Machine Learning, SQL, Deep Learning",None,5,100,Data Scientist
+Master,"Linux, Ethical Hacking, Networking",Deep Learning Specialization,6.5,100,Cybersecurity Analyst
+PhD,"TensorFlow, Pytorch, Python, NLP",AWS Certified,7,100,AI Researcher
+Master,"Linux, Networking, Cybersecurity",Deep Learning Specialization,7.5,100,Cybersecurity Analyst
+Bachelor,"SQL, Python, Machine Learning, Deep Learning",None,5.5,90,Data Scientist
+Bachelor,"Networking, Cybersecurity, Ethical Hacking",None,6,100,Cybersecurity Analyst
+PhD,"TensorFlow, Python, NLP",Deep Learning Specialization,4,95,AI Researcher
+Master,"Python, SQL, Machine Learning",Google ML,6,100,Data Scientist
+Master,"Pytorch, Python, TensorFlow, NLP",Google ML,5,100,AI Researcher
+Master,"Java, React, SQL, C++",Google ML,5.5,100,Software Engineer
+PhD,"TensorFlow, NLP, Pytorch",AWS Certified,7.5,100,AI Researcher
+PhD,"SQL, Machine Learning, Python",Google ML,6.5,100,Data Scientist
+PhD,"Java, C++, React, SQL",Google ML,4,100,Software Engineer
+Master,"Linux, Cybersecurity",AWS Certified,7.5,100,Cybersecurity Analyst
+Bachelor,"Machine Learning, Python, Deep Learning, SQL",Google ML,7,100,Data Scientist
+Bachelor,"C++, React, SQL, Java",AWS Certified,7.5,100,Software Engineer
+Bachelor,"Python, SQL, Machine Learning, Deep Learning",AWS Certified,4.5,95,Data Scientist
+PhD,"Machine Learning, Deep Learning, Python",None,6.5,95,Data Scientist
+Master,"TensorFlow, NLP, Python",AWS Certified,1,35,AI Researcher
+PhD,"Deep Learning, Machine Learning, SQL, Python",None,1.5,45,Data Scientist
+PhD,"Cybersecurity, Ethical Hacking, Networking, Linux",Google ML,3.5,95,Cybersecurity Analyst
+Bachelor,"React, SQL",AWS Certified,7.5,100,Software Engineer
+Master,"Java, C++",AWS Certified,4,100,Software Engineer
+Bachelor,"Pytorch, TensorFlow, Python, NLP",None,4.5,85,AI Researcher
+PhD,"SQL, Machine Learning",AWS Certified,6,100,Data Scientist
+Bachelor,"TensorFlow, Pytorch, NLP, Python",AWS Certified,7,100,AI Researcher
+PhD,"Machine Learning, Deep Learning",None,8.5,100,Data Scientist
+PhD,"Machine Learning, Deep Learning, SQL",AWS Certified,5,90,Data Scientist
+Bachelor,"Ethical Hacking, Cybersecurity, Linux",Deep Learning Specialization,1.5,45,Cybersecurity Analyst
+Master,"Cybersecurity, Ethical Hacking, Linux",AWS Certified,6,100,Cybersecurity Analyst
+Master,"Python, Machine Learning, Deep Learning, SQL",Google ML,6,100,Data Scientist
+Master,"Cybersecurity, Networking",Google ML,5.5,100,Cybersecurity Analyst
+Master,"Pytorch, TensorFlow, Python",None,6.5,100,AI Researcher
+PhD,"Ethical Hacking, Networking",Google ML,5.5,100,Cybersecurity Analyst
+Master,"SQL, Java, React, C++",None,2,40,Software Engineer
+Master,"SQL, Java, C++",None,4.5,75,Software Engineer
+Master,"NLP, TensorFlow, Python, Pytorch",AWS Certified,3,90,AI Researcher
+Master,"React, SQL, Java, C++",Deep Learning Specialization,2.5,65,Software Engineer
+Master,"TensorFlow, NLP, Python, Pytorch",Google ML,7.5,100,AI Researcher
+Master,"Java, SQL",None,5.5,75,Software Engineer
+PhD,"Networking, Cybersecurity, Linux",Deep Learning Specialization,4,75,Cybersecurity Analyst
+Master,"Networking, Ethical Hacking, Cybersecurity, Linux",None,1,40,Cybersecurity Analyst
+Master,"Pytorch, NLP, Python, TensorFlow",AWS Certified,8.5,100,AI Researcher
+PhD,"Deep Learning, Machine Learning, SQL, Python",Deep Learning Specialization,8,100,Data Scientist
+PhD,"Pytorch, Python",Deep Learning Specialization,8,100,AI Researcher
+PhD,"Deep Learning, Machine Learning",AWS Certified,2,60,Data Scientist
+Bachelor,"Python, TensorFlow, NLP",None,5.5,100,AI Researcher
+Bachelor,"Python, Deep Learning, Machine Learning",AWS Certified,3,55,Data Scientist
+Bachelor,"Python, TensorFlow",Google ML,2.5,70,AI Researcher
+Master,"Networking, Linux, Ethical Hacking",AWS Certified,4.5,85,Cybersecurity Analyst
+PhD,"Machine Learning, Deep Learning",AWS Certified,3,80,Data Scientist
+Master,"NLP, Pytorch, TensorFlow",Deep Learning Specialization,3,85,AI Researcher
+Master,"Pytorch, Python, NLP",None,6.5,100,AI Researcher
+Bachelor,"Deep Learning, SQL, Machine Learning",None,3,60,Data Scientist
+Master,"Linux, Networking, Cybersecurity, Ethical Hacking",AWS Certified,6,100,Cybersecurity Analyst
+PhD,"SQL, Python",None,4,85,Data Scientist
+Master,"TensorFlow, Python, NLP, Pytorch",None,2,40,AI Researcher
+Bachelor,"Deep Learning, Machine Learning, Python, SQL",None,3,75,Data Scientist
+Master,"Deep Learning, Python",AWS Certified,4,85,Data Scientist
+Master,"Cybersecurity, Networking, Ethical Hacking",None,6.5,100,Cybersecurity Analyst
+Bachelor,"Java, SQL, React, C++",Google ML,9,100,Software Engineer
+PhD,"Ethical Hacking, Networking",AWS Certified,4,90,Cybersecurity Analyst
+Bachelor,"TensorFlow, Python",Deep Learning Specialization,4,95,AI Researcher
+PhD,"Python, Machine Learning, Deep Learning, SQL",Google ML,3.5,70,Data Scientist
+PhD,"Cybersecurity, Networking, Ethical Hacking",Deep Learning Specialization,5,100,Cybersecurity Analyst
+PhD,"C++, React, SQL, Java",Deep Learning Specialization,5,100,Software Engineer
+Bachelor,"Machine Learning, SQL",Deep Learning Specialization,6,100,Data Scientist
+Bachelor,"C++, SQL, Java, React",None,8.5,100,Software Engineer
+Master,"SQL, C++, Java",None,3,50,Software Engineer
+Master,"Pytorch, TensorFlow, NLP, Python",None,0.5,30,AI Researcher
+Bachelor,"Python, Machine Learning",Deep Learning Specialization,1.5,45,Data Scientist
+Bachelor,"Linux, Cybersecurity",None,8,100,Cybersecurity Analyst
+Master,"SQL, Java, C++",Deep Learning Specialization,5.5,85,Software Engineer
+Master,"Machine Learning, Deep Learning, Python",Google ML,10,100,Data Scientist
+PhD,"Python, SQL, Machine Learning",Google ML,2,60,Data Scientist
+Master,"Machine Learning, SQL",Deep Learning Specialization,4.5,75,Data Scientist
+Master,"Ethical Hacking, Linux",AWS Certified,8.5,100,Cybersecurity Analyst
+PhD,"Pytorch, TensorFlow",AWS Certified,4.5,90,AI Researcher
+Master,"SQL, C++, Java, React",Google ML,1.5,60,Software Engineer
+PhD,"Networking, Linux, Cybersecurity",Google ML,4.5,75,Cybersecurity Analyst
+Bachelor,"Linux, Cybersecurity, Networking, Ethical Hacking",AWS Certified,6,100,Cybersecurity Analyst
+Master,"NLP, TensorFlow, Python",None,2,45,AI Researcher
+PhD,"Machine Learning, Deep Learning, SQL, Python",AWS Certified,4,80,Data Scientist
+PhD,"Java, React, SQL, C++",None,3.5,70,Software Engineer
+Bachelor,"Ethical Hacking, Cybersecurity, Networking",Deep Learning Specialization,2,60,Cybersecurity Analyst
+PhD,"SQL, Java, React",AWS Certified,4.5,90,Software Engineer
+Bachelor,"Cybersecurity, Networking, Linux, Ethical Hacking",None,4.5,70,Cybersecurity Analyst
+Bachelor,"Python, Deep Learning, Machine Learning, SQL",Deep Learning Specialization,2.5,65,Data Scientist
+Bachelor,"Pytorch, TensorFlow, NLP, Python",Google ML,6.5,100,AI Researcher
+Bachelor,"Linux, Ethical Hacking, Networking",AWS Certified,2.5,75,Cybersecurity Analyst
+Master,"Deep Learning, Machine Learning",AWS Certified,8,100,Data Scientist
+Master,"NLP, Pytorch, TensorFlow, Python",Deep Learning Specialization,4.5,75,AI Researcher
+Bachelor,"SQL, Machine Learning, Python, Deep Learning",Deep Learning Specialization,5.5,100,Data Scientist
+Master,"Networking, Cybersecurity, Ethical Hacking, Linux",Google ML,6,100,Cybersecurity Analyst
+Bachelor,"SQL, Python, Machine Learning, Deep Learning",AWS Certified,4.5,100,Data Scientist
+Bachelor,"Deep Learning, Python, SQL, Machine Learning",AWS Certified,4,85,Data Scientist
+Master,"Cybersecurity, Networking",None,6.5,100,Cybersecurity Analyst
+Bachelor,"C++, SQL, Java",None,6,100,Software Engineer
+Master,"Machine Learning, SQL, Python",Google ML,6,100,Data Scientist
+Bachelor,"SQL, Machine Learning, Python",Google ML,3,70,Data Scientist
+Bachelor,"SQL, Deep Learning, Python",Google ML,4.5,100,Data Scientist
+Bachelor,"Python, NLP, Pytorch, TensorFlow",Deep Learning Specialization,7,100,AI Researcher
+PhD,"TensorFlow, NLP",AWS Certified,7,100,AI Researcher
+PhD,"Cybersecurity, Linux, Ethical Hacking",None,6,85,Cybersecurity Analyst
+Master,"SQL, Machine Learning, Deep Learning",None,8,100,Data Scientist
+Master,"Ethical Hacking, Linux, Networking, Cybersecurity",None,3.5,85,Cybersecurity Analyst
+Bachelor,"Deep Learning, Python, Machine Learning, SQL",AWS Certified,3,90,Data Scientist
+Master,"Pytorch, TensorFlow",AWS Certified,4.5,65,AI Researcher
+PhD,"Python, Machine Learning, SQL",Google ML,9.5,100,Data Scientist
+Master,"C++, React, SQL",None,3.5,50,Software Engineer
+Bachelor,"C++, SQL",Google ML,8,100,Software Engineer
+Master,"NLP, Python, Pytorch, TensorFlow",AWS Certified,4.5,90,AI Researcher
+Master,"C++, Java, SQL",AWS Certified,3.5,90,Software Engineer
+Bachelor,"TensorFlow, Pytorch, NLP, Python",AWS Certified,1.5,50,AI Researcher
+Bachelor,"Cybersecurity, Linux, Ethical Hacking, Networking",AWS Certified,7.5,100,Cybersecurity Analyst
+Bachelor,"Python, NLP",None,5,75,AI Researcher
+Master,"React, C++, SQL, Java",Google ML,8.5,100,Software Engineer
+Bachelor,"SQL, Deep Learning, Machine Learning",Google ML,4.5,100,Data Scientist
+Master,"TensorFlow, NLP, Python",Google ML,8,100,AI Researcher
+Bachelor,"Python, SQL, Machine Learning",AWS Certified,3.5,75,Data Scientist
+PhD,"NLP, Python",Google ML,10,100,AI Researcher
+Master,"SQL, C++, Java",None,3.5,80,Software Engineer
+Master,"Pytorch, NLP, Python, TensorFlow",Google ML,4,75,AI Researcher
+PhD,"SQL, Deep Learning",Deep Learning Specialization,4,60,Data Scientist
+Bachelor,"React, SQL, Java",Deep Learning Specialization,6.5,100,Software Engineer
+Master,"SQL, Deep Learning, Machine Learning",None,4.5,65,Data Scientist
+Master,"Pytorch, TensorFlow, NLP",Google ML,3,65,AI Researcher
+Bachelor,"Python, NLP",Google ML,6.5,100,AI Researcher
+Master,"Networking, Cybersecurity, Ethical Hacking, Linux",AWS Certified,9,100,Cybersecurity Analyst
+Master,"React, C++, Java, SQL",Google ML,4.5,100,Software Engineer
+PhD,"Networking, Ethical Hacking, Linux, Cybersecurity",Google ML,6,100,Cybersecurity Analyst
+PhD,"React, SQL",Deep Learning Specialization,10,100,Software Engineer
+Master,"Cybersecurity, Ethical Hacking, Linux, Networking",Deep Learning Specialization,0.5,40,Cybersecurity Analyst
+PhD,"React, Java",Google ML,5,90,Software Engineer
+Bachelor,"Cybersecurity, Linux, Ethical Hacking",None,4.5,60,Cybersecurity Analyst
+Master,"Deep Learning, Machine Learning",Deep Learning Specialization,2.5,45,Data Scientist
+Bachelor,"TensorFlow, NLP",Google ML,4.5,65,AI Researcher
+PhD,"Linux, Networking, Cybersecurity, Ethical Hacking",AWS Certified,9,100,Cybersecurity Analyst
+Master,"SQL, Machine Learning, Python, Deep Learning",Deep Learning Specialization,5,100,Data Scientist
+Bachelor,"Python,Data Analysis,Machine Learning","Technology,Data Science",5,95,Data Scientist
+Master,"Java,System Design,Cloud Computing","Software Development,AI",5,90,Software Engineer
+Bachelor,"Graphic Design,UI/UX,Adobe Creative Suite","Arts,Digital Media",5,88,Software Engineer
+Bachelor,"Python,Deep Learning,Statistics","Healthcare,AI",5,93,AI Researcher
+Master,"Project Management,Communication,Agile","Business,Management",5,87,Software Engineer
+Bachelor,"C++,Embedded Systems,IoT","Electronics,Automation",5,91,Software Engineer
+Master,"SQL,Data Warehousing,ETL","Finance,Analytics",5,89,Data Scientist
+Bachelor,"Content Writing,SEO,Social Media","Marketing,Communications",5,86,Software Engineer
+Bachelor,"Python,Natural Language Processing,Machine Learning","Linguistics,Technology",5,92,AI Researcher
+Master,"Financial Analysis,Excel,Econometrics","Finance,Data Analysis",5,90,Data Scientist
+PhD,"Research,Statistical Analysis,Python","Academia,Biotech",5,94,Data Scientist
+Bachelor,"HTML,CSS,JavaScript","Web Development,Design",5,85,Software Engineer
+Bachelor,"Java,Algorithms,Data Structures","Software Engineering,Coding",5,88,Software Engineer
+Master,"Data Visualization,Python,R","Data Analysis,Statistics",5,90,Data Scientist
+Master,"Machine Learning,Big Data,Python","Technology,Innovation",5,93,AI Researcher
+Bachelor,"Digital Marketing,Content Creation,SEO","Marketing,Social Media",5,87,Software Engineer
+Bachelor,"Python,Data Mining,Statistics","Data Science,Finance",5,92,Data Scientist
+Bachelor,"C#,.NET,Software Design","Technology,Gaming",5,86,Software Engineer
+Master,"Project Management,Risk Analysis,Negotiation","Business,Management",5,89,Software Engineer
+Bachelor,"User Research,UX Design,Prototyping","Design,Technology",5,90,Software Engineer
+Bachelor,"Python,Data Analysis,SQL","Finance,Analytics",5,88,Data Scientist
+Master,"Marketing Strategy,Digital Marketing,CRM","Marketing,Business",5,91,Software Engineer
+Bachelor,"JavaScript,React,Node.js","Web Development,Technology",5,87,Software Engineer
+Master,"Data Science,Machine Learning,Python","Healthcare,AI",5,92,AI Researcher
+Bachelor,"Network Security,Linux,Python","Cybersecurity,Technology",5,89,Cybersecurity Analyst
+Master,"Python,Statistics,Data Mining","Academia,Research",5,90,Data Scientist
+Bachelor,"Cloud Computing,DevOps,Python","Technology,Business",5,91,Software Engineer
+Bachelor,"Content Creation,Graphic Design,Adobe Photoshop","Digital Media,Marketing",5,86,Software Engineer
+Master,"Python,TensorFlow,Deep Learning","Technology,Research",5,93,AI Researcher
+Bachelor,"SQL,Data Warehousing,R","Business,Analytics",5,88,Data Scientist
+Master,"Java,Spring,Microservices","Software Engineering,Finance",5,89,Software Engineer
+Bachelor,"HTML,CSS,JavaScript,UX","Web Design,Technology",5,85,Software Engineer
+Master,"Machine Learning,R,Python","Biotech,Data Science",5,92,Data Scientist
+Bachelor,"Digital Illustration,Adobe Illustrator,Creativity","Arts,Design",5,87,Software Engineer
+Master,"Python,Big Data,Machine Learning","Finance,Technology",5,91,Data Scientist
+Bachelor,"Copywriting,SEO,Social Media","Marketing,Content",5,86,Software Engineer
+Master,"Python,JavaScript,Data Visualization","Analytics,Business",5,90,Data Scientist
+Bachelor,"Business Analysis,Excel,SQL","Business,Finance",5,89,Data Scientist
+Bachelor,"Python,Automation,Data Analysis","Technology,Engineering",5,90,Software Engineer
+Bachelor,"Graphic Design,UX/UI,Adobe XD","Digital Media,Design",5,88,Software Engineer
+Master,"Python,Machine Learning,AI","Technology,Innovation",5,93,AI Researcher
+Bachelor,"Digital Marketing,Analytics,SEO","Marketing,Business",5,87,Software Engineer
+Master,"Python,Data Analysis,R","Finance,Data Science",5,90,Data Scientist
+Bachelor,"Content Writing,Storytelling,SEO","Media,Marketing",5,86,Software Engineer
+Bachelor,"Java,Android,UI Design","Mobile Apps,Technology",5,88,Software Engineer
+Master,"UX Research,Prototyping,Interaction Design","Design,User Experience",5,91,Data Scientist
+Bachelor,"Python,Cybersecurity,Network Security","Technology,Security",5,90,Cybersecurity Analyst
+Bachelor,"SQL,Data Analysis,Excel","Business,Analytics",5,87,Data Scientist
+Master,"Cloud Computing,Python,DevOps","Technology,Business",5,91,Software Engineer
+Bachelor,"Graphic Design,Illustration,Adobe Creative Suite","Arts,Design",5,86,Software Engineer
+Bachelor,"Python,Data Analysis,SQL","Finance,Analytics",5,90,Data Scientist
+Bachelor,"Java,Spring,Microservices","Software Engineering,Technology",5,89,Software Engineer
+Master,"Python,Machine Learning,TensorFlow","AI,Innovation",5,93,AI Researcher
+Master,"Digital Marketing,SEO,Content Strategy","Marketing,Social Media",5,87,Software Engineer
+Bachelor,"SQL,Data Warehousing,ETL","Finance,Data Analytics",5,89,Data Scientist
+Bachelor,"Graphic Design,Illustration,Adobe Illustrator","Arts,Design",5,86,Software Engineer
+Master,"Python,NLP,Deep Learning","AI,Language",5,92,AI Researcher
+Bachelor,"Research,Statistical Analysis,R","Academia,Biotech",5,94,Data Scientist
+Master,"Project Management,Agile,Communication","Business,Management",5,87,Software Engineer
+Master,"Python,Data Visualization,R","Data Analysis,Statistics",5,90,Data Scientist
+Bachelor,"Java,Algorithms,Data Structures","Software Development,Coding",5,88,Software Engineer
+Bachelor,"UX Research,Prototyping,Interaction Design","Design,User Experience",5,91,Data Scientist
+Master,"Cloud Computing,DevOps,Python","Technology,Business",5,91,Software Engineer
+Master,"Business Analysis,Excel,SQL","Business,Finance",5,89,Data Scientist
+Bachelor,"SQL,Data Analysis,Excel","Business,Analytics",5,88,Data Scientist
+Bachelor,"Cloud Computing,Python,DevOps","Technology,Business",5,91,Software Engineer
+Master,"Python,Data Analysis,SQL","Finance,Analytics",5,90,Data Scientist
+Bachelor,"Java,System Design,Cloud Computing","Software Development,AI",5,90,Software Engineer
+Master,"Python,Deep Learning,Statistics","Healthcare,AI",5,93,AI Researcher
+Bachelor,"Project Management,Communication,Agile","Business,Management",5,87,Software Engineer
+Master,"Digital Marketing,SEO,Content Creation","Marketing,Communications",5,87,Software Engineer
+Master,"Python,Data Analysis,Machine Learning","Technology,Data Science",5,87,Data Scientist
+PhD,"Java,System Design,Cloud Computing","Software Development,AI",5,88,Software Engineer
+Bachelor,"Graphic Design,UI/UX,Adobe Creative Suite","Arts,Digital Media",5,89,Software Engineer
+Master,"HTML,CSS,JavaScript","Healthcare,AI",5,90,AI Researcher
+PhD,"C++,Embedded Systems,IoT","Business,Management",5,91,Software Engineer
+Bachelor,"SQL,Data Warehousing,ETL","Finance,Analytics",5,92,Software Engineer
+Master,"JavaScript,React,Node.js","Marketing,Communications",5,93,Data Scientist
+PhD,"Digital Marketing,SEO,Content Creation","Cybersecurity,Technology",5,94,Software Engineer
+Bachelor,"Project Management,Agile,Communication","Academia,Research",5,95,AI Researcher
+Master,"Python,Deep Learning,Statistics","Web Development,Design",5,85,Data Scientist
+PhD,"Financial Analysis,Excel,Econometrics","Technology,Data Science",5,86,Data Scientist
+Bachelor,"Research,Statistical Analysis,Python","Software Development,AI",5,87,Software Engineer
+Master,"Cloud Computing,DevOps,Python","Arts,Digital Media",5,88,Software Engineer
+PhD,"Java,Algorithms,Data Structures","Healthcare,AI",5,89,Data Scientist
+Bachelor,"UX Research,Prototyping,Interaction Design","Business,Management",5,90,AI Researcher
+Master,"Copywriting,SEO,Social Media","Finance,Analytics",5,91,Software Engineer
+PhD,"Network Security,Linux,Python","Marketing,Communications",5,92,Data Scientist
+Bachelor,"C#,.NET,Software Design","Cybersecurity,Technology",5,93,Software Engineer
+Master,"Data Visualization,Python,R","Academia,Research",5,94,Software Engineer
+PhD,"Machine Learning,Big Data,Python","Web Development,Design",5,95,Software Engineer
+Bachelor,"Python,Data Analysis,Machine Learning","Technology,Data Science",5,85,Data Scientist
+Master,"Java,System Design,Cloud Computing","Software Development,AI",5,86,Software Engineer
+PhD,"Graphic Design,UI/UX,Adobe Creative Suite","Arts,Digital Media",5,87,Software Engineer
+Bachelor,"HTML,CSS,JavaScript","Healthcare,AI",5,88,AI Researcher
+Master,"C++,Embedded Systems,IoT","Business,Management",5,89,Cybersecurity Analyst
+PhD,"SQL,Data Warehousing,ETL","Finance,Analytics",5,90,Data Scientist
+Bachelor,"JavaScript,React,Node.js","Marketing,Communications",5,91,Software Engineer
+Master,"Digital Marketing,SEO,Content Creation","Cybersecurity,Technology",5,92,Software Engineer
+PhD,"Project Management,Agile,Communication","Academia,Research",5,93,AI Researcher
+Bachelor,"Python,Deep Learning,Statistics","Web Development,Design",5,94,Data Scientist
+Master,"Financial Analysis,Excel,Econometrics","Technology,Data Science",5,95,Software Engineer
+PhD,"Research,Statistical Analysis,Python","Software Development,AI",5,85,Software Engineer
+Bachelor,"Cloud Computing,DevOps,Python","Arts,Digital Media",5,86,Data Scientist
+Master,"Java,Algorithms,Data Structures","Healthcare,AI",5,87,Software Engineer
+PhD,"UX Research,Prototyping,Interaction Design","Business,Management",5,88,Data Scientist
+Bachelor,"Copywriting,SEO,Social Media","Finance,Analytics",5,89,Software Engineer
+Master,"Network Security,Linux,Python","Marketing,Communications",5,90,Data Scientist
+PhD,"C#,.NET,Software Design","Cybersecurity,Technology",5,91,Data Scientist
+Bachelor,"Data Visualization,Python,R","Academia,Research",5,92,Software Engineer
+Master,"Machine Learning,Big Data,Python","Web Development,Design",5,93,Software Engineer
+PhD,"Python,Data Analysis,Machine Learning","Technology,Data Science",5,94,AI Researcher
+Bachelor,"Java,System Design,Cloud Computing","Software Development,AI",5,95,Software Engineer
+Master,"Graphic Design,UI/UX,Adobe Creative Suite","Arts,Digital Media",5,85,Data Scientist
+PhD,"HTML,CSS,JavaScript","Healthcare,AI",5,86,Software Engineer
+Bachelor,"C++,Embedded Systems,IoT","Business,Management",5,87,Software Engineer
+Master,"SQL,Data Warehousing,ETL","Finance,Analytics",5,88,Data Scientist
+PhD,"JavaScript,React,Node.js","Marketing,Communications",5,89,Cybersecurity Analyst
+Bachelor,"Digital Marketing,SEO,Content Creation","Cybersecurity,Technology",5,90,Data Scientist
+Master,"Project Management,Agile,Communication","Academia,Research",5,91,Software Engineer
+PhD,"Python,Deep Learning,Statistics","Web Development,Design",5,92,Software Engineer
+Bachelor,"Financial Analysis,Excel,Econometrics","Technology,Data Science",5,93,Data Scientist
+Master,"Research,Statistical Analysis,Python","Software Development,AI",5,94,Software Engineer
+PhD,"Cloud Computing,DevOps,Python","Arts,Digital Media",5,95,Software Engineer
+Bachelor,"Java,Algorithms,Data Structures","Healthcare,AI",5,85,AI Researcher
+Master,"UX Research,Prototyping,Interaction Design","Business,Management",5,86,Software Engineer
+PhD,"Copywriting,SEO,Social Media","Finance,Analytics",5,87,Software Engineer
+Bachelor,"Network Security,Linux,Python","Marketing,Communications",5,88,Data Scientist
+Master,"C#,.NET,Software Design","Cybersecurity,Technology",5,89,Software Engineer
+PhD,"Data Visualization,Python,R","Academia,Research",5,90,AI Researcher
+Bachelor,"Machine Learning,Big Data,Python","Web Development,Design",5,91,Data Scientist
+Master,"Python,Data Analysis,Machine Learning","Technology,Data Science",5,92,Data Scientist
+PhD,"Java,System Design,Cloud Computing","Software Development,AI",5,93,Software Engineer
+Bachelor,"Graphic Design,UI/UX,Adobe Creative Suite","Arts,Digital Media",5,94,Software Engineer
+Master,"HTML,CSS,JavaScript","Healthcare,AI",5,95,Data Scientist
+PhD,"C++,Embedded Systems,IoT","Business,Management",5,85,AI Researcher
+Bachelor,"SQL,Data Warehousing,ETL","Finance,Analytics",5,86,Software Engineer
+Master,"JavaScript,React,Node.js","Marketing,Communications",5,87,Data Scientist
+PhD,"Digital Marketing,SEO,Content Creation","Cybersecurity,Technology",5,88,Software Engineer
+Bachelor,"Project Management,Agile,Communication","Academia,Research",5,89,Software Engineer
+Master,"Python,Deep Learning,Statistics","Web Development,Design",5,90,Software Engineer
+PhD,"Financial Analysis,Excel,Econometrics","Technology,Data Science",5,91,Data Scientist
+Bachelor,"Research,Statistical Analysis,Python","Software Development,AI",5,92,Software Engineer
+Master,"Cloud Computing,DevOps,Python","Arts,Digital Media",5,93,Software Engineer
+PhD,"Java,Algorithms,Data Structures","Healthcare,AI",5,94,AI Researcher
+Bachelor,"UX Research,Prototyping,Interaction Design","Business,Management",5,95,Cybersecurity Analyst
+Master,"Copywriting,SEO,Social Media","Finance,Analytics",5,85,Data Scientist
+PhD,"Network Security,Linux,Python","Marketing,Communications",5,86,Software Engineer
+Bachelor,"C#,.NET,Software Design","Cybersecurity,Technology",5,87,Software Engineer
+Master,"Data Visualization,Python,R","Academia,Research",5,88,AI Researcher
+PhD,"Machine Learning,Big Data,Python","Web Development,Design",5,89,Data Scientist
+Bachelor,"Python,Data Analysis,Machine Learning","Technology,Data Science",5,90,Software Engineer
+Master,"Java,System Design,Cloud Computing","Software Development,AI",5,91,Software Engineer
+PhD,"Graphic Design,UI/UX,Adobe Creative Suite","Arts,Digital Media",5,92,Data Scientist
+Bachelor,"HTML,CSS,JavaScript","Healthcare,AI",5,93,Software Engineer
+Master,"C++,Embedded Systems,IoT","Business,Management",5,94,Data Scientist
+PhD,"SQL,Data Warehousing,ETL","Finance,Analytics",5,95,Software Engineer
+Bachelor,"JavaScript,React,Node.js","Marketing,Communications",5,85,Data Scientist
+Master,"Digital Marketing,SEO,Content Creation","Cybersecurity,Technology",5,86,Data Scientist
+PhD,"Project Management,Agile,Communication","Academia,Research",5,87,Software Engineer
+Bachelor,"Python,Deep Learning,Statistics","Web Development,Design",5,88,Software Engineer
+Master,"Financial Analysis,Excel,Econometrics","Technology,Data Science",5,89,AI Researcher
+PhD,"Research,Statistical Analysis,Python","Software Development,AI",5,90,Software Engineer
+Bachelor,"Cloud Computing,DevOps,Python","Arts,Digital Media",5,91,Data Scientist
+Master,"Java,Algorithms,Data Structures","Healthcare,AI",5,92,Software Engineer
+PhD,"UX Research,Prototyping,Interaction Design","Business,Management",5,93,Software Engineer
+Bachelor,"Copywriting,SEO,Social Media","Finance,Analytics",5,94,Data Scientist
+Master,"Network Security,Linux,Python","Marketing,Communications",5,95,Cybersecurity Analyst
+PhD,"C#,.NET,Software Design","Cybersecurity,Technology",5,85,Data Scientist
+Bachelor,"Data Visualization,Python,R","Academia,Research",5,86,Software Engineer
+Master,"Machine Learning,Big Data,Python","Web Development,Design",5,87,Software Engineer

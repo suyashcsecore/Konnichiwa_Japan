@@ -279,7 +279,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-28">
-            
+
             {/* Item 1: Scroll Left */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -291,8 +291,8 @@ export default function Home() {
               <div className="lg:col-span-5 relative">
                 <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&q=80&w=1000" 
-                    alt="Tokyo train station and transit" 
+                    src="./assets/1.jpg" 
+                    alt="Chapter 1" 
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -302,25 +302,36 @@ export default function Home() {
               </div>
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
-                  <Train size={15} />
-                  <span>Transit & Megacities</span>
+                  <Compass size={15} />
+                  <span>Stay Connected From Day One</span>
                 </div>
                 <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
-                  Precision, Punctuality, and the Art of Quiet Commutes
+                  Your First Connection
                 </h3>
+                <div className="space-y-4">
                 <p className="text-[#5A534B] text-base leading-relaxed font-sans">
-                  Navigating the world's most sophisticated railway network is an exercise in mindfulness. From Shinkansen bullet trains gliding at 300 km/h with sub-second precision to local Yamanote loops, transit in Japan is seamlessly integrated into urban existence.
+                  Landing in Japan without mobile data can make everything harder. Start with a temporary travel SIM or eSIM so you have internet for maps, translation, transport, communication, and looking up essential information while you settle in.
                 </p>
-                <ul className="space-y-2.5 text-sm text-[#5A534B] font-medium font-sans">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#C65A43]" />
-                    Suica & Pasmo digital integration on smartphones
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#C65A43]" />
-                    Etiquette rules: silent phone calls and queue discipline
-                  </li>
-                </ul>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  What to prepare
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Check that your phone is unlocked and eSIM-compatible.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Arrange a travel SIM/eSIM before departure or buy a prepaid option after arrival.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Keep your passport, residence documents, and phone details handy.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Goal: Get online first. You can sort out a permanent mobile plan once you have settled.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Temporary prepaid SIMs can be convenient for short stays, while longer-term residents can move to a Japanese carrier after their residence situation is established.
+                </p>
+
+                </div>
               </div>
             </motion.div>
 
@@ -334,31 +345,40 @@ export default function Home() {
             >
               <div className="lg:col-span-7 space-y-6 lg:order-1 order-2">
                 <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
-                  <Coffee size={15} />
-                  <span>Culinary Rituals</span>
+                  <Compass size={15} />
+                  <span>Register Your Address</span>
                 </div>
                 <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
-                  From Neighborhood Izakayas to Michelin-Starred Omakase
+                  Make Japan Official
                 </h3>
+                <div className="space-y-4">
                 <p className="text-[#5A534B] text-base leading-relaxed font-sans">
-                  Japanese gastronomy is governed by seasonality (shun) and meticulous knife work. Whether grabbing a steaming bowl of tonkotsu ramen from a counter ticket machine or participating in a multi-course kaiseki dinner, every meal tells a story of craftsmanship.
+                  Once you have arrived and settled into your accommodation, one of the first important administrative steps is registering your address with your local municipality.
                 </p>
-                <ul className="space-y-2.5 text-sm text-[#5A534B] font-medium font-sans">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  For mid-to-long-term residents, the address notification generally needs to be completed within 14 days of establishing your residence.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  This step helps establish your official residential record and is also connected with services such as your My Number information.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Keep ready:
+                </p>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={16} className="text-[#C65A43]" />
-                    Seasonal ingredients and regional specialties
+                    Residence Card • Passport • New Address • Required municipal forms
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-[#C65A43]" />
-                    Dining customs: saying "Itadakimasu" and chopstick etiquette
-                  </li>
-                </ul>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Don't leave this until the last minute.
+                </p>
+
+                </div>
               </div>
               <div className="lg:col-span-5 relative lg:order-2 order-1">
                 <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&q=80&w=1000" 
-                    alt="Japanese food and ramen culture" 
+                    src="./assets/2.jpg" 
+                    alt="Chapter 2" 
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -368,6 +388,492 @@ export default function Home() {
               </div>
             </motion.div>
 
+            {/* Item 3: Scroll Left */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-5 relative">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/3.jpg" 
+                    alt="Chapter 3" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 03
+                </div>
+              </div>
+              <div className="lg:col-span-7 space-y-6">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>From Cash to Everyday Japan</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Open Your First Bank Account
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Once your basic residence setup is in place, getting a Japanese bank account becomes an important part of everyday life.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Your account may be used for things such as receiving salary, making payments, and managing everyday expenses.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Banks can ask for documents such as your Residence Card, passport, Hanko or signature, and student/employee ID, although exact requirements vary between financial institutions.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Before you visit
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Check the bank's requirements first.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Bring your:
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Residence Card + ID + address information + Hanko/signature + student/employee ID
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Different banks have different rules. Check before you go.
+                </p>
+
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 4: Scroll Right */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-7 space-y-6 lg:order-1 order-2">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>From Temporary SIM to Your Japanese Number</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Upgrade to a Permanent Number
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Your travel SIM got you through the first few days.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Now that you have settled in, you can look into a long-term Japanese mobile plan.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  A permanent plan can give you a Japanese phone number and a more reliable setup for everyday life.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Mobile operators need to verify your identity when setting up a contract, and documents such as a Residence Card or other accepted identification may be required.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Your journey
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Travel SIM/eSIM → Settle in → Prepare documents → Choose a carrier → Permanent mobile plan
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Tip: Don't cancel your temporary SIM until your new connection is working.
+                </p>
+
+                </div>
+              </div>
+              <div className="lg:col-span-5 relative lg:order-2 order-1">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/4.jpg" 
+                    alt="Chapter 4" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 04
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 5: Scroll Left */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-5 relative">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/5.jpg" 
+                    alt="Chapter 5" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 05
+                </div>
+              </div>
+              <div className="lg:col-span-7 space-y-6">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>Meet the Hanko</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Your Name, Your Seal
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  In Japan, you may come across the Hanko — a personal seal engraved with your name and traditionally used in place of a handwritten signature for certain procedures.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Some banks accept signatures instead, while others may ask for a seal depending on the account and institution.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  For foreigners, a Hanko can usually be ordered from a specialized Hanko shop or other seal-making service.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  What to check
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Your name format • Available character options • Whether registration is necessary • Whether the organization actually requires one
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Don't assume you need a Hanko for everything. Ask first.
+                </p>
+
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 6: Scroll Right */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-7 space-y-6 lg:order-1 order-2">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>Garbage Is Not Just Garbage</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Know Your Local Rules
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You've bought your first meal.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You've unpacked your first delivery.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Now you have a bag full of things you need to throw away.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  And suddenly...
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Where does all of this go?
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Japan separates waste into categories, and collection rules and schedules can vary by municipality.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Select your city / municipality, upload a picture of the item, and Konnichiwa Japan helps you understand:
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    What it is → Where it goes → How to prepare it → When to put it out
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Because the wrong garbage on the wrong day is still the wrong garbage.
+                </p>
+
+                </div>
+              </div>
+              <div className="lg:col-span-5 relative lg:order-2 order-1">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/6.jpg" 
+                    alt="Chapter 6" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 06
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 7: Scroll Left */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-5 relative">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/7.jpg" 
+                    alt="Chapter 7" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 07
+                </div>
+              </div>
+              <div className="lg:col-span-7 space-y-6">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>How Much Japanese Do You Actually Know?</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Find Your Japanese Level
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You learned Japanese before coming here.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You know your こんにちは.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  But...
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Are you actually ready to use Japanese in everyday life?
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Take a quick proficiency check covering areas such as Hiragana, Katakana, Kanji and vocabulary.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Instead of simply saying “learn Japanese”, Konnichiwa Japan shows you where you currently stand and what you should work on next.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Know your level before you start your journey to the next one.
+                </p>
+
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 8: Scroll Right */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-7 space-y-6 lg:order-1 order-2">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>Making Healthcare Easier to Explain</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  When “I'm Fine” Isn't Enough
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You've been travelling.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You're exhausted.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You're adjusting to a completely different routine.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  And then you get sick.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You know what's wrong.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  You just don't know how to explain it in Japanese.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  With Konnichiwa Japan, enter your relevant health information in English — such as symptoms, allergies, medications and medical history — and generate a structured Japanese-language report that can help you communicate with medical staff.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  We don't diagnose you. We help you explain yourself.
+                </p>
+
+                </div>
+              </div>
+              <div className="lg:col-span-5 relative lg:order-2 order-1">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/8.jpg" 
+                    alt="Chapter 8" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 08
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 9: Scroll Left */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-5 relative">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/9.jpg" 
+                    alt="Chapter 9" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 09
+                </div>
+              </div>
+              <div className="lg:col-span-7 space-y-6">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>The Things Nobody Thinks About Before Moving</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Don't Forget the Everyday Stuff
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  The big things are easy to remember.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Visa.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Flight.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Accommodation.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  But living somewhere means dealing with hundreds of smaller things.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Setting up utilities.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Understanding transport.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Finding a nearby clinic.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Knowing emergency numbers.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Understanding local rules.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Figuring out where to buy what you need.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Konnichiwa Japan is designed to bring these small pieces together so you don't have to solve each one from scratch.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Moving countries is one big journey made up of hundreds of tiny tasks.
+                </p>
+
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Item 10: Scroll Right */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FBF9F5] p-8 md:p-12 rounded-xl border border-[#D8CFBF] shadow-sm"
+            >
+              <div className="lg:col-span-7 space-y-6 lg:order-1 order-2">
+                <div className="flex items-center gap-2 text-[#C65A43] font-mono font-semibold text-xs tracking-widest uppercase">
+                  <Compass size={15} />
+                  <span>A Simple Starting Checklist</span>
+                </div>
+                <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-[#2C2A29]">
+                  Your First Month in Japan
+                </h3>
+                <div className="space-y-4">
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Your first few days can feel overwhelming.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  So don't try to solve everything at once.
+                </p>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  Before you leave
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Travel SIM/eSIM • Important documents • Accommodation details • Japanese basics
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  First few days
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Internet • Address registration • Local transport • Essential shopping
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  First few weeks
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Bank account • Permanent mobile plan • Hanko, if required • Utilities and local services
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  As you settle
+                </p>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-[#C65A43]" />
+                    Japanese practice • Healthcare • Garbage schedule • Local routines
+                  </li>
+                <p className="text-[#5A534B] text-base leading-relaxed font-sans">
+                  One step at a time. You'll get there.
+                </p>
+
+                </div>
+              </div>
+              <div className="lg:col-span-5 relative lg:order-2 order-1">
+                <div className="rounded-lg overflow-hidden shadow border border-[#D8CFBF] aspect-[4/3] bg-white p-2">
+                  <img 
+                    src="./assets/10.jpg" 
+                    alt="Chapter 10" 
+                    className="w-full h-full object-cover rounded"
+                  />
+                </div>
+                <div className="absolute -top-3 -right-3 bg-[#2C2A29] text-white text-[10px] font-mono px-3 py-1 rounded">
+                  CHAPTER 10
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
