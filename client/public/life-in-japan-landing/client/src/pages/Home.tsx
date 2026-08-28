@@ -889,7 +889,7 @@ export default function Home() {
               A Glimpse into Daily Life
             </h2>
             <p className="text-gray-300 text-base md:text-lg font-sans">
-              Watch our curated video preview capturing morning commuter flows, neon-lit alleyways in Shinjuku, and serene bamboo forests in Kyoto.
+              Watch our curated video preview capturing slices of life from Japan, neon-lit alleyways in Tokyo, and quite country sides of Kobe ,Sapporo , Nagano and Hiroshima.
             </p>
           </div>
 
@@ -905,7 +905,7 @@ export default function Home() {
               <div className="w-full h-full flex items-center justify-center bg-zinc-950 relative">
                 <iframe 
                   className="w-full h-full absolute inset-0"
-                  src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                  src="https://www.youtube-nocookie.com/embed/faC4p0SH7I4?autoplay=1" 
                   title="Life in Japan Cinematic Tour"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen
@@ -929,7 +929,7 @@ export default function Home() {
                     <span className="bg-[#C65A43] text-white text-[11px] font-mono font-semibold px-3 py-1 rounded tracking-widest uppercase">
                       4K Field Footage
                     </span>
-                    <span className="text-xs text-gray-300 font-mono">03:45 MIN</span>
+                    <span className="text-xs text-gray-300 font-mono"></span>
                   </div>
 
                   <div className="text-center space-y-4">
@@ -937,14 +937,14 @@ export default function Home() {
                       <Play size={32} className="ml-1 fill-current" />
                     </div>
                     <div>
-                      <h3 className="font-serif-display text-2xl md:text-3xl font-bold">Echoes of the Floating World</h3>
+                      <h3 className="font-serif-display text-2xl md:text-3xl font-bold">Japan Slice of Life</h3>
                       <p className="text-sm text-gray-300 mt-1 font-sans">Click to play embedded cinematic tour preview</p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between text-xs text-gray-400 border-t border-white/10 pt-4 font-mono">
-                    <span>Location: Kyoto & Tokyo</span>
-                    <span>Soundtrack: Ambient Rain & Koto</span>
+                    <span>Location: Kyoto , Nagano , Kobe</span>
+                    <span>The Land of the Rising Sun</span>
                   </div>
                 </div>
               </div>
