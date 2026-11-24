@@ -2,6 +2,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton, useUser } from '@clerk/clerk-react';
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
+const CHATBOT_URL = import.meta.env.VITE_CHATBOT_URL || 'http://localhost:5174';
+
 const Navbar = () => {
   const { user } = useUser();
   const location = useLocation();
@@ -27,8 +30,7 @@ const Navbar = () => {
           <Link to="/learn-japanese" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/learn-japanese')}`}>Learn Japanese</Link>
           <Link to="/garbage-collector" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/garbage-collector')}`}>Garbage Collector</Link>
           <Link to="/puzzles" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/puzzles')}`}>Puzzles</Link>
-          <a href="http://localhost:5174" target="_blank" rel="noopener noreferrer" className="font-medium transition-colors duration-200 text-japan-red hover:text-japan-red-hover flex items-center gap-1">
-
+          <a href={CHATBOT_URL} target="_blank" rel="noopener noreferrer" className="font-medium transition-colors duration-200 text-japan-red hover:text-japan-red-hover flex items-center gap-1">
             <Sparkles className="w-4 h-4" /> AI Chat
           </a>
         </div>
@@ -40,7 +42,7 @@ const Navbar = () => {
               const city = e.target.value;
               localStorage.setItem('selectedCity', city);
               if (user) {
-                fetch('/api/users/city', {
+                fetch(`${API_BASE}/api/users/city`, {
                   method: 'PUT',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ clerkId: user.id, city })

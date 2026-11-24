@@ -21,7 +21,8 @@ import {
 import { useUser } from "@clerk/clerk-react";
 import HealthHeader from "../components/health/HealthHeader";
 
-const API_URL = "http://localhost:5000/api/health";
+const API_BASE = import.meta.env.VITE_API_URL || '';
+const API_URL = `${API_BASE || 'http://localhost:5000'}/api/health`;
 
 export default function MedicalHistory() {
   const navigate = useNavigate();

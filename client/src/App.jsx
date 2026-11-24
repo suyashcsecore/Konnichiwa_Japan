@@ -35,6 +35,8 @@ if (!PUBLISHABLE_KEY) {
   console.error("Missing Publishable Key")
 }
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
+
 const UserSync = () => {
   const { user, isLoaded, isSignedIn } = useUser();
   const hasSynced = React.useRef(false);
@@ -44,7 +46,7 @@ const UserSync = () => {
       const syncUserToDb = async () => {
         try {
           hasSynced.current = true; // Mark as synced to prevent multiple calls
-          await fetch('http://localhost:5000/api/users/sync', {
+          await fetch(`${API_BASE || 'http://localhost:5000'}/api/users/sync`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
