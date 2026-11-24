@@ -8,9 +8,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+/dist
 dist-ssr
 *.local
+!public/life-in-japan-landing/dist/
+!public/life-in-japan-landing/dist/**
 
 # Editor directories and files
 .vscode/*

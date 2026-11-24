@@ -15,9 +15,7 @@ function Router() {
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/index.html"} component={Home} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
+        <Route component={Home} />
       </Switch>
     </WouterRouter>
   );

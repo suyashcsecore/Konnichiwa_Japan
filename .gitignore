@@ -12,9 +12,13 @@ venv/
 server/uploads/
 
 # Build outputs
-dist/
+/dist/
+/client/dist/
+/chatbot/frontend/dist/
 build/
 *.dist
+!client/public/life-in-japan-landing/dist/
+!client/public/life-in-japan-landing/dist/**
 
 # Environment variables
 .env

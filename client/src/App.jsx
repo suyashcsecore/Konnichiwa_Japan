@@ -36,6 +36,9 @@ if (!PUBLISHABLE_KEY) {
 }
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
+if (typeof window !== 'undefined') {
+  window.__VITE_API_URL__ = API_BASE;
+}
 
 const UserSync = () => {
   const { user, isLoaded, isSignedIn } = useUser();
