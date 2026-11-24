@@ -573,7 +573,6 @@ export class AIWasteClassifier {
       if (this.scanHud) this.scanHud.style.display = 'none';
     }
   }
-  }
 
   runScanSimulation(itemData, sourceLabel) {
     if (this.isScanning) return;
