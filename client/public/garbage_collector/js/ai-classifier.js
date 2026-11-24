@@ -361,14 +361,31 @@ export class AIWasteClassifier {
 
   async analyzeWithDirectGroq(imageBase64, city) {
     const urlParams = new URLSearchParams(window.location.search);
-    const groqKey = urlParams.get('groqKey') || window.parent?.__VITE_GROQ_API_KEY__ || localStorage.getItem('VITE_GROQ_API_KEY') || '';
+    let groqKey = urlParams.get('groqKey') || window.parent?.__VITE_GROQ_API_KEY__ || localStorage.getItem('VITE_GROQ_API_KEY') || '';
 
     if (!groqKey) {
-      throw new Error(
+      try {
+        groqKey = window.parent?.localStorage?.getItem('VITE_GROQ_API_KEY') || '';
+      } catch (e) {}
+    }
+
+    if (!groqKey) {
+      const inputKey = prompt(
         this.currentLanguage === 'ja'
-          ? 'Groq APIキーが設定されていません。Vercelで VITE_GROQ_API_KEY または VITE_API_URL を設定してください。'
-          : 'Groq API Key is not set. Please set VITE_GROQ_API_KEY or VITE_API_URL in your Vercel project environment variables.'
+          ? 'リアルタイムAIスキャンを有効にするには、Groq APIキー(gsk_...)を入力してください（ブラウザに保存されます）:'
+          : 'To enable instant AI Vision scanning, please paste your Groq API Key (gsk_...) [Saved in your browser]:'
       );
+      if (inputKey && inputKey.trim().startsWith('gsk_')) {
+        groqKey = inputKey.trim();
+        localStorage.setItem('VITE_GROQ_API_KEY', groqKey);
+        try { window.parent?.localStorage?.setItem('VITE_GROQ_API_KEY', groqKey); } catch (e) {}
+      } else {
+        throw new Error(
+          this.currentLanguage === 'ja'
+            ? 'Groq APIキーが設定されていません。Vercelで環境変数 VITE_GROQ_API_KEY を設定してください。'
+            : 'Groq API Key is not set. Please set VITE_GROQ_API_KEY in your Vercel project environment variables.'
+        );
+      }
     }
 
     const promptText = `Analyze this image for Japanese municipal waste sorting. Identify the main item. You MUST reply STRICTLY with a JSON object only. Do NOT include <think> tags. Do NOT provide any reasoning or explanation. Your ENTIRE output must be exactly the JSON object containing: nameEn (string), nameJa (string), category (one of: burnable, non_burnable, plastic, pet_bottle, cans, glass, paper, bulky, hazardous), confidence (number 0-1). Do not include any other text or markdown formatting.`;
