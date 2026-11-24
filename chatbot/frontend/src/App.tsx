@@ -2,18 +2,18 @@ import { useState, useEffect } from 'react'
 import { Header } from './components/Header'
 import { ChatInterface } from './components/ChatInterface'
 import { ChatSidebar } from './components/ChatSidebar'
-import { ResumeAnalyzer } from './components/ResumeAnalyzer'
-import { ResumeBuilder } from './components/ResumeBuilder'
+import { ProcedureGuide } from './components/ProcedureGuide'
+import { PhrasesGuide } from './components/PhrasesGuide'
 import { useChatStore } from './store/chatStore'
 
-type Tab = 'chat' | 'resume-analyzer' | 'resume-builder'
+type Tab = 'chat' | 'procedures' | 'phrases'
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('chat')
   const { theme, setTheme, setSidebarOpen } = useChatStore()
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('job-advisor-theme') as 'light' | 'dark' | null
+    const savedTheme = localStorage.getItem('konnichiwa-japan-theme') as 'light' | 'dark' | null
     if (savedTheme) {
       setTheme(savedTheme)
     } else {
@@ -24,6 +24,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('konnichiwa-japan-theme', theme)
   }, [theme])
 
   useEffect(() => {
@@ -48,8 +49,8 @@ function App() {
       <div className="main-area">
         <Header activeTab={activeTab} />
         {activeTab === 'chat' && <ChatInterface />}
-        {activeTab === 'resume-analyzer' && <ResumeAnalyzer />}
-        {activeTab === 'resume-builder' && <ResumeBuilder />}
+        {activeTab === 'procedures' && <ProcedureGuide />}
+        {activeTab === 'phrases' && <PhrasesGuide />}
       </div>
     </div>
   )

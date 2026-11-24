@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Compass, Camera, Wind } from 'lucide-react';
 import fuji from '../assets/fuji.jpg';

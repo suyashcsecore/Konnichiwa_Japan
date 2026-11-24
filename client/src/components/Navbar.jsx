@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Sparkles, Menu } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton, useUser } from '@clerk/clerk-react';
 
 const Navbar = () => {
@@ -29,6 +28,7 @@ const Navbar = () => {
           <Link to="/garbage-collector" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/garbage-collector')}`}>Garbage Collector</Link>
           <Link to="/puzzles" className={`font-medium transition-colors duration-200 hover:text-gray-900 ${isActive('/puzzles')}`}>Puzzles</Link>
           <a href="http://localhost:5174" target="_blank" rel="noopener noreferrer" className="font-medium transition-colors duration-200 text-japan-red hover:text-japan-red-hover flex items-center gap-1">
+
             <Sparkles className="w-4 h-4" /> AI Chat
           </a>
         </div>

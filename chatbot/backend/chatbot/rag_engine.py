@@ -290,11 +290,10 @@ class KimiRAGChatbot:
         
         dataset_context = "\n\n".join(f"Source: {c.source} row {c.row_id}\n{c.text}" for c in retrieved)
         system_prompt = (
-            "You are an AI job advisor. Ground answers in the supplied local dataset context when it is relevant. "
-            "If the dataset is insufficient, state the limitation and give practical next steps. "
-            "Do not claim live internet access unless internet context is explicitly supplied.\n\n"
+            "You are Konnichiwa Japan AI, an expert assistant for the Konnichiwa Japan project. "
+            "Ground answers in the supplied local Japan knowledge context when it is relevant. "
+            "Provide practical advice for students moving to, studying in, or living in Japan (administrative procedures, garbage sorting, language, daily etiquette, and healthcare).\n\n"
             f"Local dataset context:\n{dataset_context or 'No relevant local dataset context was retrieved.'}\n\n"
-            f"Uploaded resume context:\n{uploaded_resume_context[:5000] or 'None'}\n\n"
             f"Internet context supplied by app:\n{internet_context[:3000] or 'None'}"
         )
         messages: list[dict[str, str]] = [{"role": "system", "content": system_prompt}]

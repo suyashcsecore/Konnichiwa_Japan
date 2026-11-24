@@ -9,8 +9,8 @@ export function Header({ activeTab }: HeaderProps) {
 
   const tabTitles: Record<string, string> = {
     'chat': 'Konnichiwa Japan AI',
-    'resume-analyzer': 'Resume Analyzer',
-    'resume-builder': 'Resume Builder',
+    'procedures': 'Relocation & Administrative Guide',
+    'phrases': 'Essential Japanese Phrases & Emergency Contacts',
   }
 
   return (

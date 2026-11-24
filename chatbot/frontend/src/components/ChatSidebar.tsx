@@ -1,6 +1,6 @@
 import { useChatStore } from '../store/chatStore'
 
-type Tab = 'chat' | 'resume-analyzer' | 'resume-builder'
+type Tab = 'chat' | 'procedures' | 'phrases'
 
 interface ChatSidebarProps {
   activeTab: Tab
@@ -18,8 +18,8 @@ const navItems: { id: Tab; label: string; icon: JSX.Element }[] = [
     ),
   },
   {
-    id: 'resume-analyzer',
-    label: 'Resume Analyzer',
+    id: 'procedures',
+    label: 'Relocation Guide',
     icon: (
       <svg className="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -31,12 +31,13 @@ const navItems: { id: Tab; label: string; icon: JSX.Element }[] = [
     ),
   },
   {
-    id: 'resume-builder',
-    label: 'Resume Builder',
+    id: 'phrases',
+    label: 'Phrases & Emergency',
     icon: (
       <svg className="sidebar-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
-        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="16" x2="12.01" y2="16" />
       </svg>
     ),
   },

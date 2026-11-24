@@ -185,10 +185,10 @@ export function ChatInterface() {
   const removeAttachment = () => setPendingAttachment(null)
 
   const suggestions = [
-    'What should I know before visiting Tokyo?',
-    'Teach me some basic Japanese phrases',
-    'What is the Garbage Collector feature?',
-    'Tell me about traditional Japanese food',
+    'How do I register my Residence Card at City Hall?',
+    'What do I need to open a bank account in Japan?',
+    'How does garbage sorting work in Tokyo?',
+    'Essential phrases for convenience stores & trains',
   ]
 
   return (
@@ -196,9 +196,9 @@ export function ChatInterface() {
       <div className="chat-messages">
         {messages.length === 0 && (
           <div className="welcome-message">
-            <div className="welcome-icon">🎯</div>
-            <h2>How can I help you today?</h2>
-            <p>I can help with Japanese culture, language, travel, and the Konnichiwa Japan project.</p>
+            <div className="welcome-icon">🌸</div>
+            <h2>Konnichiwa! How can I help your Japan journey?</h2>
+            <p>I am your assistant for administrative procedures, garbage sorting, daily etiquette, and Japanese language.</p>
             <div className="suggestions">
               {suggestions.map((s, i) => (
                 <button key={i} className="suggestion-chip" onClick={() => setInputText(s)}>

@@ -15,7 +15,7 @@ router.post('/analyze', async (req, res) => {
     const apiKey = keys[Math.floor(Math.random() * keys.length)];
 
     const payload = JSON.stringify({
-      model: 'qwen/qwen3.6-27b',
+      model: 'qwen/qwen3.8-27b',
       messages: [
         {
           role: 'user',
