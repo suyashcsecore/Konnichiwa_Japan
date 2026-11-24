@@ -84,15 +84,34 @@ router.post('/analyze', async (req, res) => {
           const jsonStr = match[0];
           const analyzed = JSON.parse(jsonStr);
           
+          const categoryNormalizer = {
+            'pet_bottle': 'pet_bottles',
+            'pet': 'pet_bottles',
+            'non_burnable': 'non_combustible',
+            'nonburnable': 'non_combustible',
+            'burnable': 'combustible',
+            'plastic': 'recyclable_containers',
+            'cans': 'cans',
+            'glass': 'glass',
+            'paper': 'used_paper',
+            'hazardous': 'batteries_tubes'
+          };
+          const dbCategoryKey = categoryNormalizer[analyzed.category] || analyzed.category;
+
           // Verify with database
           const WasteItem = require('../models/WasteItem');
           const CityRule = require('../models/CityRule');
           
-          const wasteItem = await WasteItem.findOne({ category_key: analyzed.category });
+          const wasteItem = await WasteItem.findOne({ 
+            $or: [{ category_key: dbCategoryKey }, { category_key: analyzed.category }] 
+          });
           let cityRules = null;
           
           if (req.body.city) {
-            cityRules = await CityRule.findOne({ city_name: req.body.city, category_key: analyzed.category });
+            cityRules = await CityRule.findOne({ 
+              city_name: req.body.city, 
+              $or: [{ category_key: dbCategoryKey }, { category_key: analyzed.category }] 
+            });
           }
 
           if (wasteItem) {

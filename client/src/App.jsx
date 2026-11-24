@@ -36,8 +36,10 @@ if (!PUBLISHABLE_KEY) {
 }
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
+const GROQ_KEY = import.meta.env.VITE_GROQ_API_KEY || '';
 if (typeof window !== 'undefined') {
   window.__VITE_API_URL__ = API_BASE;
+  window.__VITE_GROQ_API_KEY__ = GROQ_KEY;
 }
 
 const UserSync = () => {

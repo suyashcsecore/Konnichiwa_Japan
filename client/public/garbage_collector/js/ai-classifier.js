@@ -359,6 +359,93 @@ export class AIWasteClassifier {
     this.runScanSimulation(synthesizedItem, searchItem.nameEn);
   }
 
+  async analyzeWithDirectGroq(imageBase64, city) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const groqKey = urlParams.get('groqKey') || window.parent?.__VITE_GROQ_API_KEY__ || localStorage.getItem('VITE_GROQ_API_KEY') || '';
+
+    if (!groqKey) {
+      throw new Error(
+        this.currentLanguage === 'ja'
+          ? 'Groq APIキーが設定されていません。Vercelで VITE_GROQ_API_KEY または VITE_API_URL を設定してください。'
+          : 'Groq API Key is not set. Please set VITE_GROQ_API_KEY or VITE_API_URL in your Vercel project environment variables.'
+      );
+    }
+
+    const promptText = `Analyze this image for Japanese municipal waste sorting. Identify the main item. You MUST reply STRICTLY with a JSON object only. Do NOT include <think> tags. Do NOT provide any reasoning or explanation. Your ENTIRE output must be exactly the JSON object containing: nameEn (string), nameJa (string), category (one of: burnable, non_burnable, plastic, pet_bottle, cans, glass, paper, bulky, hazardous), confidence (number 0-1). Do not include any other text or markdown formatting.`;
+
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${groqKey}`
+      },
+      body: JSON.stringify({
+        model: 'qwen/qwen3.8-27b',
+        messages: [
+          {
+            role: 'user',
+            content: [
+              { type: 'text', text: promptText },
+              { type: 'image_url', image_url: { url: imageBase64, detail: 'low' } }
+            ]
+          }
+        ],
+        temperature: 0.1,
+        max_tokens: 1024
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.error?.message || `Groq API Error ${response.status}`);
+    }
+
+    const data = await response.json();
+    const content = data.choices[0]?.message?.content || '';
+    const match = content.match(/\{[\s\S]*?"nameEn"[\s\S]*?"category"[\s\S]*?\}/);
+    if (!match) {
+      throw new Error('Could not parse JSON response from Groq Vision API.');
+    }
+    const parsed = JSON.parse(match[0]);
+    return {
+      nameEn: parsed.nameEn,
+      nameJa: parsed.nameJa,
+      category: parsed.category || 'burnable',
+      confidence: parsed.confidence || 0.95,
+      collectionDay: 'Follow municipal schedule',
+      disposalMethod: 'Standard separation protocol',
+      specialBagRequired: false
+    };
+  }
+
+  normalizeCategory(rawCategory) {
+    const categoryMap = {
+      'pet_bottle': 'pet',
+      'pet_bottles': 'pet',
+      'pet': 'pet',
+      'non_burnable': 'nonburnable',
+      'non-burnable': 'nonburnable',
+      'non_combustible': 'nonburnable',
+      'combustible': 'burnable',
+      'can': 'cans',
+      'cans': 'cans',
+      'bottles': 'glass',
+      'bottle': 'glass',
+      'glass': 'glass',
+      'used_paper': 'paper',
+      'paper': 'paper',
+      'batteries_tubes': 'hazardous',
+      'battery': 'hazardous',
+      'hazardous': 'hazardous',
+      'recyclable_containers': 'plastic',
+      'plastic': 'plastic',
+      'bulky': 'bulky'
+    };
+    const key = (rawCategory || 'burnable').toLowerCase().trim();
+    const resolved = categoryMap[key] || key;
+    return WASTE_CATEGORIES[resolved] ? resolved : 'burnable';
+  }
+
   async runRealScan(imageBase64, sourceLabel) {
     if (this.isScanning) return;
     this.isScanning = true;
@@ -372,15 +459,14 @@ export class AIWasteClassifier {
     if (this.scanOverlay) this.scanOverlay.classList.add('active');
     if (this.scanHud) this.scanHud.style.display = 'flex';
 
-    if (this.scanStatusText) this.scanStatusText.textContent = this.currentLanguage === 'ja' ? 'AIサーバーへ送信中...' : 'Sending to AI Server...';
-    if (this.scanProgressBar) this.scanProgressBar.style.width = '20%';
+    if (this.scanStatusText) this.scanStatusText.textContent = this.currentLanguage === 'ja' ? 'AI画像解析中...' : 'Analyzing image with AI...';
+    if (this.scanProgressBar) this.scanProgressBar.style.width = '25%';
 
     try {
       const urlParams = new URLSearchParams(window.location.search);
       const city = urlParams.get('city') || 'Tokyo';
       let apiBase = urlParams.get('api') || '';
 
-      // Check window.parent or localStorage if apiBase wasn't passed via query param
       if (!apiBase) {
         try {
           apiBase = window.parent?.__VITE_API_URL__ || window.parent?.localStorage?.getItem('VITE_API_URL') || localStorage.getItem('VITE_API_URL') || '';
@@ -391,77 +477,71 @@ export class AIWasteClassifier {
         apiBase = apiBase.slice(0, -1);
       }
 
-      const analyzeEndpoint = apiBase ? `${apiBase}/api/garbage/analyze` : '/api/garbage/analyze';
+      let analyzed = null;
 
-      let response;
+      // Stage 1: Try Express Backend
+      const analyzeEndpoint = apiBase ? `${apiBase}/api/garbage/analyze` : '/api/garbage/analyze';
       try {
-        response = await fetch(analyzeEndpoint, {
+        const response = await fetch(analyzeEndpoint, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ imageBase64, city })
         });
-      } catch (networkErr) {
-        // Fallback for local development when running on port 5173 without proxy
-        if (!apiBase && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
-          response = await fetch('http://localhost:5000/api/garbage/analyze', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ imageBase64, city })
-          });
-        } else {
-          throw networkErr;
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data && data.analyzed) {
+            analyzed = data.analyzed;
+          }
+        } else if (response.status === 405) {
+          console.warn('Backend returned 405 on static host. Elevating to direct Groq Vision AI.');
         }
+      } catch (backendErr) {
+        console.warn('Backend unreachable, switching directly to Groq Vision AI:', backendErr);
       }
 
-      if (response && response.status === 405) {
-        throw new Error(
-          this.currentLanguage === 'ja'
-            ? 'バックエンドAPIが未設定です(HTTP 405)。Vercelで環境変数 VITE_API_URL を設定してください。'
-            : 'Backend API URL is not configured (HTTP 405). Please set VITE_API_URL in your Vercel project environment variables to your deployed backend URL.'
-        );
+      // Stage 2: Direct Groq Vision AI (always works on Vercel or any client host!)
+      if (!analyzed) {
+        if (this.scanProgressBar) this.scanProgressBar.style.width = '55%';
+        if (this.scanStatusText) {
+          this.scanStatusText.textContent = this.currentLanguage === 'ja' ? 'Groq Vision AI (Qwen) でリアルタイム判定中...' : 'Analyzing with Groq Vision AI (Qwen)...';
+        }
+        analyzed = await this.analyzeWithDirectGroq(imageBase64, city);
       }
 
-      if (!response.ok) {
-        const errData = await response.json().catch(() => ({}));
-        throw new Error(errData.error || `HTTP Error ${response.status}`);
-      }
-
-      if (this.scanProgressBar) this.scanProgressBar.style.width = '80%';
-      const data = await response.json();
-      
-      if (this.scanProgressBar) this.scanProgressBar.style.width = '100%';
+      if (this.scanProgressBar) this.scanProgressBar.style.width = '85%';
       this.playSuccessChime();
 
-      // Convert the Grok result into a format expected by the UI
-      const categoryObj = WASTE_CATEGORIES[data.analyzed.category] || WASTE_CATEGORIES.burnable;
+      // Normalize category to official Japanese municipal sorting keys
+      const resolvedCategoryKey = this.normalizeCategory(analyzed.category);
+      const categoryObj = WASTE_CATEGORIES[resolvedCategoryKey] || WASTE_CATEGORIES.burnable;
+
       const synthesizedItem = {
-        id: 'grok-' + Math.random().toString(36).substring(7),
-        nameEn: data.analyzed.nameEn,
-        nameJa: data.analyzed.nameJa,
+        id: 'groq-' + Math.random().toString(36).substring(7),
+        nameEn: analyzed.nameEn,
+        nameJa: analyzed.nameJa,
         image: categoryObj.icon || '🗑️',
         visualClass: 'search-card',
-        primaryCategory: data.analyzed.category,
-        confidence: data.analyzed.confidence || 0.95,
+        primaryCategory: categoryObj.id,
+        confidence: analyzed.confidence || 0.95,
         composition: [
           {
-            partEn: `${data.analyzed.nameEn} Body`,
-            partJa: `${data.analyzed.nameJa} 本体`,
-            category: data.analyzed.category,
+            partEn: `${analyzed.nameEn} Body`,
+            partJa: `${analyzed.nameJa} 本体`,
+            category: categoryObj.id,
             mark: categoryObj.symbol
           }
         ],
-        prepStepsEn: data.analyzed.instructionsEn 
-          ? [data.analyzed.instructionsEn]
+        prepStepsEn: analyzed.instructionsEn 
+          ? [analyzed.instructionsEn]
           : [
           `Identify category: ${categoryObj.nameEn} (${categoryObj.symbol}).`,
           `Inspect item for food contamination, liquid, or residue. Clean if necessary.`,
           `Verify municipal bag type: ${categoryObj.bagTypeEn}.`,
           `Put out during designated ${categoryObj.nameEn} collection window (${categoryObj.scheduleFrequency}).`
         ],
-        prepStepsJa: data.analyzed.instructionsJa
-          ? [data.analyzed.instructionsJa]
+        prepStepsJa: analyzed.instructionsJa
+          ? [analyzed.instructionsJa]
           : [
           `分別区分：${categoryObj.nameJa}（マーク：${categoryObj.symbol}）`,
           `汚れや残液がある場合は水洗いして綺麗に落とします。`,
@@ -469,76 +549,30 @@ export class AIWasteClassifier {
           `地域の収集日程（${categoryObj.scheduleFrequency}）の朝に指定集積所へ出します。`
         ],
         designatedBag: categoryObj.bagTypeEn,
-        collectionDay: data.analyzed.collectionDay || categoryObj.scheduleFrequency,
-        disposalMethod: data.analyzed.disposalMethod || 'Place in designated area',
-        specialBagRequired: data.analyzed.specialBagRequired ? 'Yes (Special Bag Required)' : 'No (Use standard transparent bag)',
-        proTipEn: `Analyzed by Grok AI. Always follow local ward guidelines.`,
-        proTipJa: `Grok AIによる解析です。地域の分別ルールを遵守してください。`
+        collectionDay: analyzed.collectionDay || categoryObj.scheduleFrequency,
+        disposalMethod: analyzed.disposalMethod || 'Place in designated area',
+        specialBagRequired: analyzed.specialBagRequired ? 'Yes (Special Bag Required)' : 'No (Use standard transparent bag)',
+        proTipEn: `Identified by Groq AI Vision as [${categoryObj.nameEn}]. Follow local ${city} municipal rules.`,
+        proTipJa: `Groq AI Visionによるリアルタイム判定 [${categoryObj.nameJa}]。${city}の分別ルールを遵守してください。`
       };
+
+      if (this.scanProgressBar) this.scanProgressBar.style.width = '100%';
 
       setTimeout(() => {
         this.isScanning = false;
         if (this.scanOverlay) this.scanOverlay.classList.remove('active');
         if (this.scanHud) this.scanHud.style.display = 'none';
         this.displayClassificationResult(synthesizedItem);
-      }, 500);
+      }, 400);
 
     } catch (err) {
-      console.error(err);
-      
-      const isMissingBackend = err.message.includes('405') || err.message.includes('Failed to fetch') || err.message.includes('VITE_API_URL');
-      if (isMissingBackend) {
-        const isJa = this.currentLanguage === 'ja';
-        const fallbackItem = {
-          id: 'sim-' + Date.now(),
-          nameEn: 'Recyclable Plastic Container / Waste',
-          nameJa: 'プラスチック製容器包装 / 生活ごみ',
-          image: '♻️',
-          visualClass: 'search-card',
-          primaryCategory: 'plastic',
-          confidence: 0.90,
-          composition: [
-            {
-              partEn: 'Container Body',
-              partJa: '容器本体',
-              category: 'plastic',
-              mark: 'プラ'
-            }
-          ],
-          prepStepsEn: [
-            '1. Empty any liquid or residual food thoroughly.',
-            '2. Lightly rinse with water and let dry.',
-            '3. Place in transparent/translucent bag for Plastic Containers.',
-            '4. Dispose on weekly Plastic Recycling collection day.'
-          ],
-          prepStepsJa: [
-            '1. 中身を完全に空にして軽く水洗いします。',
-            '2. 水気を切って乾かします。',
-            '3. 透明または半透明のごみ袋に入れます。',
-            '4. 地域のプラスチック資源ごみ収集日の朝に出します。'
-          ],
-          designatedBag: 'Transparent Bag (プラ mark)',
-          collectionDay: 'Weekly Recycling Day',
-          disposalMethod: 'Designated resource station',
-          specialBagRequired: 'Transparent bag with プラ mark',
-          proTipEn: 'Note: To enable live Groq AI Vision scan on Vercel, set VITE_API_URL in project environment variables to your deployed backend URL.',
-          proTipJa: '注：Vercel上でライブAI画像判定を行うには、環境変数 VITE_API_URL にバックエンドURLを設定してください。'
-        };
-
-        setTimeout(() => {
-          this.isScanning = false;
-          if (this.scanOverlay) this.scanOverlay.classList.remove('active');
-          if (this.scanHud) this.scanHud.style.display = 'none';
-          this.displayClassificationResult(fallbackItem);
-        }, 500);
-        return;
-      }
-
+      console.error('AI Scan Error:', err);
       alert((this.currentLanguage === 'ja' ? 'AIスキャンエラー: ' : 'AI Scan Error: ') + err.message);
       this.isScanning = false;
       if (this.scanOverlay) this.scanOverlay.classList.remove('active');
       if (this.scanHud) this.scanHud.style.display = 'none';
     }
+  }
   }
 
   runScanSimulation(itemData, sourceLabel) {
